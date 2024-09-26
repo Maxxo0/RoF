@@ -43,7 +43,7 @@ namespace Maxxo
         public void SelectClass(int i)
         {
             selectedCharacter = characters[i];
-            splashArt.sprite = selectedCharacter.splashArt;
+//            splashArt.sprite = selectedCharacter.splashArt;
         }
         public void Embark()
         {

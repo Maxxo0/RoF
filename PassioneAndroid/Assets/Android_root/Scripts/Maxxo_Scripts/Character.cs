@@ -9,10 +9,10 @@ namespace Maxxo
     public class Character : ScriptableObject
     {
         public CharacterClass characterClass;
-        public enum CharacterClass { ironChad, silent }
+        public enum CharacterClass { deathknight, nigromancer }
         public GameObject characterPrefab;
         public Relic startingRelic;
-        public Sprite splashArt;
+//        public Sprite splashArt;
         public List<Card> startingDeck;
     }
 }
