@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: DeathKnight
   m_EditorClassIdentifier: 
   characterClass: 0
-  characterPrefab: {fileID: 0}
+  characterPrefab: {fileID: 1317907807089443208, guid: ce40c411224b13645820d9ab559668bf,
+    type: 3}
   startingRelic: {fileID: 0}
-  splashArt: {fileID: 0}
-  startingDeck: []
+  startingDeck:
+  - {fileID: 0}

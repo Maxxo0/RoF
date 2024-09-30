@@ -18,7 +18,7 @@ namespace Maxxo
         public CardType cardType;
         public enum CardType { Attack, Skill, Power }
         public CardClass cardClass;
-        public enum CardClass { ironChad, silent, colorless, curse, status }
+        public enum CardClass { deathKight, nicromancer, enemy }
         public CardTargetType cardTargetType;
         public enum CardTargetType { self, enemy };
 
