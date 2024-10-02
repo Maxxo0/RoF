@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    [SerializeField] GameObject introPanel, mapPanel, characterSelectPanel, rewardPanel, playerUI;
+    
 
 
     public CharacterClass characterClass;
@@ -40,18 +40,7 @@ public class GameManager : MonoBehaviour
 
     public CharacterClass actualClass;
 
-    public void GoCharacterSelect()
-    {
-        introPanel.SetActive(false);
-        characterSelectPanel.SetActive(true);
-
-    }
-
-    public void  SelectDeathKnight()
-    {
-        characterSelectPanel.SetActive(false);
-
-    }
+    
 
 
 }
