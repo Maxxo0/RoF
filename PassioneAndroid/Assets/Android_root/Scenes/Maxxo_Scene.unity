@@ -876,12 +876,12 @@ GameObject:
   - component: {fileID: 643192039}
   - component: {fileID: 643192038}
   m_Layer: 5
-  m_Name: PlayerUI
+  m_Name: CardUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &643192037
 RectTransform:
   m_ObjectHideFlags: 0
@@ -893,12 +893,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 992190917}
   m_Father: {fileID: 872470978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -431}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &643192038
@@ -1033,7 +1034,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 992190917}
   - {fileID: 1756332966}
   - {fileID: 527029779}
   - {fileID: 940293547}
@@ -1412,7 +1412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &992190917
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1420,13 +1420,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992190916}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.8662, y: 3.499125, z: 1.8662}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1351134153}
-  m_Father: {fileID: 872470978}
+  m_Father: {fileID: 643192037}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.18848057}
   m_AnchorMax: {x: 0.5, y: 0.18848057}
@@ -1717,6 +1717,54 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7425765093112710962}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1303763951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1303763953}
+  - component: {fileID: 1303763952}
+  m_Layer: 0
+  m_Name: Deck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1303763952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303763951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f48db00e90c4cb47b1d5ab6cf5393c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerDeck: {fileID: 11400000, guid: ca5a960501fd86c48b332956beae3f24, type: 2}
+  _cardPrefab: {fileID: 5352234847515661597, guid: ab0b3a17349d1954bb954a77edd9f023,
+    type: 3}
+  _cardCanvas: {fileID: 643192037}
+--- !u!4 &1303763953
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303763951}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1349543671
 GameObject:
   m_ObjectHideFlags: 0
@@ -2552,7 +2600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1756332966
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3163,10 +3211,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 824829676161543356, guid: ce40c411224b13645820d9ab559668bf,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1317907807089443208, guid: ce40c411224b13645820d9ab559668bf,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317907807089443208, guid: ce40c411224b13645820d9ab559668bf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4807933414267305588, guid: ce40c411224b13645820d9ab559668bf,
         type: 3}
@@ -3642,3 +3700,4 @@ SceneRoots:
   - {fileID: 404571182}
   - {fileID: 566195607}
   - {fileID: 1567527413}
+  - {fileID: 1303763953}
