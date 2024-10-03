@@ -1,3 +1,4 @@
+using Maxxo;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,7 +33,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    
+    public Character character;
+    public List<Card> playerDeck = new List<Card>();
+    public List<Card> cardLibrary = new List<Card>();
+    public List<Relic> relics = new List<Relic>();
+    public List<Relic> relicLibrary = new List<Relic>();
+    public int floorNumber = 1;
+    public int goldAmount;
 
 
     public CharacterClass characterClass;
