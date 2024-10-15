@@ -118,7 +118,7 @@ public class Debuffs : MonoBehaviour
     {
         if (isBleeding)
         {
-            gameObject.GetComponent<HealtManager>().TakeDMG(Mathf.RoundToInt((bleedingDMG + (Mathf.RoundToInt(gameObject.GetComponent<HealtManager>().healthMax * 0.05f))) * (1 + (0.2f * bleedingLvL))), true);
+            gameObject.GetComponent<HealtManager>().TakeDMG(Mathf.RoundToInt((bleedingDMG + (Mathf.RoundToInt(gameObject.GetComponent<HealtManager>().healthMaxAlter * 0.05f))) * (1 + (0.2f * bleedingLvL))), true);
             bleedingCoun -= 1;
             if (bleedingCoun == 0)
             {
