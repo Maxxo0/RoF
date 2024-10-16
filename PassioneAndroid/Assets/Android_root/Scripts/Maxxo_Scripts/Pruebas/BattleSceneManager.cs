@@ -4,86 +4,115 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
-
-public class BattleSceneManager : MonoBehaviour
+namespace Maxxo
 {
-    [Header("Cards")]
-    public List<Card> deck;
-    public List<Card> drawPile = new List<Card>();
-    public List<Card> cardsInHand = new List<Card>();
-    public List<Card> discardPile = new List<Card>();
-    public CardUI selectedCard;
-    public List<CardUI> cardsInHandGameObjects = new List<CardUI>();
-
-    [Header("Stats")]
-    public int drawAmount = 5;
-    public int maxEnergy;
-    public int energy;
-    public Turn turn;
-    public enum Turn { Player, Enemy };
-
-
-
-    public void BeginBattle(GameObject[] prefabsArray)
+    public class BattleSceneManager : MonoBehaviour
     {
-        foreach (Card card in cardsInHand)
+        [Header("Cards")]
+        public List<ScriptableCard> deck;
+        public List<ScriptableCard> drawPile = new List<ScriptableCard>();
+        public List<ScriptableCard> cardsInHand = new List<ScriptableCard>();
+        public List<ScriptableCard> discardPile = new List<ScriptableCard>();
+        public CardUI selectedCard;
+        public List<CardUI> cardsInHandGameObjects = new List<CardUI>();
+
+        [Header("Stats")]
+        public int drawAmount = 5;
+        public int maxEnergy;
+        public int energy;
+        public Turn turn;
+        public enum Turn { Player, Enemy };
+
+
+       /* public void StartHallwayFight()
         {
-            DiscardCard(card);
+            BeginBattle();
         }
-        foreach (CardUI cardUI in cardsInHandGameObjects)
+        public void StartEliteFight()
         {
+            eliteFight = true;
+            BeginBattle(possibleElites);
+        }*/
+        public void BeginBattle(GameObject[] prefabsArray)
+        {
+            Debug.Log("BeginBattle activa");
+            foreach (ScriptableCard card in cardsInHand)
+            {
+                DiscardCard(card);
+            }
+            foreach (CardUI cardUI in cardsInHandGameObjects)
+            {
+                cardUI.gameObject.SetActive(false);
+                //cardsInHand.Remove(cardUI.card);
+            }
+
+            discardPile = new List<ScriptableCard>();
+            drawPile = new List<ScriptableCard>();
+            cardsInHand = new List<ScriptableCard>();
+
+            discardPile.AddRange(GameManager.Instance.playerDeck);
+            ShuffleCards();
+            DrawCards(drawAmount);
+            energy = maxEnergy;
+            //energyText.text = energy.ToString();
+        }
+
+        public void ShuffleCards()
+        {
+            Debug.Log("ShuffleCards Activa");
+            discardPile.Shuffle();
+            drawPile = discardPile;
+            discardPile = new List<ScriptableCard>();
+            //discardPileCountText.text = discardPile.Count.ToString();
+        }
+
+        public void DrawCards(int amountToDraw)
+        {
+            int cardsDrawn = 0;
+            while (cardsDrawn < amountToDraw && cardsInHand.Count <= 10)
+            {
+                if (drawPile.Count < 1)
+                    ShuffleCards();
+
+                cardsInHand.Add(drawPile[0]);
+                DisplayCardInHand(drawPile[0]);
+                drawPile.Remove(drawPile[0]);
+                // drawPileCountText.text = drawPile.Count.ToString();
+                cardsDrawn++;
+            }
+
+
+        }
+
+        public void DisplayCardInHand(ScriptableCard card)
+        {
+            CardUI cardUI = cardsInHandGameObjects[cardsInHand.Count - 1];
+            cardUI.LoadCard(card);
+            cardUI.gameObject.SetActive(true);
+        }
+
+        public void PlayCard(CardUI cardUI)
+        {
+            //Debug.Log("played card");
+            //GoblinNob is enraged
+            if (cardUI.card.cardType != ScriptableCard.CardType.Attack)
+
+                //cardActions.PerformAction(cardUI.card, cardTarget);
+
+                energy -= cardUI.card.GetCardCostAmount();
+            //energyText.text = energy.ToString();
+
+            //Instantiate(cardUI.discardEffect, cardUI.transform.position, Quaternion.identity, topParent);
+            selectedCard = null;
             cardUI.gameObject.SetActive(false);
-            //cardsInHand.Remove(cardUI.card);
+            cardsInHand.Remove(cardUI.card);
+            DiscardCard(cardUI.card);
         }
-
-        discardPile = new List<Card>();
-        drawPile = new List<Card>();
-        cardsInHand = new List<Card>();
-
-        discardPile.AddRange(GameManager.Instance.playerDeck);
-        ShuffleCards();
-        DrawCards(drawAmount);
-        energy = maxEnergy;
-        //energyText.text = energy.ToString();
-    }
-
-    public void ShuffleCards()
-    {
-        //discardPile.Shuffle();
-        drawPile = discardPile;
-        discardPile = new List<Card>();
-        //discardPileCountText.text = discardPile.Count.ToString();
-    }
-
-    public void DrawCards(int amountToDraw)
-    {
-        int cardsDrawn = 0;
-        while (cardsDrawn < amountToDraw && cardsInHand.Count <= 10)
+        public void DiscardCard(ScriptableCard card)
         {
-            if (drawPile.Count < 1)
-                ShuffleCards();
-
-            cardsInHand.Add(drawPile[0]);
-            DisplayCardInHand(drawPile[0]);
-            drawPile.Remove(drawPile[0]);
-           // drawPileCountText.text = drawPile.Count.ToString();
-            cardsDrawn++;
+            discardPile.Add(card);
+            //discardPileCountText.text = discardPile.Count.ToString();
         }
 
-
     }
-
-    public void DisplayCardInHand(Card card)
-    {
-        CardUI cardUI = cardsInHandGameObjects[cardsInHand.Count - 1];
-        cardUI.LoadCard(card);
-        cardUI.gameObject.SetActive(true);
-    }
-    public void DiscardCard(Card card)
-    {
-        discardPile.Add(card);
-        //discardPileCountText.text = discardPile.Count.ToString();
-    }
-
-}
+} 

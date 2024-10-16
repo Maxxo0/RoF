@@ -33,15 +33,12 @@ public class GameManager : MonoBehaviour
     }
 
     public Character character;
-    public List<Card> playerDeck = new List<Card>();
-    public List<Card> cardLibrary = new List<Card>();
+    public List<ScriptableCard> playerDeck = new List<ScriptableCard>();
+    public List<ScriptableCard> cardLibrary = new List<ScriptableCard>();
     //public List<Relic> relics = new List<Relic>();
     //public List<Relic> relicLibrary = new List<Relic>();
     public int floorNumber = 1;
     public int goldAmount;
-
-
-    public CharacterClass characterClass;
     public enum CharacterClass { deathknight, necromancer }
 
     public CharacterClass actualClass;

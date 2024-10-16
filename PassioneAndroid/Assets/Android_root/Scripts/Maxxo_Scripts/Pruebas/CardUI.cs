@@ -8,7 +8,11 @@ using TMPro;
 public class CardUI : MonoBehaviour
 {
 
-    private Card card;
+    public ScriptableCard card;
+    public TMP_Text cardTitleText;
+    public TMP_Text cardDescriptionText;
+    public TMP_Text cardCostText;
+    public Image cardImage;
 
     //  [Header("Prefabs Elements")]
     // [SerializeField] private Image _cardimage;
@@ -17,13 +21,13 @@ public class CardUI : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void LoadCard(Card _card)
+    public void LoadCard(ScriptableCard _card)
     {
         card = _card;
         gameObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
-        //cardTitleText.text = card.cardTitle;
-        //cardDescriptionText.text = card.GetCardDescriptionAmount();
-        //cardCostText.text = card.GetCardCostAmount().ToString();
-        //cardImage.sprite = card.cardIcon;
+        cardTitleText.text = card.cardTitle;
+        cardDescriptionText.text = card.GetCardDescriptionAmount();
+        cardCostText.text = card.GetCardCostAmount().ToString();
+        cardImage.sprite = card.cardIcon;
     }
 }
