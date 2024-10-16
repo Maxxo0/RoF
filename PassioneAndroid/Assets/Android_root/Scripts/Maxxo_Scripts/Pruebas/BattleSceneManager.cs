@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
 
 
 public class BattleSceneManager : MonoBehaviour
@@ -15,6 +18,8 @@ public class BattleSceneManager : MonoBehaviour
 
     [Header("Stats")]
     public int drawAmount = 5;
+    public int maxEnergy;
+    public int energy;
     public Turn turn;
     public enum Turn { Player, Enemy };
 
@@ -32,9 +37,15 @@ public class BattleSceneManager : MonoBehaviour
             //cardsInHand.Remove(cardUI.card);
         }
 
+        discardPile = new List<Card>();
+        drawPile = new List<Card>();
+        cardsInHand = new List<Card>();
+
         discardPile.AddRange(GameManager.Instance.playerDeck);
         ShuffleCards();
         DrawCards(drawAmount);
+        energy = maxEnergy;
+        //energyText.text = energy.ToString();
     }
 
     public void ShuffleCards()
@@ -59,6 +70,8 @@ public class BattleSceneManager : MonoBehaviour
            // drawPileCountText.text = drawPile.Count.ToString();
             cardsDrawn++;
         }
+
+
     }
 
     public void DisplayCardInHand(Card card)

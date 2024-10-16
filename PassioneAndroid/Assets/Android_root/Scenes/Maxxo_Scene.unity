@@ -534,76 +534,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117959998}
   m_CullTransparentMesh: 1
---- !u!1 &169253414
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 169253416}
-  - component: {fileID: 169253415}
-  m_Layer: 0
-  m_Name: BattleScene
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &169253415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169253414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdcda7e3a400f594db9bafd331715eed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deck: []
-  drawPile: []
-  cardsInHand: []
-  discardPile: []
-  selectedCard: {fileID: 0}
-  cardsInHandGameObjects: []
-  cardTarget: {fileID: 0}
-  player: {fileID: 0}
-  maxEnergy: 0
-  energy: 0
-  drawAmount: 5
-  turn: 0
-  endTurnButton: {fileID: 0}
-  drawPileCountText: {fileID: 0}
-  discardPileCountText: {fileID: 0}
-  energyText: {fileID: 0}
-  topParent: {fileID: 0}
-  enemyParent: {fileID: 0}
-  endScreen: {fileID: 0}
-  enemies: []
-  possibleEnemies: []
-  possibleElites: []
-  birdIcon: {fileID: 0}
-  banner: {fileID: 0}
-  turnText: {fileID: 0}
-  gameover: {fileID: 0}
---- !u!4 &169253416
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169253414}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &217776430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1227,6 +1157,8 @@ MonoBehaviour:
   - {fileID: 1849386164}
   - {fileID: 99622496}
   drawAmount: 5
+  maxEnergy: 0
+  energy: 0
   turn: 0
 --- !u!1 &643192036
 GameObject:
@@ -2091,8 +2023,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   cardLibrary: []
-  relics: []
-  relicLibrary: []
   floorNumber: 1
   goldAmount: 0
   characterClass: 0
@@ -5162,7 +5092,6 @@ SceneRoots:
   - {fileID: 844760003722817507}
   - {fileID: 872470978}
   - {fileID: 1994542803}
-  - {fileID: 169253416}
   - {fileID: 404571182}
   - {fileID: 566195607}
   - {fileID: 1567527413}
