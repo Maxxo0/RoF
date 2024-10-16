@@ -1,8 +1,7 @@
-using Maxxo;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static Maxxo.BattleSceneManager;
+
 
 public class BattleSceneManager : MonoBehaviour
 {
@@ -40,7 +39,7 @@ public class BattleSceneManager : MonoBehaviour
 
     public void ShuffleCards()
     {
-        discardPile.Shuffle();
+        //discardPile.Shuffle();
         drawPile = discardPile;
         discardPile = new List<Card>();
         //discardPileCountText.text = discardPile.Count.ToString();
