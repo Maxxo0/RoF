@@ -42,7 +42,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8415523097171159843}
   - component: {fileID: 5535340064042963425}
-  - component: {fileID: 1648068554428128598}
   m_Layer: 0
   m_Name: NodeSpawn
   m_TagString: Untagged
@@ -78,29 +77,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a48903586669b44ea658277b6ff780a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangeSpawn: 0.5
+  rangeSpawn: 0.35
   Node: {fileID: 7429627677228614721}
---- !u!135 &1648068554428128598
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2931885652445599505}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3058776411338666040
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,6 +574,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5730515731039297828}
+  - component: {fileID: 3965452604190558704}
+  - component: {fileID: 693207959251099782}
   m_Layer: 0
   m_Name: Idole
   m_TagString: Untagged
@@ -622,3 +602,42 @@ Transform:
   - {fileID: 7979786441638950903}
   m_Father: {fileID: 8415523097171159843}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3965452604190558704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7429627677228614721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53e60e1162eb6324ba9ae40dc47f7d19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeList:
+  - {fileID: 3825192007678678199}
+  - {fileID: 1930009854237716881}
+  - {fileID: 6964282067771700560}
+  concreteOption: 0
+  selectedNode: {fileID: 6964282067771700560}
+--- !u!135 &693207959251099782
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7429627677228614721}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.35
+  m_Center: {x: 0, y: 0, z: 0}

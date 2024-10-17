@@ -13,10 +13,10 @@ public class NodeSpawn : MonoBehaviour
     }
     public void ResetPosition() 
     {
-        Node.transform.position = new Vector3(transform.position.x+Random.Range(-rangeSpawn, rangeSpawn),
+        Node.transform.position = new Vector3(transform.position.x + Random.Range(-rangeSpawn, rangeSpawn),
         transform.position.y,
-        transform.position.z+Random.Range(-rangeSpawn, rangeSpawn)
-    );
+        transform.position.z + Random.Range(-rangeSpawn, rangeSpawn));
+        Node.GetComponent<NodeSelector>().randomNode();
     }
     private void OnDrawGizmosSelected()
     {
