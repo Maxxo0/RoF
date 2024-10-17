@@ -65,9 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Attack
-
-'
+  m_text: CardName
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -94,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20.44
+  m_fontSizeBase: 20.44
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -148,7 +146,6 @@ GameObject:
   - component: {fileID: 1565083184077561189}
   - component: {fileID: 8181548871195313606}
   - component: {fileID: 4439675605474467765}
-  - component: {fileID: 5352234847515661597}
   - component: {fileID: 3359897914104732916}
   m_Layer: 5
   m_Name: CartaPrefab
@@ -227,20 +224,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962050917e4146f4393c494630f93f77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5352234847515661597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4210585474959935304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97c5e0bd53ac3e94fbc6790dcb71e553, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <cardData>k__BackingField: {fileID: 11400000, guid: 1ece32dfe5e6a2146a133a56e95e1559,
-    type: 2}
+  card: {fileID: 0}
+  cardTitleText: {fileID: 4135741619593002474}
+  cardDescriptionText: {fileID: 0}
+  cardCostText: {fileID: 0}
+  cardImage: {fileID: 0}
 --- !u!114 &3359897914104732916
 MonoBehaviour:
   m_ObjectHideFlags: 0

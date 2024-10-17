@@ -1,3 +1,4 @@
+using Maxxo;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,7 @@ public class SceneManager : MonoBehaviour
         }
     }
 
+    BattleSceneManager battleSceneManager;
     [SerializeField] GameObject introPanel, mapPanel, characterSelectPanel, rewardPanel, playerUI;
     [SerializeField] GameObject fprefab1, fprefab2, fprefab3, fprefab4, fprefab5;
     [SerializeField] GameObject enemy1, enemy2, enemy3;
@@ -34,9 +36,35 @@ public class SceneManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        battleSceneManager = FindObjectOfType<BattleSceneManager>();
     }
 
-    
+    public void SelectBattleType()
+    {
+        StartCoroutine(LoadBattle());
+    }
+
+    public IEnumerator LoadBattle()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        //StartCoroutine(sceneFader.UI_Fade());
+        yield return new WaitForSeconds(1);
+
+        /*mapScene.SetActive(false);
+        chestScene.SetActive(false);
+        restScene.SetActive(false);
+        playerIcon.SetActive(true);*/
+
+        /*if (e == "enemy")*/
+        battleSceneManager.StartHallwayFight();
+        /*else if (e == "elite")
+            battleSceneManager.StartEliteFight();*/
+
+        //fade from black
+        yield return new WaitForSeconds(1);
+        Cursor.lockState = CursorLockMode.None;
+    }
 
     public void GoCharacterSelect()
     {
@@ -62,6 +90,7 @@ public class SceneManager : MonoBehaviour
 
     public void SelectLevel()
     {
+        StartCoroutine(LoadBattle());
         int escenary;
         int enemies;
         int lowEnemies;

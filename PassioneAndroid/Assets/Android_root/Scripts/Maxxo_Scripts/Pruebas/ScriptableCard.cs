@@ -6,32 +6,24 @@ using UnityEngine;
 
 public class ScriptableCard : ScriptableObject
 {
-    [field: SerializeField] public string cardName { get; private set; }
-    [field: SerializeField, TextArea] public string cardDescription { get; private set;}
+    public string cardTitle;
+    public Sprite cardIcon;
+    public bool isUpgraded;
+    public CardType cardType;
+    public enum CardType { Attack, Shield, Special, LifeSteal }
 
-    [field: SerializeField] public int playCost { get; private set; }
-
-    [field: SerializeField] public Sprite image { get; private set; }
-
+    public CardClass cardClass;
+    public enum CardClass { Deathknight, Necromancer, Monster }
 
 
+    public CardDescription cardDescription;
+    public CardAmount cardCost;
+    public CardAmount cardEffect;
+    public CardAmount buffAmount;
 
 
-    public enum CardClass
-    {
-        Deathknight,
-        Necromancer,
-        Monster
-    }
 
-    public enum CardEffectType
-    {
-        Attack,
-        Shield,
-        Special,
-        LifeSteal
-    }
-
+    public CardRarity rarity;
     public enum CardRarity
     {
         Character,
@@ -41,6 +33,45 @@ public class ScriptableCard : ScriptableObject
         Legendary
     }
 
+    public int GetCardCostAmount()
+    {
+        if (!isUpgraded)
+            return cardCost.baseAmount;
+        else
+            return cardCost.upgradedAmount;
+    }
+    public string GetCardDescriptionAmount()
+    {
+        if (!isUpgraded)
+            return cardDescription.baseAmount;
+        else
+            return cardDescription.upgradedAmount;
+    }
+    public int GetBuffAmount()
+    {
+        if (!isUpgraded)
+            return buffAmount.baseAmount;
+        else
+            return buffAmount.upgradedAmount;
+    }
+    [System.Serializable]
+    public struct CardAmount
+    {
+        public int baseAmount;
+        public int upgradedAmount;
+    }
+    [System.Serializable]
+    public struct CardDescription
+    {
+        public string baseAmount;
+        public string upgradedAmount;
+    }
+    [System.Serializable]
+    public struct CardBuffs
+    {
+        //public Buff.Type buffType;
+        //public CardAmount buffAmount;
+    }
 
 
 }

@@ -10,9 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4de94ebddec380740a11a0b31e7e9b32, type: 3}
-  m_Name: NuclearBomb
+  m_Name: Defend
   m_EditorClassIdentifier: 
-  <cardName>k__BackingField: Nuke
-  <cardDescription>k__BackingField: Nuke
-  <playCost>k__BackingField: 3
-  <image>k__BackingField: {fileID: 0}
+  cardTitle: Defend
+  cardIcon: {fileID: 0}
+  isUpgraded: 0
+  cardType: 1
+  cardClass: 2
+  cardDescription:
+    baseAmount: Gain 5 Block
+    upgradedAmount: Gain 8 Block
+  cardCost:
+    baseAmount: 1
+    upgradedAmount: 1
+  cardEffect:
+    baseAmount: 5
+    upgradedAmount: 8
+  buffAmount:
+    baseAmount: 0
+    upgradedAmount: 0
+  rarity: 1
