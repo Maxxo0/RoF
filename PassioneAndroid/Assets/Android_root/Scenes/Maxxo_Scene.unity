@@ -625,7 +625,7 @@ PrefabInstance:
     - target: {fileID: 724130701596448625, guid: ab0b3a17349d1954bb954a77edd9f023,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1087.3318
+      value: 960.54175
       objectReference: {fileID: 0}
     - target: {fileID: 724130701596448625, guid: ab0b3a17349d1954bb954a77edd9f023,
         type: 3}
@@ -1160,6 +1160,8 @@ MonoBehaviour:
   maxEnergy: 3
   energy: 0
   turn: 0
+  possibleEnemies: []
+  possibleElites: []
 --- !u!1 &643192036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,7 +1913,7 @@ PrefabInstance:
     - target: {fileID: 724130701596448625, guid: ab0b3a17349d1954bb954a77edd9f023,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1340.9117
+      value: 1214.1217
       objectReference: {fileID: 0}
     - target: {fileID: 724130701596448625, guid: ab0b3a17349d1954bb954a77edd9f023,
         type: 3}
@@ -3449,7 +3451,7 @@ PrefabInstance:
     - target: {fileID: 724130701596448625, guid: ab0b3a17349d1954bb954a77edd9f023,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 580.17175
+      value: 960.54175
       objectReference: {fileID: 0}
     - target: {fileID: 724130701596448625, guid: ab0b3a17349d1954bb954a77edd9f023,
         type: 3}
@@ -3667,7 +3669,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1756332966
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4543,7 +4545,7 @@ PrefabInstance:
     - target: {fileID: 724130701596448625, guid: ab0b3a17349d1954bb954a77edd9f023,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 833.7518
+      value: 706.96173
       objectReference: {fileID: 0}
     - target: {fileID: 724130701596448625, guid: ab0b3a17349d1954bb954a77edd9f023,
         type: 3}

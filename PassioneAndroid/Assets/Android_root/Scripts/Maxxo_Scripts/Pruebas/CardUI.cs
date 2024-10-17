@@ -26,8 +26,8 @@ public class CardUI : MonoBehaviour
         card = _card;
         gameObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
         cardTitleText.text = card.cardTitle;
-        cardDescriptionText.text = card.GetCardDescriptionAmount();
-        cardCostText.text = card.GetCardCostAmount().ToString();
-        cardImage.sprite = card.cardIcon;
+        //cardDescriptionText.text = card.GetCardDescriptionAmount();
+        //cardCostText.text = card.GetCardCostAmount().ToString();
+        //cardImage.sprite = card.cardIcon;
     }
 }

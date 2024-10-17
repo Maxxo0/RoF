@@ -23,17 +23,21 @@ namespace Maxxo
         public Turn turn;
         public enum Turn { Player, Enemy };
 
+        [Header("Enemies")]
+        public GameObject[] possibleEnemies;
+        public GameObject[] possibleElites;
+        bool eliteFight;
 
-       /* public void StartHallwayFight()
+        public void StartHallwayFight()
         {
-            BeginBattle();
+            BeginBattle(/*possibleEnemies*/);
         }
         public void StartEliteFight()
         {
             eliteFight = true;
-            BeginBattle(possibleElites);
-        }*/
-        public void BeginBattle(GameObject[] prefabsArray)
+            BeginBattle(/*possibleElites*/);
+        }
+        public void BeginBattle(/*GameObject[] prefabsArray*/)
         {
             Debug.Log("BeginBattle activa");
             foreach (ScriptableCard card in cardsInHand)
