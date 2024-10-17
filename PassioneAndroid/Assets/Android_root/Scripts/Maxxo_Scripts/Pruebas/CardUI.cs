@@ -24,7 +24,7 @@ public class CardUI : MonoBehaviour
     public void LoadCard(ScriptableCard _card)
     {
         card = _card;
-        gameObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+        //gameObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
         cardTitleText.text = card.cardTitle;
         //cardDescriptionText.text = card.GetCardDescriptionAmount();
         //cardCostText.text = card.GetCardCostAmount().ToString();
