@@ -13,6 +13,7 @@ public class CardUI : MonoBehaviour
     public TMP_Text cardDescriptionText;
     public TMP_Text cardCostText;
     public Image cardImage;
+    public Image cardBorder;
 
     //  [Header("Prefabs Elements")]
     // [SerializeField] private Image _cardimage;
@@ -26,8 +27,9 @@ public class CardUI : MonoBehaviour
         card = _card;
         //gameObject.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
         cardTitleText.text = card.cardTitle;
-        //cardDescriptionText.text = card.GetCardDescriptionAmount();
-        //cardCostText.text = card.GetCardCostAmount().ToString();
-        //cardImage.sprite = card.cardIcon;
+        cardDescriptionText.text = card.GetCardDescriptionAmount();
+        cardCostText.text = card.GetCardCostAmount().ToString();
+        cardImage.sprite = card.cardIcon;
+        cardBorder.sprite = card.cardBorder;
     }
 }

@@ -8,9 +8,10 @@ public class ScriptableCard : ScriptableObject
 {
     public string cardTitle;
     public Sprite cardIcon;
+    public Sprite cardBorder;
     public bool isUpgraded;
     public CardType cardType;
-    public enum CardType { Attack, Shield, Special, LifeSteal }
+    public enum CardType { Attack, Shield, Special }
 
     public CardClass cardClass;
     public enum CardClass { Deathknight, Necromancer, Monster }
