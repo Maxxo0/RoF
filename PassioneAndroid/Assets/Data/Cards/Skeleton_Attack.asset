@@ -20,7 +20,7 @@ MonoBehaviour:
   cardClass: 2
   cardDescription:
     baseAmount: Get the other character's card
-    upgradedAmount: 
+    upgradedAmount: Get the other character's card upgraded
   cardCost:
     baseAmount: 0
     upgradedAmount: 0

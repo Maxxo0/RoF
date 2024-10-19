@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4de94ebddec380740a11a0b31e7e9b32, type: 3}
-  m_Name: Spider_Web
+  m_Name: Rat_Bite
   m_EditorClassIdentifier: 
-  cardTitle: 
+  cardTitle: Rat Bite
   cardIcon: {fileID: 0}
-  cardBorder: {fileID: 21300000, guid: 376836408d811004a8417456588b0eca, type: 3}
+  cardBorder: {fileID: 21300000, guid: f081319f84f84aa43ba25f3bf27d5c25, type: 3}
   isUpgraded: 0
   cardType: 0
   cardClass: 2
   cardDescription:
-    baseAmount: Apply Stun an enemy.
-    upgradedAmount: Apply Stun all enemies.
+    baseAmount: Deal X damage
+    upgradedAmount: Deal X damage. Apply 3 truns Poison.
   cardCost:
     baseAmount: 0
     upgradedAmount: 0
@@ -30,4 +30,4 @@ MonoBehaviour:
   buffAmount:
     baseAmount: 0
     upgradedAmount: 0
-  rarity: 0
+  rarity: 1

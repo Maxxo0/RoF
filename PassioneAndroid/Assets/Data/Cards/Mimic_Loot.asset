@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4de94ebddec380740a11a0b31e7e9b32, type: 3}
-  m_Name: Spider_Web
+  m_Name: Mimic_Loot
   m_EditorClassIdentifier: 
-  cardTitle: 
+  cardTitle: Mimic Loot
   cardIcon: {fileID: 0}
-  cardBorder: {fileID: 21300000, guid: 376836408d811004a8417456588b0eca, type: 3}
+  cardBorder: {fileID: 21300000, guid: 78353abcb4ad7ea40853e594ba980858, type: 3}
   isUpgraded: 0
-  cardType: 0
-  cardClass: 2
+  cardType: 2
+  cardClass: 0
   cardDescription:
-    baseAmount: Apply Stun an enemy.
-    upgradedAmount: Apply Stun all enemies.
+    baseAmount: Grants a temporary item
+    upgradedAmount: Grants item
   cardCost:
     baseAmount: 0
     upgradedAmount: 0
@@ -30,4 +30,4 @@ MonoBehaviour:
   buffAmount:
     baseAmount: 0
     upgradedAmount: 0
-  rarity: 0
+  rarity: 3
