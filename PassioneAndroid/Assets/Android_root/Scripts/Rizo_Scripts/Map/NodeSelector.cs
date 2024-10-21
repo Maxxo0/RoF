@@ -19,6 +19,7 @@ public class NodeSelector : MonoBehaviour
             selectedNode = nodeList[randomIndex];
             selectedNode.SetActive(true);
         }
+        gameObject.GetComponent<NodeRute>().nodeActive = selectedNode;
     }
 
     public void CompletEvent() 
