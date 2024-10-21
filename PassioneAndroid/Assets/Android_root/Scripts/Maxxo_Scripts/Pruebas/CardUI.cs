@@ -26,7 +26,7 @@ public class CardUI : MonoBehaviour
     {
         if (GameManager.Instance.actualClass == GameManager.CharacterClass.necromancer && card.name == ("Player_Attack"))
         {
-            cardTitleText.text = ("Magic Missile");
+            cardTitleText.text = ("Ligthning Bolt");
         }
         if (GameManager.Instance.actualClass == GameManager.CharacterClass.deathknight && card.name == ("Player_Attack"))
         {
@@ -35,7 +35,7 @@ public class CardUI : MonoBehaviour
         }
         if (GameManager.Instance.actualClass == GameManager.CharacterClass.necromancer && card.name == ("Player_HeavyAttack"))
         {
-            cardTitleText.text = ("Electric Shock");
+            cardTitleText.text = ("Thunder");
         }
         if (GameManager.Instance.actualClass == GameManager.CharacterClass.deathknight && card.name == ("Player_HeavyAttack"))
         {

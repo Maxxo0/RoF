@@ -7,6 +7,7 @@ namespace Maxxo
 public class CardActions : MonoBehaviour
     {
         ScriptableCard card;
+        GameObject target;
         BattleSceneManager battleSceneManager;
 
         private void Awake()
@@ -14,15 +15,10 @@ public class CardActions : MonoBehaviour
             battleSceneManager = FindObjectOfType<BattleSceneManager>();
         }
         // Start is called before the first frame update
-        void Start()
+        public void PerformAcrion(ScriptableCard _card, GameObject _target)
         {
-        
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
+            card = _card;
+            target = _target;
         }
     
 
