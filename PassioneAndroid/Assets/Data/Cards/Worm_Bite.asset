@@ -17,7 +17,7 @@ MonoBehaviour:
   cardBorder: {fileID: 21300000, guid: f081319f84f84aa43ba25f3bf27d5c25, type: 3}
   isUpgraded: 0
   cardType: 0
-  cardClass: 2
+  cardClass: 1
   cardDescription:
     baseAmount: Deal X damage
     upgradedAmount: Gain X Block

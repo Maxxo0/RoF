@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4de94ebddec380740a11a0b31e7e9b32, type: 3}
-  m_Name: Bash
+  m_Name: Player_HeavyAttack
   m_EditorClassIdentifier: 
-  cardTitle: Bash
+  cardTitle: Player Heavy
   cardIcon: {fileID: 0}
-  cardBorder: {fileID: 21300000, guid: f081319f84f84aa43ba25f3bf27d5c25, type: 3}
+  cardBorder: {fileID: 21300000, guid: 376836408d811004a8417456588b0eca, type: 3}
   isUpgraded: 0
   cardType: 0
   cardClass: 0
   cardDescription:
-    baseAmount: Deal 8 damage. Apply 2 Vulnerable.
-    upgradedAmount: Deal 10 damage. Apply 3 Vulnerable.
+    baseAmount: Deal X damage
+    upgradedAmount: Apply bleed
   cardCost:
     baseAmount: 2
     upgradedAmount: 1
   cardEffect:
-    baseAmount: 2
-    upgradedAmount: 2
+    baseAmount: 0
+    upgradedAmount: 0
   buffAmount:
     baseAmount: 0
     upgradedAmount: 0

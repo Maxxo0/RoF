@@ -14,7 +14,7 @@ public class ScriptableCard : ScriptableObject
     public enum CardType { Attack, Shield, Special }
 
     public CardClass cardClass;
-    public enum CardClass { Deathknight, Necromancer, Monster }
+    public enum CardClass { Player , Monster }
 
 
     public CardDescription cardDescription;
@@ -47,6 +47,13 @@ public class ScriptableCard : ScriptableObject
             return cardDescription.baseAmount;
         else
             return cardDescription.upgradedAmount;
+    }
+    public int GetCardEffectAmount()
+    {
+        if (!isUpgraded)
+            return cardEffect.baseAmount;
+        else
+            return cardEffect.upgradedAmount;
     }
     public int GetBuffAmount()
     {
