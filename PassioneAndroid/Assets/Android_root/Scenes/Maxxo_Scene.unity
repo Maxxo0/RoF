@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2555625, y: 0.47774205}
   m_AnchorMax: {x: 0.2555625, y: 0.5}
-  m_AnchoredPosition: {x: 7.500061, y: 12}
+  m_AnchoredPosition: {x: 7.500122, y: 12}
   m_SizeDelta: {x: 161, y: 6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &76631745
@@ -1975,18 +1975,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cdaf918c6b9d3c4c8c1a945a4ab61ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
   playerDeck:
-  - {fileID: 11400000, guid: 1ece32dfe5e6a2146a133a56e95e1559, type: 2}
-  - {fileID: 11400000, guid: 1ece32dfe5e6a2146a133a56e95e1559, type: 2}
-  - {fileID: 11400000, guid: 1ece32dfe5e6a2146a133a56e95e1559, type: 2}
+  - {fileID: 11400000, guid: d3f33ed6483f4b648ae3bb1228e4555a, type: 2}
+  - {fileID: 11400000, guid: d3f33ed6483f4b648ae3bb1228e4555a, type: 2}
+  - {fileID: 11400000, guid: d3f33ed6483f4b648ae3bb1228e4555a, type: 2}
   - {fileID: 11400000, guid: 173def036d31478479107cadb26bf81e, type: 2}
   - {fileID: 11400000, guid: 173def036d31478479107cadb26bf81e, type: 2}
   - {fileID: 11400000, guid: 173def036d31478479107cadb26bf81e, type: 2}
-  - {fileID: 11400000, guid: 4fbf51a2f99f26c46a8d4d41d6d06553, type: 2}
-  - {fileID: 11400000, guid: 4fbf51a2f99f26c46a8d4d41d6d06553, type: 2}
-  - {fileID: 11400000, guid: 5324e640d00181b47920dabc10f6b032, type: 2}
-  - {fileID: 11400000, guid: 5324e640d00181b47920dabc10f6b032, type: 2}
+  - {fileID: 11400000, guid: d69f329c46b3d604fae89bd4630a42be, type: 2}
+  - {fileID: 11400000, guid: d69f329c46b3d604fae89bd4630a42be, type: 2}
+  - {fileID: 11400000, guid: 173def036d31478479107cadb26bf81e, type: 2}
+  - {fileID: 11400000, guid: 173def036d31478479107cadb26bf81e, type: 2}
   cardLibrary: []
   floorNumber: 1
   goldAmount: 0
@@ -3191,7 +3190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2566042, y: 0.5}
   m_AnchorMax: {x: 0.2566042, y: 0.5}
-  m_AnchoredPosition: {x: 5.500061, y: 2}
+  m_AnchoredPosition: {x: 5.5, y: 2}
   m_SizeDelta: {x: 161, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1704971656

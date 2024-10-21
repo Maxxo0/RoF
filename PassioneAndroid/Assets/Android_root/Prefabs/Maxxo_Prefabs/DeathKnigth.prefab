@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 621077684176598785}
   - component: {fileID: 8552454351320072664}
   m_Layer: 0
-  m_Name: Player
+  m_Name: DeathKnigth
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,5 +120,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dea3024506e4f248a260cede2fbae2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Deck:
-  - {fileID: 0}
+  health: 0
+  energy: 0

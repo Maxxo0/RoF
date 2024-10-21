@@ -32,7 +32,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public Character character;
     public List<ScriptableCard> playerDeck = new List<ScriptableCard>();
     public List<ScriptableCard> cardLibrary = new List<ScriptableCard>();
     //public List<Relic> relics = new List<Relic>();

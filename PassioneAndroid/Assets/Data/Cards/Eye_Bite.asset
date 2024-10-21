@@ -17,7 +17,7 @@ MonoBehaviour:
   cardBorder: {fileID: 21300000, guid: e1dacc75c6f68b34b83ea15eab391d59, type: 3}
   isUpgraded: 0
   cardType: 0
-  cardClass: 2
+  cardClass: 1
   cardDescription:
     baseAmount: Deal X damage. If you have less than 50% hit 2 times. If you have
       less than 25% hit 3 times. If you have less than 5% hit 5 times.
