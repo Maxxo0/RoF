@@ -1357,12 +1357,12 @@ PrefabInstance:
         type: 3}
       propertyPath: nodos_a_activar.Array.data[0]
       value: 
-      objectReference: {fileID: 142722902}
+      objectReference: {fileID: 1751285657}
     - target: {fileID: 5307629774344630830, guid: b912814bc755f94429a2d7499ae9683c,
         type: 3}
       propertyPath: nodos_a_activar.Array.data[1]
       value: 
-      objectReference: {fileID: 1751285657}
+      objectReference: {fileID: 780411803}
     - target: {fileID: 5307629774344630830, guid: b912814bc755f94429a2d7499ae9683c,
         type: 3}
       propertyPath: nodos_a_desactivar.Array.size
@@ -1372,7 +1372,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nodos_a_desactivar.Array.data[0]
       value: 
-      objectReference: {fileID: 661513678}
+      objectReference: {fileID: 1388093974}
     - target: {fileID: 8415523097171159843, guid: b912814bc755f94429a2d7499ae9683c,
         type: 3}
       propertyPath: m_LocalPosition.x
