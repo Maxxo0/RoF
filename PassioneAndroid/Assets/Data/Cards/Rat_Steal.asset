@@ -17,7 +17,7 @@ MonoBehaviour:
   cardBorder: {fileID: 21300000, guid: 78353abcb4ad7ea40853e594ba980858, type: 3}
   isUpgraded: 0
   cardType: 2
-  cardClass: 2
+  cardClass: 1
   cardDescription:
     baseAmount: Generates a card of the selected target
     upgradedAmount: Generates a upgraded card of the selected target

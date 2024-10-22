@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 939646577155595028}
+  - component: {fileID: 5789500925798936041}
   m_Layer: 0
   m_Name: Otro
   m_TagString: Untagged
@@ -32,6 +33,21 @@ Transform:
   - {fileID: 2361995197366879385}
   m_Father: {fileID: 5730515731039297828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5789500925798936041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930009854237716881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09f99775b455c47429dabed716f00ed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.05
+  frequency: 5
+  stop: 1
 --- !u!1 &2931885652445599505
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,6 +316,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1059993567181098995}
+  - component: {fileID: 1365498729231144102}
   m_Layer: 0
   m_Name: Combate
   m_TagString: Untagged
@@ -323,6 +340,21 @@ Transform:
   - {fileID: 6682782000693298932}
   m_Father: {fileID: 5730515731039297828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1365498729231144102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3825192007678678199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09f99775b455c47429dabed716f00ed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.05
+  frequency: 5
+  stop: 1
 --- !u!1 &5709194797477522140
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,6 +574,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7979786441638950903}
+  - component: {fileID: 3463090211156282495}
   m_Layer: 0
   m_Name: Tienda
   m_TagString: Untagged
@@ -565,6 +598,21 @@ Transform:
   - {fileID: 7230737872131551171}
   m_Father: {fileID: 5730515731039297828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3463090211156282495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6964282067771700560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09f99775b455c47429dabed716f00ed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.05
+  frequency: 5
+  stop: 1
 --- !u!1 &7429627677228614721
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,9 +624,10 @@ GameObject:
   - component: {fileID: 5730515731039297828}
   - component: {fileID: 3965452604190558704}
   - component: {fileID: 693207959251099782}
+  - component: {fileID: 5307629774344630830}
   m_Layer: 0
   m_Name: Idole
-  m_TagString: Untagged
+  m_TagString: Node
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -641,3 +690,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.35
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5307629774344630830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7429627677228614721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a51b1962bdbe44cba6ba77955487b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodos_a_desactivar: []
+  nodos_a_activar: []
+  nodeActive: {fileID: 0}

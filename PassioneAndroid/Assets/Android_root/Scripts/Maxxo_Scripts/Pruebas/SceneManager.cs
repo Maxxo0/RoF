@@ -20,6 +20,7 @@ public class SceneManager : MonoBehaviour
     }
 
     BattleSceneManager battleSceneManager;
+    [SerializeField] GameObject deathKnight, necromancer;
     [SerializeField] GameObject introPanel, mapPanel, characterSelectPanel, rewardPanel, playerUI;
     [SerializeField] GameObject fprefab1, fprefab2, fprefab3, fprefab4, fprefab5;
     [SerializeField] GameObject enemy1, enemy2, enemy3;
@@ -76,6 +77,7 @@ public class SceneManager : MonoBehaviour
     public void SelectDeathKnight()
     {
         characterSelectPanel.SetActive(false);
+        deathKnight.SetActive(true);
         GameManager.Instance.actualClass = GameManager.CharacterClass.deathknight;
         mapPanel.SetActive(true);
 
@@ -84,6 +86,7 @@ public class SceneManager : MonoBehaviour
     public void SelectNecromancer()
     {
         characterSelectPanel.SetActive(false);
+        necromancer.SetActive(true);
         GameManager.Instance.actualClass = GameManager.CharacterClass.necromancer;
         mapPanel.SetActive(true);
     }
