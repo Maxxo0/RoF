@@ -22,6 +22,7 @@ namespace Maxxo
         public int energy;
         public Turn turn;
         public enum Turn { Player, Enemy };
+        
 
         [Header("Enemies")]
         public GameObject[] possibleEnemies;

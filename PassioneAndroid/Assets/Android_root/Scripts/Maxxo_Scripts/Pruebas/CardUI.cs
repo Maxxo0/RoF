@@ -43,6 +43,7 @@ public class CardUI : MonoBehaviour
             cardTitleText.text = ("Bonk");
         }
 
+        
 
     }
 

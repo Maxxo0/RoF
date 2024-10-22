@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
 
     public List<ScriptableCard> playerDeck = new List<ScriptableCard>();
     public List<ScriptableCard> cardLibrary = new List<ScriptableCard>();
+    public GameObject target;
     //public List<Relic> relics = new List<Relic>();
     //public List<Relic> relicLibrary = new List<Relic>();
     public int floorNumber = 1;
