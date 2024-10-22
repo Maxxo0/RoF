@@ -24,7 +24,7 @@ public class SceneManager : MonoBehaviour
     [SerializeField] GameObject introPanel, mapPanel, characterSelectPanel, rewardPanel, playerUI;
     [SerializeField] GameObject fprefab1, fprefab2, fprefab3, fprefab4, fprefab5;
     [SerializeField] GameObject enemy1, enemy2, enemy3;
-    [SerializeField] Transform eSpawn1, eSpawn2, eSpawn3;
+    [SerializeField] GameObject eSpawn1, eSpawn2, eSpawn3;
 
     private void Awake()
     {
@@ -96,9 +96,9 @@ public class SceneManager : MonoBehaviour
         StartCoroutine(LoadBattle());
         int escenary;
         int enemies;
-        int lowEnemies;
+        
         enemies = Random.Range(1, 4);
-        lowEnemies = Random.Range(1, 3);
+        
         escenary = Random.Range(1, 6);
         Debug.Log(escenary);
         if (escenary == 1) { fprefab1.SetActive(true); }
@@ -107,18 +107,22 @@ public class SceneManager : MonoBehaviour
         if (escenary == 4) { fprefab4.SetActive(true); }
         if (escenary == 5) { fprefab5.SetActive(true); }
 
-        if (enemies == 1 && lowEnemies == 1)  { Instantiate(enemy1, eSpawn1.position, Quaternion.identity); Debug.Log("1/1"); } 
-        if (enemies == 1 && lowEnemies == 2)  { Instantiate(enemy2, eSpawn1.position, Quaternion.identity); Debug.Log("1/2"); }
+        if (enemies == 1 )  { EnemySpawner enemySpawner1 = eSpawn1.GetComponent<EnemySpawner>(); enemySpawner1.SpawnEnemies();  } 
+       
 
-        if (enemies == 2 && lowEnemies == 1) { Instantiate(enemy1, eSpawn1.position, Quaternion.identity); Instantiate(enemy1, eSpawn2.position, Quaternion.identity); Debug.Log("2/1"); }
-        if (enemies == 2 && lowEnemies == 2) { Instantiate(enemy2, eSpawn1.position, Quaternion.identity); Instantiate(enemy2, eSpawn2.position, Quaternion.identity); Debug.Log("2/2"); }
+
+        if (enemies == 2 ) 
+        {
+            EnemySpawner enemySpawner1 = eSpawn1.GetComponent<EnemySpawner>(); enemySpawner1.SpawnEnemies();
+            EnemySpawner enemySpawner2 = eSpawn2.GetComponent<EnemySpawner>(); enemySpawner2.SpawnEnemies();
+        }
+        
 
         if (enemies == 3)
         {
-            Debug.Log("Boss");
-            Instantiate(enemy3, eSpawn3.position, Quaternion.identity);
-            Instantiate(enemy1, eSpawn1.position, Quaternion.identity);
-            Instantiate(enemy2, eSpawn2.position, Quaternion.identity);
+            EnemySpawner enemySpawner1 = eSpawn1.GetComponent<EnemySpawner>(); enemySpawner1.SpawnEnemies();
+            EnemySpawner enemySpawner2 = eSpawn2.GetComponent<EnemySpawner>(); enemySpawner2.SpawnEnemies();
+            EnemySpawner enemySpawner3 = eSpawn3.GetComponent<EnemySpawner>(); enemySpawner3.SpawnEnemies();
         }
 
         mapPanel.SetActive(false);

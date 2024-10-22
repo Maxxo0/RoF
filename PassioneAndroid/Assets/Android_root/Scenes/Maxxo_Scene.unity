@@ -956,8 +956,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 404571182}
+  - component: {fileID: 404571183}
   m_Layer: 0
-  m_Name: EnemySpawne1
+  m_Name: EnemySpawner1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -978,6 +979,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &404571183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404571181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f932115ee0fd4458d9b79658006f9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawn1: 1
+  spawn2: 0
+  spawn3: 0
+  enemy1: {fileID: 0}
+  enemy2: {fileID: 0}
+  enemy3: {fileID: 0}
+  enemies1:
+  - {fileID: 7401395932581492602, guid: b633015d898ee8e419a44a97407a7b84, type: 3}
+  - {fileID: 4517717747188285965, guid: 39891fae60ba36045a882302449b2125, type: 3}
+  enemies2: []
+  enemies3: []
 --- !u!1 &527029778
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,6 +1089,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 566195607}
+  - component: {fileID: 566195608}
   m_Layer: 0
   m_Name: EnemySpawner3
   m_TagString: Untagged
@@ -1087,6 +1112,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &566195608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566195606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f932115ee0fd4458d9b79658006f9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawn1: 0
+  spawn2: 0
+  spawn3: 1
+  enemy1: {fileID: 0}
+  enemy2: {fileID: 0}
+  enemy3: {fileID: 0}
+  enemies1: []
+  enemies2: []
+  enemies3:
+  - {fileID: 4517717747188285965, guid: 39891fae60ba36045a882302449b2125, type: 3}
+  - {fileID: 8827327163476621221, guid: f39f9f48944aaba4badbf65f35d6e567, type: 3}
 --- !u!1 &643192036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1784,9 +1832,9 @@ MonoBehaviour:
   enemy1: {fileID: 7401395932581492602, guid: b633015d898ee8e419a44a97407a7b84, type: 3}
   enemy2: {fileID: 4517717747188285965, guid: 39891fae60ba36045a882302449b2125, type: 3}
   enemy3: {fileID: 8827327163476621221, guid: f39f9f48944aaba4badbf65f35d6e567, type: 3}
-  eSpawn1: {fileID: 404571182}
-  eSpawn2: {fileID: 1567527413}
-  eSpawn3: {fileID: 566195607}
+  eSpawn1: {fileID: 404571181}
+  eSpawn2: {fileID: 1567527412}
+  eSpawn3: {fileID: 566195606}
 --- !u!1001 &1079133207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2988,6 +3036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1567527413}
+  - component: {fileID: 1567527414}
   m_Layer: 0
   m_Name: EnemySpawner2
   m_TagString: Untagged
@@ -3010,6 +3059,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1567527414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567527412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f932115ee0fd4458d9b79658006f9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawn1: 0
+  spawn2: 1
+  spawn3: 0
+  enemy1: {fileID: 0}
+  enemy2: {fileID: 0}
+  enemy3: {fileID: 0}
+  enemies1: []
+  enemies2:
+  - {fileID: 7401395932581492602, guid: b633015d898ee8e419a44a97407a7b84, type: 3}
+  - {fileID: 4517717747188285965, guid: 39891fae60ba36045a882302449b2125, type: 3}
+  - {fileID: 8827327163476621221, guid: f39f9f48944aaba4badbf65f35d6e567, type: 3}
+  enemies3: []
 --- !u!1001 &1650626647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5092,7 +5165,7 @@ SceneRoots:
   - {fileID: 872470978}
   - {fileID: 1994542803}
   - {fileID: 404571182}
-  - {fileID: 566195607}
   - {fileID: 1567527413}
+  - {fileID: 566195607}
   - {fileID: 4409389202781191044}
   - {fileID: 2825961164019579099}
