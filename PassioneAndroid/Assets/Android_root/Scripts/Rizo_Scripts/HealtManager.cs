@@ -15,7 +15,12 @@ public class HealtManager : MonoBehaviour
     public int healthMaxBase;
     public int healthMaxAlter;
     public int armor;
+    public bool isAlive;
 
+    private void Update()
+    {
+        if (isAlive == false) { dead(); }
+    }
 
     public void HealthUp(int healthUp) 
     {
@@ -41,7 +46,7 @@ public class HealtManager : MonoBehaviour
             {
                 dmg -= armor;
                 armor = 0;
-                if ((health - dmg) <= 0) dead();
+                if ((health - dmg) <= 0) isAlive = false;
                 else health -= dmg;
             }
 
@@ -49,7 +54,7 @@ public class HealtManager : MonoBehaviour
         else
         {
 
-            if ((health - dmg) <= 0) dead();
+            if ((health - dmg) <= 0) isAlive = false;
             else health -= dmg;
         }
     }
@@ -61,6 +66,6 @@ public class HealtManager : MonoBehaviour
     }
     void dead() 
     {
-    
+        gameObject.SetActive(false);
     }
 }
