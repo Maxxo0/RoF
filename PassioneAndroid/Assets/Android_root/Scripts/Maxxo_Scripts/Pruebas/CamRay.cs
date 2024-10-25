@@ -36,7 +36,13 @@ public class CamRay : MonoBehaviour
                     Debug.Log("Enemigo");
 
                 }
+                if (hit.collider.tag == "Player")
+                {
+                    GameManager.Instance.target = hit.collider.gameObject;
+                    Debug.Log("Target Player");
+                }
             }
         }
+        
     }
 }

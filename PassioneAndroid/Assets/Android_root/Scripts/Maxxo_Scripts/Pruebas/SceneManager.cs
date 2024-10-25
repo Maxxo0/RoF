@@ -109,7 +109,7 @@ public class SceneManager : MonoBehaviour
 
         if (enemies == 1 )  { EnemySpawner enemySpawner1 = eSpawn1.GetComponent<EnemySpawner>(); enemySpawner1.SpawnEnemies();  } 
        
-
+            
 
         if (enemies == 2 ) 
         {

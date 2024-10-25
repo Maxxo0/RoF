@@ -2050,6 +2050,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 173def036d31478479107cadb26bf81e, type: 2}
   - {fileID: 11400000, guid: 173def036d31478479107cadb26bf81e, type: 2}
   cardLibrary: []
+  target: {fileID: 0}
   floorNumber: 1
   goldAmount: 0
   actualClass: 0
@@ -3094,7 +3095,6 @@ MonoBehaviour:
   enemies2:
   - {fileID: 7401395932581492602, guid: b633015d898ee8e419a44a97407a7b84, type: 3}
   - {fileID: 4517717747188285965, guid: 39891fae60ba36045a882302449b2125, type: 3}
-  - {fileID: 8827327163476621221, guid: f39f9f48944aaba4badbf65f35d6e567, type: 3}
   enemies3: []
 --- !u!1001 &1650626647
 PrefabInstance:
@@ -4767,6 +4767,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175968218348482579, guid: 709be4764200bf6408b2adedf4439f91,
+        type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175968218348482579, guid: 709be4764200bf6408b2adedf4439f91,
+        type: 3}
+      propertyPath: isAlive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
