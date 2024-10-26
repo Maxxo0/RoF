@@ -13,6 +13,7 @@ public class CardActions : MonoBehaviour
         private void Awake()
         {
             battleSceneManager = FindObjectOfType<BattleSceneManager>();
+
             
         }
 
@@ -23,22 +24,43 @@ public class CardActions : MonoBehaviour
         {
             card = _card;
             GameManager.Instance.target = _target;
+
+            switch (card.cardTitle)
+            {
+                case "Ligthning Bolt":
+                    AttackEnemy();
+                    break;
+                case "Slash":
+                    AttackEnemy();
+                    break;
+                case "Thunder":
+                    AttackEnemy();
+                    break;
+                case "Bonk":
+                    AttackEnemy();
+                    break;
+                case "Skeleton Attack":
+                    AttackEnemy();
+                    break;
+                case "Skeleton Armor":
+                    Block();
+                    break;
+            }
         }
     
 
         private void AttackEnemy()
         {
-            /*int totalDamage = card.GetCardEffectAmount()+player.strength.buffValue;
-            if(target.vulnerable.buffValue>0)
-            {
-                float a = totalDamage*1.5f;
-                Debug.Log("incrased damage from "+totalDamage+" to "+(int)a);
-                totalDamage = (int)a;
-            }
-            target.TakeDamage(totalDamage);*/
+            int totalDamage = card.GetCardEffectAmount();
+            
+            //target.TakeDamage(totalDamage);
 
             Debug.Log("Ataque");
         }
 
+        private void Block()
+        {
+
+        }
     }
 }
