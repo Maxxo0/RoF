@@ -42,6 +42,10 @@ public class CamRay : MonoBehaviour
                     Debug.Log("Target Player");
                 }
             }
+            else
+            {
+                GameManager.Instance.target = null;
+            }
         }
         
     }

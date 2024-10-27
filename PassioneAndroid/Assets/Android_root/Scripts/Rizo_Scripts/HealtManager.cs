@@ -5,6 +5,7 @@
 
 
 
+using Maxxo;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,13 @@ public class HealtManager : MonoBehaviour
     public int healthMaxAlter;
     public int armor;
     public bool isAlive;
+    public ScriptableCard cardDrop;
+    BattleSceneManager battleSceneManager;
+
+    private void Awake()
+    {
+        battleSceneManager = FindObjectOfType<BattleSceneManager>();
+    }
 
     private void Update()
     {
@@ -66,6 +74,7 @@ public class HealtManager : MonoBehaviour
     }
     void dead() 
     {
+        battleSceneManager.DisplayCardInHand(cardDrop);
         gameObject.SetActive(false);
     }
 }

@@ -25,6 +25,7 @@ public class SceneManager : MonoBehaviour
     [SerializeField] GameObject fprefab1, fprefab2, fprefab3, fprefab4, fprefab5;
     [SerializeField] GameObject enemy1, enemy2, enemy3;
     [SerializeField] GameObject eSpawn1, eSpawn2, eSpawn3;
+    public bool enemyT1, enemyT2, enemyT3;
 
     private void Awake()
     {
@@ -128,4 +129,6 @@ public class SceneManager : MonoBehaviour
         mapPanel.SetActive(false);
 
     }
+
+
 }

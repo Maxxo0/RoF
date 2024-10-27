@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1307165638215329499}
   - component: {fileID: 1197126982159184072}
   - component: {fileID: 5147006998877285520}
+  - component: {fileID: 4828312140049267960}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Enemy
@@ -105,3 +106,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4828312140049267960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4517717747188285965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91b8a5a25ec3fa4a8d741a4e3c6df9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  healthMaxBase: 100
+  healthMaxAlter: 0
+  armor: 0
+  isAlive: 1
+  cardDrop: {fileID: 11400000, guid: 7ff0f513312a16340965b47dba15cb8d, type: 2}

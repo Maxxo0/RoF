@@ -20,14 +20,15 @@ public class CardActions : MonoBehaviour
         
 
         // Start is called before the first frame update
-        public void PerformAcrion(ScriptableCard _card, GameObject _target)
+        public void PerformAction(ScriptableCard _card, GameObject _target)
         {
             card = _card;
             GameManager.Instance.target = _target;
 
             switch (card.cardTitle)
             {
-                case "Ligthning Bolt":
+                case "Player Attack":
+                    Debug.Log("Ataca");
                     AttackEnemy();
                     break;
                 case "Slash":
@@ -51,9 +52,11 @@ public class CardActions : MonoBehaviour
 
         private void AttackEnemy()
         {
+            
             int totalDamage = card.GetCardEffectAmount();
             
-            //target.TakeDamage(totalDamage);
+            HealtManager healtManager = GameManager.Instance.target.GetComponent<HealtManager>();
+            healtManager.TakeDMG(totalDamage);
 
             Debug.Log("Ataque");
         }

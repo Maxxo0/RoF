@@ -99,15 +99,15 @@ public class CardUI : MonoBehaviour
         if (battleSceneManager.energy < card.GetCardCostAmount())
             return;
 
-       /* if (card.cardType == Card.CardType.Attack)
+        if (card.cardType == ScriptableCard.CardType.Attack)
         {
             battleSceneManager.PlayCard(this);
-            animator.Play("HoverOffCard");
+            //animator.Play("HoverOffCard");
         }
-        else if (card.cardType != Card.CardType.Attack)
+        else if (card.cardType != ScriptableCard.CardType.Attack)
         {
-            animator.Play("HoverOffCard");
+            //animator.Play("HoverOffCard");
             battleSceneManager.PlayCard(this);
-        }*/
+        }
     }
 }
