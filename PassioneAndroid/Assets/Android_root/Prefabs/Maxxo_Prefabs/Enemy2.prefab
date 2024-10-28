@@ -124,3 +124,4 @@ MonoBehaviour:
   armor: 0
   isAlive: 1
   cardDrop: {fileID: 11400000, guid: 7ff0f513312a16340965b47dba15cb8d, type: 2}
+  type: 1

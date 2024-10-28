@@ -19,6 +19,8 @@ public class HealtManager : MonoBehaviour
     public bool isAlive;
     public ScriptableCard cardDrop;
     BattleSceneManager battleSceneManager;
+    public enum Type { player, enemy }
+    public Type type;
 
     private void Awake()
     {
@@ -27,7 +29,7 @@ public class HealtManager : MonoBehaviour
 
     private void Update()
     {
-        if (isAlive == false) { dead(); }
+        if (isAlive == false && type == Type.enemy) { eDead(); }
     }
 
     public void HealthUp(int healthUp) 
@@ -72,9 +74,9 @@ public class HealtManager : MonoBehaviour
     
     
     }
-    void dead() 
+    void eDead() 
     {
-        battleSceneManager.DisplayCardInHand(cardDrop);
+        battleSceneManager.DisplayCardEnemy(cardDrop);
         gameObject.SetActive(false);
     }
 }

@@ -22,6 +22,7 @@ namespace Maxxo
         public int cardN = 0;
         public int maxEnergy;
         public int energy;
+        public int cardUIN;
         public Turn turn;
         public enum Turn { Player, Enemy1, Enemy2, Enemy3 };
         
@@ -111,6 +112,23 @@ namespace Maxxo
             CardUI cardUI = cardsInHandGameObjects[cardsInHand.Count - 1];
             cardUI.LoadCard(card);
             cardUI.gameObject.SetActive(true);
+        }
+
+        public void DisplayCardEnemy(ScriptableCard card)
+        {
+            if (cardUIN < 10)
+            {
+                CardUI cardUI = cardsInHandGameObjects[cardUIN];
+                cardUIN++;
+                cardUI.LoadCard(card);
+                cardUI.gameObject.SetActive(true);
+                
+                if (cardUIN == 10)
+                {
+                    cardUIN = 5;
+                }
+            }
+           
         }
 
         public void PlayCard(CardUI cardUI)

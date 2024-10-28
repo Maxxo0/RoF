@@ -1916,10 +1916,11 @@ MonoBehaviour:
   - {fileID: 1407753369}
   - {fileID: 1849386164}
   - {fileID: 99622496}
-  cardN: 10
   drawAmount: 5
+  cardN: 10
   maxEnergy: 3
   energy: 0
+  cardUIN: 5
   turn: 0
   possibleEnemies: []
   possibleElites: []
