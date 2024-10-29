@@ -18,6 +18,7 @@ public class HealtManager : MonoBehaviour
     public int armor;
     public bool isAlive;
     public ScriptableCard cardDrop;
+    public ScriptableCard[] cardsDrops;
     BattleSceneManager battleSceneManager;
     public enum Type { player, enemy }
     public Type type;
@@ -27,6 +28,10 @@ public class HealtManager : MonoBehaviour
         battleSceneManager = FindObjectOfType<BattleSceneManager>();
     }
 
+    private void Start()
+    {
+        health = healthMaxBase;
+    }
     private void Update()
     {
         if (isAlive == false && type == Type.enemy) { eDead(); }
@@ -76,6 +81,7 @@ public class HealtManager : MonoBehaviour
     }
     void eDead() 
     {
+        cardDrop = cardsDrops[Random.Range(0,10)];
         battleSceneManager.DisplayCardEnemy(cardDrop);
         gameObject.SetActive(false);
     }

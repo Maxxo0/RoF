@@ -1132,8 +1132,8 @@ MonoBehaviour:
   enemy2: {fileID: 0}
   enemy3: {fileID: 0}
   enemies1:
-  - {fileID: 7401395932581492602, guid: b633015d898ee8e419a44a97407a7b84, type: 3}
-  - {fileID: 4517717747188285965, guid: 39891fae60ba36045a882302449b2125, type: 3}
+  - {fileID: 8339912072144536423, guid: 087b151c4dfe55f4185a44e91598c9e7, type: 3}
+  - {fileID: 6113586960061738911, guid: 232365a777247a744b54eb480ac1cd2b, type: 3}
   enemies2: []
   enemies3: []
 --- !u!1 &527029778
@@ -3958,7 +3958,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1756332966
 RectTransform:
   m_ObjectHideFlags: 0
