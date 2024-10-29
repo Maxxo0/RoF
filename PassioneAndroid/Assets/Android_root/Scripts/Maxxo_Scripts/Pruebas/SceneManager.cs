@@ -5,6 +5,14 @@ using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
+    // Enumeración para las clases de personaje
+    public enum Classes
+    {
+        deathKnight = 0,
+        necromancer = 1
+    };
+
+    // Singleton para el SceneManager
     private static SceneManager instance;
     public static SceneManager Instance
     {
@@ -12,22 +20,60 @@ public class SceneManager : MonoBehaviour
         {
             if (instance == null)
             {
-
                 Debug.Log("SceneManager is null!");
             }
             return instance;
         }
     }
 
-    BattleSceneManager battleSceneManager;
-    [SerializeField] GameObject deathKnight, necromancer;
-    [SerializeField] GameObject introPanel, mapPanel, characterSelectPanel, rewardPanel, playerUI;
-    [SerializeField] GameObject fprefab1, fprefab2, fprefab3, fprefab4, fprefab5;
-    [SerializeField] GameObject enemy1, enemy2, enemy3;
-    [SerializeField] GameObject eSpawn1, eSpawn2, eSpawn3;
-    public bool enemyT1, enemyT2, enemyT3;
+    // Cámara
+    [Header("Cámaras")]
+    [SerializeField] private GameObject baseCam;
+    [SerializeField] private GameObject mapCam;
 
-    private void Awake()
+    // Referencia al BattleSceneManager
+    private BattleSceneManager battleSceneManager;
+
+    // Personajes
+    [Header("Personajes")]
+    [SerializeField] private GameObject deathKnight;
+    [SerializeField] private GameObject necromancer;
+
+    // Paneles de UI
+    [Header("Paneles de UI")]
+    [SerializeField] private GameObject introPanel;
+    [SerializeField] private GameObject mapPanel;
+    [SerializeField] private GameObject characterSelectPanel;
+    [SerializeField] private GameObject rewardPanel;
+    [SerializeField] private GameObject playerUI;
+
+    // Prefabs
+    [Header("Prefabs")]
+    [SerializeField] private GameObject fprefab1;
+    [SerializeField] private GameObject fprefab2;
+    [SerializeField] private GameObject fprefab3;
+    [SerializeField] private GameObject fprefab4;
+    [SerializeField] private GameObject fprefab5;
+
+    // Enemigos
+    [Header("Enemigos")]
+    [SerializeField] private GameObject enemy1;
+    [SerializeField] private GameObject enemy2;
+    [SerializeField] private GameObject enemy3;
+
+    // Puntos de aparición de enemigos
+    [Header("Puntos de aparición")]
+    [SerializeField] private GameObject eSpawn1;
+    [SerializeField] private GameObject eSpawn2;
+    [SerializeField] private GameObject eSpawn3;
+
+    // Estado de los enemigos
+    [Header("Estado de Enemigos")]
+    public bool enemyT1;
+    public bool enemyT2;
+    public bool enemyT3;
+
+private void Awake()
     {
         if (instance == null)
         {
@@ -92,6 +138,28 @@ public class SceneManager : MonoBehaviour
         mapPanel.SetActive(true);
     }
 
+    public void OnCharacterSelect(int classIndex)
+    {
+        Classes selectedClass = (Classes)classIndex;
+        SelectCharacter(selectedClass);
+    }
+    void SelectCharacter(Classes selectedClass)
+    {
+        characterSelectPanel.SetActive(false);
+        switch (selectedClass) 
+        {
+            case Classes.deathKnight:
+                deathKnight.SetActive(true);
+                GameManager.Instance.actualClass = GameManager.CharacterClass.deathknight;
+                break;
+            case Classes.necromancer:
+                necromancer.SetActive(true);
+                GameManager.Instance.actualClass = GameManager.CharacterClass.necromancer;
+                break;
+        }
+        baseCam.SetActive(false);
+        mapCam.SetActive(true);
+    }
     public void SelectLevel()
     {
         StartCoroutine(LoadBattle());
