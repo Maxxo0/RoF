@@ -96,20 +96,10 @@ private void Awake()
     public IEnumerator LoadBattle()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        //StartCoroutine(sceneFader.UI_Fade());
         yield return new WaitForSeconds(1);
 
-        /*mapScene.SetActive(false);
-        chestScene.SetActive(false);
-        restScene.SetActive(false);
-        playerIcon.SetActive(true);*/
-
-        /*if (e == "enemy")*/
         battleSceneManager.StartHallwayFight();
-        /*else if (e == "elite")
-            battleSceneManager.StartEliteFight();*/
 
-        //fade from black
         yield return new WaitForSeconds(1);
         Cursor.lockState = CursorLockMode.None;
     }
@@ -160,43 +150,30 @@ private void Awake()
         baseCam.SetActive(false);
         mapCam.SetActive(true);
     }
+
     public void SelectLevel()
     {
         StartCoroutine(LoadBattle());
-        int escenary;
-        int enemies;
-        
-        enemies = Random.Range(1, 4);
-        
-        escenary = Random.Range(1, 6);
+        int escenary = Random.Range(1, 6);
+        int enemies = Random.Range(1, 4);
+
         Debug.Log(escenary);
-        if (escenary == 1) { fprefab1.SetActive(true); }
-        if (escenary == 2) { fprefab2.SetActive(true); }
-        if (escenary == 3) { fprefab3.SetActive(true); }
-        if (escenary == 4) { fprefab4.SetActive(true); }
-        if (escenary == 5) { fprefab5.SetActive(true); }
 
-        if (enemies == 1 )  { EnemySpawner enemySpawner1 = eSpawn1.GetComponent<EnemySpawner>(); enemySpawner1.SpawnEnemies();  } 
-       
-            
-
-        if (enemies == 2 ) 
+        // Activar prefab según el escenario seleccionado
+        switch (escenary)
         {
-            EnemySpawner enemySpawner1 = eSpawn1.GetComponent<EnemySpawner>(); enemySpawner1.SpawnEnemies();
-            EnemySpawner enemySpawner2 = eSpawn2.GetComponent<EnemySpawner>(); enemySpawner2.SpawnEnemies();
+            case 1: fprefab1.SetActive(true); break;
+            case 2: fprefab2.SetActive(true); break;
+            case 3: fprefab3.SetActive(true); break;
+            case 4: fprefab4.SetActive(true); break;
+            case 5: fprefab5.SetActive(true); break;
         }
-        
 
-        if (enemies == 3)
-        {
-            EnemySpawner enemySpawner1 = eSpawn1.GetComponent<EnemySpawner>(); enemySpawner1.SpawnEnemies();
-            EnemySpawner enemySpawner2 = eSpawn2.GetComponent<EnemySpawner>(); enemySpawner2.SpawnEnemies();
-            EnemySpawner enemySpawner3 = eSpawn3.GetComponent<EnemySpawner>(); enemySpawner3.SpawnEnemies();
-        }
+        // Activar enemigos según la cantidad seleccionada
+        if (enemies >= 1) eSpawn1.GetComponent<EnemySpawner>().SpawnEnemies();
+        if (enemies >= 2) eSpawn2.GetComponent<EnemySpawner>().SpawnEnemies();
+        if (enemies == 3) eSpawn3.GetComponent<EnemySpawner>().SpawnEnemies();
 
         mapPanel.SetActive(false);
-
     }
-
-
 }
