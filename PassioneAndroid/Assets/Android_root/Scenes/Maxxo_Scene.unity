@@ -1107,7 +1107,7 @@ Transform:
   m_GameObject: {fileID: 404571181}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.25, y: 0.75, z: 0}
+  m_LocalPosition: {x: 4.25, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1240,7 +1240,7 @@ Transform:
   m_GameObject: {fileID: 566195606}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.25, y: 0.75, z: -1.5}
+  m_LocalPosition: {x: 5.25, y: 1, z: -1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1267,8 +1267,8 @@ MonoBehaviour:
   enemies1: []
   enemies2: []
   enemies3:
-  - {fileID: 4517717747188285965, guid: 39891fae60ba36045a882302449b2125, type: 3}
-  - {fileID: 8827327163476621221, guid: f39f9f48944aaba4badbf65f35d6e567, type: 3}
+  - {fileID: 9094481924470186725, guid: 82e9d862401784844a1d9756356a25ab, type: 3}
+  - {fileID: 4487345629628019493, guid: 2b6709fa2e8eaee47bd6346f8d6b68c5, type: 3}
 --- !u!1 &643192036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,6 +1979,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a43b0ead7a44084ca3ef44f1762f72a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseCam: {fileID: 0}
+  mapCam: {fileID: 0}
   deathKnight: {fileID: 2093670923}
   necromancer: {fileID: 2825961164019579100}
   introPanel: {fileID: 1756332965}
@@ -3341,7 +3343,7 @@ Transform:
   m_GameObject: {fileID: 1567527412}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 0.75, z: 1.25}
+  m_LocalPosition: {x: 3, y: 1, z: 1.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3367,8 +3369,9 @@ MonoBehaviour:
   enemy3: {fileID: 0}
   enemies1: []
   enemies2:
-  - {fileID: 7401395932581492602, guid: b633015d898ee8e419a44a97407a7b84, type: 3}
-  - {fileID: 4517717747188285965, guid: 39891fae60ba36045a882302449b2125, type: 3}
+  - {fileID: 8339912072144536423, guid: 087b151c4dfe55f4185a44e91598c9e7, type: 3}
+  - {fileID: 8339912072144536423, guid: 087b151c4dfe55f4185a44e91598c9e7, type: 3}
+  - {fileID: 6113586960061738911, guid: 232365a777247a744b54eb480ac1cd2b, type: 3}
   enemies3: []
 --- !u!1001 &1650626647
 PrefabInstance:
@@ -3958,7 +3961,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1756332966
 RectTransform:
   m_ObjectHideFlags: 0

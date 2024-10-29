@@ -16,7 +16,7 @@ MonoBehaviour:
   cardIcon: {fileID: 0}
   cardBorder: {fileID: 21300000, guid: 376836408d811004a8417456588b0eca, type: 3}
   isUpgraded: 0
-  cardType: 2
+  cardType: 0
   cardClass: 1
   cardDescription:
     baseAmount: If it is the first card to be thrown in this round, it stuns enemies
@@ -26,7 +26,7 @@ MonoBehaviour:
     upgradedAmount: 0
   cardEffect:
     baseAmount: 0
-    upgradedAmount: 0
+    upgradedAmount: 100
   buffAmount:
     baseAmount: 0
     upgradedAmount: 0

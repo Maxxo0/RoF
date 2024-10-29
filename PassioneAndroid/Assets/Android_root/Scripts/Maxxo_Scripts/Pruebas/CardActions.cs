@@ -31,13 +31,7 @@ public class CardActions : MonoBehaviour
                     Debug.Log("Ataca");
                     AttackEnemy();
                     break;
-                case "Slash":
-                    AttackEnemy();
-                    break;
-                case "Thunder":
-                    AttackEnemy();
-                    break;
-                case "Bonk":
+                case "Player Heavy":
                     AttackEnemy();
                     break;
                 case "Skeleton Attack":
@@ -46,6 +40,22 @@ public class CardActions : MonoBehaviour
                 case "Skeleton Armor":
                     Block();
                     break;
+                case "Spider Bite":
+                    AttackEnemy();
+                    break;
+                case "Spider Web":
+                    Stun();
+                    break;
+                case "Mimic Bite":
+                    AttackEnemy();
+                    break;
+                case "Mimic Loot":
+                    TakeItem();
+                    break;
+                case "Mimic Surprise":
+                    Stun();
+                    break;
+
             }
         }
     
@@ -62,6 +72,19 @@ public class CardActions : MonoBehaviour
         }
 
         private void Block()
+        {
+            int armor = card.GetCardEffectAmount();
+
+            HealtManager healtManager = GameManager.Instance.target.GetComponent<HealtManager>();
+            healtManager.ArmorUp(armor);
+        }
+
+        public void Stun()
+        {
+
+        }
+
+        public void TakeItem()
         {
 
         }

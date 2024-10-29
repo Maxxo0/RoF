@@ -28,14 +28,14 @@ public class CardUI : MonoBehaviour
         {
             if (card.name == ("Player_Attack")) { cardTitleText.text = ("Ligthning Bolt"); }
             if (card.name == ("Player_HeavyAttack")) { cardTitleText.text = ("Thunder"); }
-            if (card.name == ("Skeleton_Attack")) { cardTitleText.text = ("Bonk"); }
+            if (card.name == ("Skeleton_Attack")) { cardTitleText.text = ("Bonk"); card.cardClass = ScriptableCard.CardClass.Monster; }
         }
 
         if (GameManager.Instance.actualClass == GameManager.CharacterClass.deathknight)
         {
             if (card.name == ("Player_Attack")) { cardTitleText.text = cardTitleText.text = ("Slash"); }
             if (card.name == ("Player_HeavyAttack")) { cardTitleText.text = ("Bonk"); }
-            if (card.name == ("Skeleton_Attack")) { cardTitleText.text = ("Thunder"); }
+            if (card.name == ("Skeleton_Attack")) { cardTitleText.text = ("Thunder"); card.cardClass = ScriptableCard.CardClass.Monster; }
         }
         
         
