@@ -5,6 +5,14 @@ using UnityEngine;
 
 public class SceneManager : MonoBehaviour
 {
+    // Enumeración para las clases de personaje
+    public enum Classes
+    {
+        deathKnight = 0,
+        necromancer = 1
+    };
+
+    // Singleton para el SceneManager
     private static SceneManager instance;
     public static SceneManager Instance
     {
@@ -12,22 +20,60 @@ public class SceneManager : MonoBehaviour
         {
             if (instance == null)
             {
-
                 Debug.Log("SceneManager is null!");
             }
             return instance;
         }
     }
 
-    BattleSceneManager battleSceneManager;
-    [SerializeField] GameObject deathKnight, necromancer;
-    [SerializeField] GameObject introPanel, mapPanel, characterSelectPanel, rewardPanel, playerUI;
-    [SerializeField] GameObject fprefab1, fprefab2, fprefab3, fprefab4, fprefab5;
-    [SerializeField] GameObject enemy1, enemy2, enemy3;
-    [SerializeField] GameObject eSpawn1, eSpawn2, eSpawn3;
-    public bool enemyT1, enemyT2, enemyT3;
+    // Cámara
+    [Header("Cámaras")]
+    [SerializeField] private GameObject baseCam;
+    [SerializeField] private GameObject mapCam;
 
-    private void Awake()
+    // Referencia al BattleSceneManager
+    private BattleSceneManager battleSceneManager;
+
+    // Personajes
+    [Header("Personajes")]
+    [SerializeField] private GameObject deathKnight;
+    [SerializeField] private GameObject necromancer;
+
+    // Paneles de UI
+    [Header("Paneles de UI")]
+    [SerializeField] private GameObject introPanel;
+    [SerializeField] private GameObject mapPanel;
+    [SerializeField] private GameObject characterSelectPanel;
+    [SerializeField] private GameObject rewardPanel;
+    [SerializeField] private GameObject playerUI;
+
+    // Prefabs
+    [Header("Prefabs")]
+    [SerializeField] private GameObject fprefab1;
+    [SerializeField] private GameObject fprefab2;
+    [SerializeField] private GameObject fprefab3;
+    [SerializeField] private GameObject fprefab4;
+    [SerializeField] private GameObject fprefab5;
+
+    // Enemigos
+    [Header("Enemigos")]
+    [SerializeField] private GameObject enemy1;
+    [SerializeField] private GameObject enemy2;
+    [SerializeField] private GameObject enemy3;
+
+    // Puntos de aparición de enemigos
+    [Header("Puntos de aparición")]
+    [SerializeField] private GameObject eSpawn1;
+    [SerializeField] private GameObject eSpawn2;
+    [SerializeField] private GameObject eSpawn3;
+
+    // Estado de los enemigos
+    [Header("Estado de Enemigos")]
+    public bool enemyT1;
+    public bool enemyT2;
+    public bool enemyT3;
+
+private void Awake()
     {
         if (instance == null)
         {
@@ -50,20 +96,10 @@ public class SceneManager : MonoBehaviour
     public IEnumerator LoadBattle()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        //StartCoroutine(sceneFader.UI_Fade());
         yield return new WaitForSeconds(1);
 
-        /*mapScene.SetActive(false);
-        chestScene.SetActive(false);
-        restScene.SetActive(false);
-        playerIcon.SetActive(true);*/
-
-        /*if (e == "enemy")*/
         battleSceneManager.StartHallwayFight();
-        /*else if (e == "elite")
-            battleSceneManager.StartEliteFight();*/
 
-        //fade from black
         yield return new WaitForSeconds(1);
         Cursor.lockState = CursorLockMode.None;
     }
@@ -92,43 +128,52 @@ public class SceneManager : MonoBehaviour
         mapPanel.SetActive(true);
     }
 
+    public void OnCharacterSelect(int classIndex)
+    {
+        Classes selectedClass = (Classes)classIndex;
+        SelectCharacter(selectedClass);
+    }
+    void SelectCharacter(Classes selectedClass)
+    {
+        characterSelectPanel.SetActive(false);
+        switch (selectedClass) 
+        {
+            case Classes.deathKnight:
+                deathKnight.SetActive(true);
+                GameManager.Instance.actualClass = GameManager.CharacterClass.deathknight;
+                break;
+            case Classes.necromancer:
+                necromancer.SetActive(true);
+                GameManager.Instance.actualClass = GameManager.CharacterClass.necromancer;
+                break;
+        }
+        baseCam.SetActive(false);
+        mapCam.SetActive(true);
+    }
+
     public void SelectLevel()
     {
         StartCoroutine(LoadBattle());
-        int escenary;
-        int enemies;
-        
-        enemies = Random.Range(1, 4);
-        
-        escenary = Random.Range(1, 6);
+        int escenary = Random.Range(1, 6);
+        int enemies = Random.Range(1, 4);
+
         Debug.Log(escenary);
-        if (escenary == 1) { fprefab1.SetActive(true); }
-        if (escenary == 2) { fprefab2.SetActive(true); }
-        if (escenary == 3) { fprefab3.SetActive(true); }
-        if (escenary == 4) { fprefab4.SetActive(true); }
-        if (escenary == 5) { fprefab5.SetActive(true); }
 
-        if (enemies == 1 )  { EnemySpawner enemySpawner1 = eSpawn1.GetComponent<EnemySpawner>(); enemySpawner1.SpawnEnemies();  } 
-       
-            
-
-        if (enemies == 2 ) 
+        // Activar prefab según el escenario seleccionado
+        switch (escenary)
         {
-            EnemySpawner enemySpawner1 = eSpawn1.GetComponent<EnemySpawner>(); enemySpawner1.SpawnEnemies();
-            EnemySpawner enemySpawner2 = eSpawn2.GetComponent<EnemySpawner>(); enemySpawner2.SpawnEnemies();
+            case 1: fprefab1.SetActive(true); break;
+            case 2: fprefab2.SetActive(true); break;
+            case 3: fprefab3.SetActive(true); break;
+            case 4: fprefab4.SetActive(true); break;
+            case 5: fprefab5.SetActive(true); break;
         }
-        
 
-        if (enemies == 3)
-        {
-            EnemySpawner enemySpawner1 = eSpawn1.GetComponent<EnemySpawner>(); enemySpawner1.SpawnEnemies();
-            EnemySpawner enemySpawner2 = eSpawn2.GetComponent<EnemySpawner>(); enemySpawner2.SpawnEnemies();
-            EnemySpawner enemySpawner3 = eSpawn3.GetComponent<EnemySpawner>(); enemySpawner3.SpawnEnemies();
-        }
+        // Activar enemigos según la cantidad seleccionada
+        if (enemies >= 1) eSpawn1.GetComponent<EnemySpawner>().SpawnEnemies();
+        if (enemies >= 2) eSpawn2.GetComponent<EnemySpawner>().SpawnEnemies();
+        if (enemies == 3) eSpawn3.GetComponent<EnemySpawner>().SpawnEnemies();
 
         mapPanel.SetActive(false);
-
     }
-
-
 }
