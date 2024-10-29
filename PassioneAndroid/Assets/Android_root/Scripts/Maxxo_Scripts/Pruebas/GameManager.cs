@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour
     public GameObject target;
     //public List<Relic> relics = new List<Relic>();
     //public List<Relic> relicLibrary = new List<Relic>();
+    public Turn turn;
+    public enum Turn { Player, Enemy1, Enemy2, Enemy3 };
     public int floorNumber = 1;
     public int goldAmount;
     public enum CharacterClass { deathknight, necromancer }

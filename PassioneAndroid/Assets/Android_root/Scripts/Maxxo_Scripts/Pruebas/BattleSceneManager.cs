@@ -23,8 +23,7 @@ namespace Maxxo
         public int maxEnergy;
         public int energy;
         public int cardUIN;
-        public Turn turn;
-        public enum Turn { Player, Enemy1, Enemy2, Enemy3 };
+        
         
 
 
@@ -100,12 +99,7 @@ namespace Maxxo
 
         }
 
-        public void DrawnEnemyCard(int amountToDraw)
-        {
-            
-            
-            
-        }
+        
 
         public void DisplayCardInHand(ScriptableCard card)
         {
@@ -135,19 +129,71 @@ namespace Maxxo
         {
             //Debug.Log("played card");
             //GoblinNob is enraged
-            if (cardUI.card.cardType == ScriptableCard.CardType.Attack)
-            {
-                cardActions.PerformAction(cardUI.card, GameManager.Instance.target);
-                Debug.Log("PlayCard");
-                //energy -= cardUI.card.GetCardCostAmount();
-                //energyText.text = energy.ToString();
 
-                //Instantiate(cardUI.discardEffect, cardUI.transform.position, Quaternion.identity, topParent);
-                selectedCard = null;
-                cardUI.gameObject.SetActive(false);
-                cardsInHand.Remove(cardUI.card);
-                DiscardCard(cardUI.card);
+            // Cartas del Player
+            if (cardUI.card.cardClass == ScriptableCard.CardClass.Player )
+            {
+               if (cardUI.card.cardType == ScriptableCard.CardType.Attack && GameManager.Instance.target.tag == "Enemy") 
+                {
+                    cardActions.PerformAction(cardUI.card, GameManager.Instance.target);
+                    Debug.Log("PlayCard");
+                    energy -= cardUI.card.GetCardCostAmount();
+                    //energyText.text = energy.ToString();
+
+                    //Instantiate(cardUI.discardEffect, cardUI.transform.position, Quaternion.identity, topParent);
+                    selectedCard = null;
+                    cardUI.gameObject.SetActive(false);
+                    cardsInHand.Remove(cardUI.card);
+                    DiscardCard(cardUI.card);
+                }
+
+                if (cardUI.card.cardType == ScriptableCard.CardType.Shield && GameManager.Instance.target.tag == "Player")
+                {
+                    cardActions.PerformAction(cardUI.card, GameManager.Instance.target);
+                    Debug.Log("PlayCard");
+                    energy -= cardUI.card.GetCardCostAmount();
+                    //energyText.text = energy.ToString();
+
+                    //Instantiate(cardUI.discardEffect, cardUI.transform.position, Quaternion.identity, topParent);
+                    selectedCard = null;
+                    cardUI.gameObject.SetActive(false);
+                    cardsInHand.Remove(cardUI.card);
+                    DiscardCard(cardUI.card);
+                }
             }
+
+            if (cardUI.card.cardClass == ScriptableCard.CardClass.Monster)
+            {
+                if (cardUI.card.cardType == ScriptableCard.CardType.Attack && GameManager.Instance.target.tag == "Enemy")
+                {
+                    cardActions.PerformAction(cardUI.card, GameManager.Instance.target);
+                    Debug.Log("PlayCard");
+                    energy -= cardUI.card.GetCardCostAmount();
+                    //energyText.text = energy.ToString();
+
+                    //Instantiate(cardUI.discardEffect, cardUI.transform.position, Quaternion.identity, topParent);
+                    selectedCard = null;
+                    cardUI.gameObject.SetActive(false);
+                    cardsInHand.Remove(cardUI.card);
+                    //DiscardCard(cardUI.card);
+                }
+
+                if (cardUI.card.cardType == ScriptableCard.CardType.Shield && GameManager.Instance.target.tag == "Player")
+                {
+                    cardActions.PerformAction(cardUI.card, GameManager.Instance.target);
+                    Debug.Log("PlayCard");
+                    energy -= cardUI.card.GetCardCostAmount();
+                    //energyText.text = energy.ToString();
+
+                    //Instantiate(cardUI.discardEffect, cardUI.transform.position, Quaternion.identity, topParent);
+                    selectedCard = null;
+                    cardUI.gameObject.SetActive(false);
+                    cardsInHand.Remove(cardUI.card);
+                    //DiscardCard(cardUI.card);
+                }
+            }
+
+
 
 
         }
@@ -163,9 +209,9 @@ namespace Maxxo
 
         public void ChangeTurn()
         {
-            if (turn == Turn.Player)
+            if (GameManager.Instance.turn ==  GameManager.Turn.Player)
             {
-                turn = Turn.Enemy1;
+                GameManager.Instance.turn = GameManager.Turn.Enemy1;
                 //endTurnButton.enabled = false;
 
                 #region discard hand
@@ -202,7 +248,7 @@ namespace Maxxo
                 {
                     e.DisplayIntent();
                 }*/
-                turn = Turn.Player;
+                GameManager.Instance.turn = GameManager.Turn.Player;
 
                 //reset block
                 //player.currentBlock = 0;

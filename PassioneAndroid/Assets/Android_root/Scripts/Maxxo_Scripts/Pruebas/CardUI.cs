@@ -24,25 +24,18 @@ public class CardUI : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.actualClass == GameManager.CharacterClass.necromancer && card.name == ("Player_Attack"))
+        if (GameManager.Instance.actualClass == GameManager.CharacterClass.necromancer )
         {
-            cardTitleText.text = ("Ligthning Bolt");
-        }
-        if (GameManager.Instance.actualClass == GameManager.CharacterClass.deathknight && card.name == ("Player_Attack"))
-        {
-            //card.cardTitle = ("Slash");
-            cardTitleText.text = ("Slash");
-        }
-        if (GameManager.Instance.actualClass == GameManager.CharacterClass.necromancer && card.name == ("Player_HeavyAttack"))
-        {
-            cardTitleText.text = ("Thunder");
-        }
-        if (GameManager.Instance.actualClass == GameManager.CharacterClass.deathknight && card.name == ("Player_HeavyAttack"))
-        {
-            //card.cardTitle = ("Slash");
-            cardTitleText.text = ("Bonk");
+            if (card.name == ("Player_Attack")) { cardTitleText.text = ("Ligthning Bolt"); }
+            if (card.name == ("Player_HeavyAttack")) { cardTitleText.text = ("Thunder"); }
         }
 
+        if (GameManager.Instance.actualClass == GameManager.CharacterClass.deathknight)
+        {
+            if (card.name == ("Player_Attack")) { cardTitleText.text = cardTitleText.text = ("Slash"); }
+            if (card.name == ("Player_HeavyAttack")) { cardTitleText.text = ("Bonk"); }
+        }
+        
         
 
     }

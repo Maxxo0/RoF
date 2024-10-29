@@ -1921,7 +1921,6 @@ MonoBehaviour:
   maxEnergy: 3
   energy: 0
   cardUIN: 5
-  turn: 0
   possibleEnemies: []
   possibleElites: []
 --- !u!114 &1003465909
@@ -2204,6 +2203,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 173def036d31478479107cadb26bf81e, type: 2}
   cardLibrary: []
   target: {fileID: 0}
+  turn: 0
   floorNumber: 1
   goldAmount: 0
   actualClass: 0
@@ -3958,7 +3958,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1756332966
 RectTransform:
   m_ObjectHideFlags: 0
