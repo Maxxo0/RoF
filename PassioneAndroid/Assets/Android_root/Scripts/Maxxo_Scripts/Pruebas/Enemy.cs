@@ -7,7 +7,13 @@ public class Enemy : MonoBehaviour
 {
 
     BattleSceneManager battleSceneManager;
-    [SerializeField] enum EnemyType { spider, skeleton, }
+    public EnemyClass enemyC;
+    public enum EnemyClass { spider, skeleton, }
+
+    public enum EnemyType { Enemy1, Enemy2, Enemy3 };
+    public EnemyType enemyT;
+    public int eTurn;
+
 
     private void Awake()
     {
@@ -28,6 +34,7 @@ public class Enemy : MonoBehaviour
         
     }
 
+    
     void Attack()
     {
 

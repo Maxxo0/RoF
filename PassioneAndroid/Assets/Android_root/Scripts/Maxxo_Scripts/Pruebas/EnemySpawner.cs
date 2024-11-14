@@ -33,18 +33,24 @@ public class EnemySpawner : MonoBehaviour
         {
             int eN1 = Random.Range(0, enemies1.Length);
             enemy1 = enemies1[eN1];
+            Enemy enemy = enemy1.GetComponent<Enemy>();
+            enemy.enemyT = Enemy.EnemyType.Enemy1;
             Instantiate(enemy1, transform.position, Quaternion.identity); Debug.Log("1");
         }
         if (spawn2 == true)
         {
             int eN2 = Random.Range(0, enemies2.Length);
             enemy2 = enemies2[eN2];
+            Enemy enemy = enemy2.GetComponent<Enemy>();
+            enemy.enemyT = Enemy.EnemyType.Enemy2;
             Instantiate(enemy2, transform.position, Quaternion.identity); Debug.Log("2");
         }
         if (spawn3 == true)
         {
             int eN3 = Random.Range(0, enemies3.Length);
             enemy3 = enemies3[eN3];
+            Enemy enemy = enemy3.GetComponent<Enemy>();
+            enemy.enemyT = Enemy.EnemyType.Enemy3;
             Instantiate(enemy3, transform.position, Quaternion.identity); Debug.Log("3");
         }
     }

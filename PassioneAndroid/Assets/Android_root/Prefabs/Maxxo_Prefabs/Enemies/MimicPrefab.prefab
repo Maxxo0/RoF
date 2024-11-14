@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5152733941572369118}
   - component: {fileID: 6862417392321744602}
   - component: {fileID: 3429827752455139084}
+  - component: {fileID: 685127690608162112}
   m_Layer: 0
   m_Name: MimicPrefab
   m_TagString: Enemy
@@ -136,3 +137,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7102a5c6b258b1c45a3f3978fe94a2fc, type: 2}
   - {fileID: 11400000, guid: 7102a5c6b258b1c45a3f3978fe94a2fc, type: 2}
   type: 1
+--- !u!114 &685127690608162112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4487345629628019493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f57eed974b3e04b82b6e3964108e00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyC: 0
+  enemyT: 0
+  eTurn: 0

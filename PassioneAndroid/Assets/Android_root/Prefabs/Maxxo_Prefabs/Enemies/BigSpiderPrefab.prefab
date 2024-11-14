@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 894090962019023670}
   - component: {fileID: 5635317916533308807}
   - component: {fileID: 8965776874024291424}
+  - component: {fileID: 1901181718764410772}
   m_Layer: 0
   m_Name: BigSpiderPrefab
   m_TagString: Enemy
@@ -136,3 +137,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8338835bd8484f244a13b77577899232, type: 2}
   - {fileID: 11400000, guid: 8338835bd8484f244a13b77577899232, type: 2}
   type: 1
+--- !u!114 &1901181718764410772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9094481924470186725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f57eed974b3e04b82b6e3964108e00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyC: 0
+  enemyT: 0
+  eTurn: 0

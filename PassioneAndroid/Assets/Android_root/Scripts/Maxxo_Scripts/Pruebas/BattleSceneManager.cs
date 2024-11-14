@@ -30,6 +30,7 @@ namespace Maxxo
         [Header("Enemies")]
         public GameObject[] possibleEnemies;
         public GameObject[] possibleElites;
+        
         bool eliteFight;
 
         private void Awake()

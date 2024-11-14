@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1744804239763710524}
   - component: {fileID: 2066765616270223473}
   m_Layer: 0
-  m_Name: Spider
+  m_Name: SpiderPreFab
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,3 +149,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f57eed974b3e04b82b6e3964108e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyC: 0
+  enemyT: 0
+  eTurn: 0
