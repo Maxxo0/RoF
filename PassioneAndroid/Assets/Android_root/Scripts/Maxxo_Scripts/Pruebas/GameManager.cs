@@ -44,6 +44,10 @@ public class GameManager : MonoBehaviour
     public enum CharacterClass { deathknight, necromancer }
 
     public CharacterClass actualClass;
+    public int maxEnemies = 3;
+    public int deathEnemies = 0;
+    public bool canE1, canE2, canE3;
+
 
     
 

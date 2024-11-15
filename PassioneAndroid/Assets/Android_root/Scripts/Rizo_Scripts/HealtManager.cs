@@ -84,5 +84,6 @@ public class HealtManager : MonoBehaviour
         cardDrop = cardsDrops[Random.Range(0,10)];
         battleSceneManager.DisplayCardEnemy(cardDrop);
         gameObject.SetActive(false);
+        GameManager.Instance.deathEnemies++;
     }
 }

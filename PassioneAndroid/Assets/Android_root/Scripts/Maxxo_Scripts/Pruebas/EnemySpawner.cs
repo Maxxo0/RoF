@@ -35,6 +35,7 @@ public class EnemySpawner : MonoBehaviour
             enemy1 = enemies1[eN1];
             Enemy enemy = enemy1.GetComponent<Enemy>();
             enemy.enemyT = Enemy.EnemyType.Enemy1;
+            GameManager.Instance.maxEnemies++;
             Instantiate(enemy1, transform.position, Quaternion.identity); Debug.Log("1");
         }
         if (spawn2 == true)
@@ -43,6 +44,7 @@ public class EnemySpawner : MonoBehaviour
             enemy2 = enemies2[eN2];
             Enemy enemy = enemy2.GetComponent<Enemy>();
             enemy.enemyT = Enemy.EnemyType.Enemy2;
+            GameManager.Instance.maxEnemies++;
             Instantiate(enemy2, transform.position, Quaternion.identity); Debug.Log("2");
         }
         if (spawn3 == true)
@@ -51,6 +53,7 @@ public class EnemySpawner : MonoBehaviour
             enemy3 = enemies3[eN3];
             Enemy enemy = enemy3.GetComponent<Enemy>();
             enemy.enemyT = Enemy.EnemyType.Enemy3;
+            GameManager.Instance.maxEnemies++;
             Instantiate(enemy3, transform.position, Quaternion.identity); Debug.Log("3");
         }
     }

@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
 
     public enum EnemyType { Enemy1, Enemy2, Enemy3 };
     public EnemyType enemyT;
-    public int eTurn;
+    public int eAction;
 
 
     private void Awake()

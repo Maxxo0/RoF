@@ -23,15 +23,11 @@ namespace Maxxo
         public int maxEnergy;
         public int energy;
         public int cardUIN;
-        
+        [SerializeField] GameObject endTurnButton;
         
 
 
-        [Header("Enemies")]
-        public GameObject[] possibleEnemies;
-        public GameObject[] possibleElites;
         
-        bool eliteFight;
 
         private void Awake()
         {
@@ -44,7 +40,7 @@ namespace Maxxo
         }
         public void StartEliteFight()
         {
-            eliteFight = true;
+            
             BeginBattle(/*possibleElites*/);
         }
         public void BeginBattle(/*GameObject[] prefabsArray*/)
@@ -67,6 +63,7 @@ namespace Maxxo
             discardPile.AddRange(GameManager.Instance.playerDeck);
             ShuffleCards();
             DrawCards(drawAmount);
+            endTurnButton.SetActive(true);
             energy = maxEnergy;
             //energyText.text = energy.ToString();
         }
@@ -132,7 +129,7 @@ namespace Maxxo
             //GoblinNob is enraged
 
             // Cartas del Player
-            if (cardUI.card.cardClass == ScriptableCard.CardClass.Player )
+            if (cardUI.card.cardClass == ScriptableCard.CardClass.Player && energy >= cardUI.card.cardCost.baseAmount  )
             {
                if (cardUI.card.cardType == ScriptableCard.CardType.Attack && GameManager.Instance.target.tag == "Enemy") 
                 {
@@ -213,7 +210,7 @@ namespace Maxxo
             if (GameManager.Instance.turn ==  GameManager.Turn.Player)
             {
                 GameManager.Instance.turn = GameManager.Turn.Enemy1;
-                //endTurnButton.enabled = false;
+                endTurnButton.SetActive(false);
 
                 #region discard hand
                 foreach (ScriptableCard card in cardsInHand)

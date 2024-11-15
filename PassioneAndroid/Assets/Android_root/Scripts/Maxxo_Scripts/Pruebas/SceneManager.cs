@@ -88,6 +88,15 @@ private void Awake()
         battleSceneManager = FindObjectOfType<BattleSceneManager>();
     }
 
+
+    private void Update()
+    {
+        if (GameManager.Instance.maxEnemies == GameManager.Instance.deathEnemies)
+        {
+            rewardPanel.SetActive(true);
+        }
+    }
+
     public void SelectBattleType()
     {
         StartCoroutine(LoadBattle());
