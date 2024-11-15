@@ -8,6 +8,7 @@ public class ScriptableCard : ScriptableObject
 {
     public string cardTitle;
     public Sprite cardIcon;
+    public List<Sprite> playerIcon = new List<Sprite>();
     public Sprite cardBorder;
     public bool isUpgraded;
     public CardType cardType;
