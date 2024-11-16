@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Spider_Bite
   m_EditorClassIdentifier: 
   cardTitle: Spider Bite
-  cardIcon: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: 6812ad2541b6d0f4b83c0500b7c2744a, type: 3}
+  playerIcon: []
   cardBorder: {fileID: 21300000, guid: f081319f84f84aa43ba25f3bf27d5c25, type: 3}
   isUpgraded: 0
   cardType: 0

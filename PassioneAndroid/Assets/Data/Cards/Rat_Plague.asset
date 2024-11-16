@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Rat_Plague
   m_EditorClassIdentifier: 
   cardTitle: Rat Plague
-  cardIcon: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: d9fff4684e5be2d40ab74a2eb7019614, type: 3}
+  playerIcon: []
   cardBorder: {fileID: 21300000, guid: 376836408d811004a8417456588b0eca, type: 3}
   isUpgraded: 0
   cardType: 0

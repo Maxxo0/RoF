@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Rat_Bite
   m_EditorClassIdentifier: 
   cardTitle: Rat Bite
-  cardIcon: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: af8c5ef5e33eb334399a8cde9afc9e7e, type: 3}
+  playerIcon: []
   cardBorder: {fileID: 21300000, guid: f081319f84f84aa43ba25f3bf27d5c25, type: 3}
   isUpgraded: 0
   cardType: 0
