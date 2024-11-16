@@ -22,10 +22,12 @@ public class HealtManager : MonoBehaviour
     BattleSceneManager battleSceneManager;
     public enum Type { player, enemy }
     public Type type;
+    Enemy enemy;
 
     private void Awake()
     {
         battleSceneManager = FindObjectOfType<BattleSceneManager>();
+        enemy = GetComponent<Enemy>();
     }
 
     private void Start()
@@ -85,6 +87,9 @@ public class HealtManager : MonoBehaviour
         battleSceneManager.DisplayCardEnemy(cardDrop);
         battleSceneManager.drawPile.Add(cardDrop);
         GameManager.Instance.deathEnemies++;
+        /*if (enemy.enemyT == Enemy.EnemyType.Enemy1) { GameManager.Instance.canE1 = false; }
+        if (enemy.enemyT == Enemy.EnemyType.Enemy2) { GameManager.Instance.canE2 = false; }
+        if (enemy.enemyT == Enemy.EnemyType.Enemy3) { GameManager.Instance.canE3 = false; }*/
         if (GameManager.Instance.maxEnemies == GameManager.Instance.deathEnemies)
         {
             SceneManager.Instance.RewardPanel();

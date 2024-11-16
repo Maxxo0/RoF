@@ -151,4 +151,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyC: 0
   enemyT: 0
-  eTurn: 0
+  eAction: 0
+  eCanAct: 0
+  eDamage: 50

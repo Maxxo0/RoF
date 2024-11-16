@@ -129,7 +129,7 @@ namespace Maxxo
             //GoblinNob is enraged
 
             // Cartas del Player
-            if (cardUI.card.cardClass == ScriptableCard.CardClass.Player && energy >= cardUI.card.cardCost.baseAmount  )
+            if (cardUI.card.cardClass == ScriptableCard.CardClass.Player && energy >= cardUI.card.cardCost.baseAmount && !GameManager.Instance.pStun )
             {
                if (cardUI.card.cardType == ScriptableCard.CardType.Attack && GameManager.Instance.target.tag == "Enemy") 
                 {
@@ -160,7 +160,7 @@ namespace Maxxo
                 }
             }
 
-            if (cardUI.card.cardClass == ScriptableCard.CardClass.Monster)
+            if (cardUI.card.cardClass == ScriptableCard.CardClass.Monster && !GameManager.Instance.pStun)
             {
                 if (cardUI.card.cardType == ScriptableCard.CardType.Attack && GameManager.Instance.target.tag == "Enemy")
                 {
@@ -209,8 +209,10 @@ namespace Maxxo
         {
             if (GameManager.Instance.turn ==  GameManager.Turn.Player)
             {
-
-                GameManager.Instance.turn = GameManager.Turn.Enemy1;
+                Debug.Log("ChangeTurn");
+                if (GameManager.Instance.canE1 == true) {  GameManager.Instance.turn = GameManager.Turn.Enemy1; }
+                else if (GameManager.Instance.canE2 == true) {  GameManager.Instance.turn = GameManager.Turn.Enemy2; }
+                else if (GameManager.Instance.canE3 == true) { GameManager.Instance.turn = GameManager.Turn.Enemy3; }
                 endTurnButton.SetActive(false);
 
                 #region discard hand
@@ -228,28 +230,19 @@ namespace Maxxo
                 }
                 #endregion
 
-                /*foreach (Enemy e in enemies)
-                {
-                    if (e.thisEnemy == null)
-                        e.thisEnemy = e.GetComponent<Fighter>();
-
-                    //reset block
-                    e.thisEnemy.currentBlock = 0;
-                    e.thisEnemy.fighterHealthBar.DisplayBlock(0);
-                }*/
-
-                //player.EvaluateBuffsAtTurnEnd();
-                //StartCoroutine(HandleEnemyTurn());
             }
-            if (GameManager.Instance.turn == GameManager.Turn.Enemy1 && GameManager.Instance.canE1 == false)
+            else if (GameManager.Instance.turn == GameManager.Turn.Enemy1)
             {
-                GameManager.Instance.turn = GameManager.Turn.Enemy2;
+                if (GameManager.Instance.canE2 == true) { GameManager.Instance.turn = GameManager.Turn.Enemy2; }
+                else if (GameManager.Instance.canE3 == true) { GameManager.Instance.turn = GameManager.Turn.Enemy3; }
+                else { GameManager.Instance.turn = GameManager.Turn.Player; }
             }
-            if (GameManager.Instance.turn == GameManager.Turn.Enemy2 && GameManager.Instance.canE2 == false)
+            else if (GameManager.Instance.turn == GameManager.Turn.Enemy2)
             {
-                GameManager.Instance.turn = GameManager.Turn.Enemy3;
+                if (GameManager.Instance.canE3 == true) { GameManager.Instance.turn = GameManager.Turn.Enemy3; }
+                else { GameManager.Instance.turn = GameManager.Turn.Player; }
             }
-            if (GameManager.Instance.turn == GameManager.Turn.Enemy3 && GameManager.Instance.canE3 == false)
+            else if (GameManager.Instance.turn == GameManager.Turn.Enemy3)
             {
                 GameManager.Instance.turn = GameManager.Turn.Player; energy = maxEnergy; DrawCards(drawAmount);
             }

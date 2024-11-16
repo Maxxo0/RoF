@@ -36,8 +36,8 @@ public class SceneManager : MonoBehaviour
 
     // Personajes
     [Header("Personajes")]
-    [SerializeField] private GameObject deathKnight;
-    [SerializeField] private GameObject necromancer;
+    public GameObject deathKnight;
+    public GameObject necromancer;
 
     // Paneles de UI
     [Header("Paneles de UI")]
@@ -141,15 +141,18 @@ private void Awake()
         {
             case Classes.deathKnight:
                 deathKnight.SetActive(true);
+                GameManager.Instance.healthPlayer = deathKnight.GetComponent<HealtManager>();
                 GameManager.Instance.actualClass = GameManager.CharacterClass.deathknight;
                 break;
             case Classes.necromancer:
                 necromancer.SetActive(true);
+                GameManager.Instance.healthPlayer = necromancer.GetComponent<HealtManager>();
                 GameManager.Instance.actualClass = GameManager.CharacterClass.necromancer;
                 break;
         }
-        baseCam.SetActive(false);
-        mapCam.SetActive(true);
+        //baseCam.SetActive(false);
+        //mapCam.SetActive(true);
+        mapPanel.SetActive(true);
     }
 
     public void SelectLevel()
