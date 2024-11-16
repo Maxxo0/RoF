@@ -15,13 +15,15 @@ public class Enemy : MonoBehaviour
     public int eAction;
     public bool eCanAct;
     public int eDamage;
+    public int eArmor;
+    HealtManager enemyHealth;
    
 
 
     private void Awake()
     {
         battleSceneManager = FindObjectOfType<BattleSceneManager>();
-        
+        enemyHealth = GetComponent<HealtManager>();
 
     }
 
@@ -39,6 +41,8 @@ public class Enemy : MonoBehaviour
         if (eCanAct)
         {
             if (GameManager.Instance.turn == GameManager.Turn.Enemy1 && enemyT == EnemyType.Enemy1) { EnemyAction(); }
+            if (GameManager.Instance.turn == GameManager.Turn.Enemy2 && enemyT == EnemyType.Enemy2) { EnemyAction(); }
+            if (GameManager.Instance.turn == GameManager.Turn.Enemy3 && enemyT == EnemyType.Enemy3) { EnemyAction(); }
         }
     }
 
@@ -54,6 +58,20 @@ public class Enemy : MonoBehaviour
                     int randomHit = Random.Range(0, 10);
                     if (randomHit > 8) { Stun(); }
                     else { Attack(); }
+                }
+                break;
+            case EnemyClass.Skeleton:
+                if (eAction <= 5) 
+                {
+                    eCanAct = false;
+                    eAction++;
+                    Attack();
+                
+                }
+                else
+                {
+                    eAction++;
+                    Defend();
                 }
                 break;
         }
@@ -87,6 +105,6 @@ public class Enemy : MonoBehaviour
 
     public void Defend()
     {
-
+        enemyHealth.ArmorUp(eArmor);
     }
 }
