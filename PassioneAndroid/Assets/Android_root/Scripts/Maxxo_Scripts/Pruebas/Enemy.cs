@@ -8,11 +8,12 @@ public class Enemy : MonoBehaviour
 
     BattleSceneManager battleSceneManager;
     public EnemyClass enemyC;
-    public enum EnemyClass { spider, skeleton, }
+    public enum EnemyClass { Spider, Skeleton, BigSpider, Mimic }
 
-    public enum EnemyType { Enemy1, Enemy2, Enemy3 };
-    public EnemyType enemyT;
+    public Turn enemyT;
+    public enum Turn { Enemy1, Enemy2, Enemy3 }
     public int eAction;
+    public bool eCanAct;
 
 
     private void Awake()
@@ -25,13 +26,13 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        eCanAct = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (eCanAct == true ) { }
     }
 
     

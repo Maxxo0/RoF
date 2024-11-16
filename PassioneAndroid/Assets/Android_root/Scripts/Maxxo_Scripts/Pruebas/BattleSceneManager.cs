@@ -209,6 +209,7 @@ namespace Maxxo
         {
             if (GameManager.Instance.turn ==  GameManager.Turn.Player)
             {
+
                 GameManager.Instance.turn = GameManager.Turn.Enemy1;
                 endTurnButton.SetActive(false);
 
@@ -240,12 +241,24 @@ namespace Maxxo
                 //player.EvaluateBuffsAtTurnEnd();
                 //StartCoroutine(HandleEnemyTurn());
             }
-            else
+            if (GameManager.Instance.turn == GameManager.Turn.Enemy1 && GameManager.Instance.canE1 == false)
             {
-                /*foreach (Enemy e in enemies)
+                GameManager.Instance.turn = GameManager.Turn.Enemy2;
+            }
+            if (GameManager.Instance.turn == GameManager.Turn.Enemy2 && GameManager.Instance.canE2 == false)
+            {
+                GameManager.Instance.turn = GameManager.Turn.Enemy3;
+            }
+            if (GameManager.Instance.turn == GameManager.Turn.Enemy3 && GameManager.Instance.canE3 == false)
+            {
+                GameManager.Instance.turn = GameManager.Turn.Player; energy = maxEnergy; DrawCards(drawAmount);
+            }
+            /*else
+            {
+                foreach (Enemy e in enemies)
                 {
                     e.DisplayIntent();
-                }*/
+                }
                 GameManager.Instance.turn = GameManager.Turn.Player;
 
                 //reset block
@@ -259,7 +272,7 @@ namespace Maxxo
 
                 //turnText.text = "Player's Turn";
                 //banner.Play("bannerOut");
-            }
+            }*/
         }
 
     }

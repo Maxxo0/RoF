@@ -89,14 +89,6 @@ private void Awake()
     }
 
 
-    private void Update()
-    {
-        if (GameManager.Instance.maxEnemies == GameManager.Instance.deathEnemies)
-        {
-            rewardPanel.SetActive(true);
-        }
-    }
-
     public void SelectBattleType()
     {
         StartCoroutine(LoadBattle());
@@ -184,5 +176,11 @@ private void Awake()
         if (enemies == 3) eSpawn3.GetComponent<EnemySpawner>().SpawnEnemies();
 
         mapPanel.SetActive(false);
+    }
+
+    public void RewardPanel()
+    {
+        
+        rewardPanel.SetActive(true);
     }
 }
