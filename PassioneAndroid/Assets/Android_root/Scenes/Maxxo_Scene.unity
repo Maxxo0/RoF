@@ -1877,10 +1877,10 @@ RectTransform:
   m_Children:
   - {fileID: 643192037}
   - {fileID: 527029779}
+  - {fileID: 1859216432}
   - {fileID: 1243047176}
   - {fileID: 940293547}
   - {fileID: 1756332966}
-  - {fileID: 1859216432}
   m_Father: {fileID: 872470978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2208,7 +2208,7 @@ MonoBehaviour:
   floorNumber: 1
   goldAmount: 0
   actualClass: 0
-  maxEnemies: 3
+  maxEnemies: 0
   deathEnemies: 0
   canE1: 0
   canE2: 0
