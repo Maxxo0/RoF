@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Demon_Drain
   m_EditorClassIdentifier: 
   cardTitle: Demon Drain
-  cardIcon: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: 578aff9e11a5fef499581b63e04f175b, type: 3}
+  playerIcon: []
   cardBorder: {fileID: 21300000, guid: 376836408d811004a8417456588b0eca, type: 3}
   isUpgraded: 0
   cardType: 0

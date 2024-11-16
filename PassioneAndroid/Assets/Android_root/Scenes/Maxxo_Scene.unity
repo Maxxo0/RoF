@@ -2208,8 +2208,11 @@ MonoBehaviour:
   floorNumber: 1
   goldAmount: 0
   actualClass: 0
-  maxEnemies: 0
+  maxEnemies: 3
   deathEnemies: 0
+  canE1: 0
+  canE2: 0
+  canE3: 0
 --- !u!1 &1087484551
 GameObject:
   m_ObjectHideFlags: 0
@@ -5247,7 +5250,7 @@ PrefabInstance:
     - target: {fileID: 749168342801922975, guid: 1fe9f113638d6a0428e56fd8dea8ae1b,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9104948754373156168, guid: 1fe9f113638d6a0428e56fd8dea8ae1b,
         type: 3}

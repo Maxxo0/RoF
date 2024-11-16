@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Eye_Bite
   m_EditorClassIdentifier: 
   cardTitle: Eye Bite
-  cardIcon: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: bbefdff2050e34b42b7738d8f7f9bef1, type: 3}
+  playerIcon: []
   cardBorder: {fileID: 21300000, guid: e1dacc75c6f68b34b83ea15eab391d59, type: 3}
   isUpgraded: 0
   cardType: 0

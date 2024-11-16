@@ -26,16 +26,16 @@ public class CardUI : MonoBehaviour
     {
         if (GameManager.Instance.actualClass == GameManager.CharacterClass.necromancer )
         {
-            if (card.name == ("Player_Attack")) { cardTitleText.text = ("Ligthning Bolt"); }
-            if (card.name == ("Player_HeavyAttack")) { cardTitleText.text = ("Thunder"); }
-            if (card.name == ("Skeleton_Attack")) { cardTitleText.text = ("Bonk"); card.cardClass = ScriptableCard.CardClass.Monster; }
+            if (card.name == ("Player_Attack")) { cardTitleText.text = ("Ligthning Bolt"); card.cardIcon = card.playerIcon[1]; }
+            if (card.name == ("Player_HeavyAttack")) { cardTitleText.text = ("Thunder"); card.cardIcon = card.playerIcon[1]; }
+            if (card.name == ("Skeleton_Attack")) { cardTitleText.text = ("Bonk"); card.cardClass = ScriptableCard.CardClass.Monster; card.cardIcon = card.playerIcon[0]; }
         }
 
         if (GameManager.Instance.actualClass == GameManager.CharacterClass.deathknight)
         {
-            if (card.name == ("Player_Attack")) { cardTitleText.text = cardTitleText.text = ("Slash"); }
-            if (card.name == ("Player_HeavyAttack")) { cardTitleText.text = ("Bonk"); }
-            if (card.name == ("Skeleton_Attack")) { cardTitleText.text = ("Thunder"); card.cardClass = ScriptableCard.CardClass.Monster; }
+            if (card.name == ("Player_Attack")) { cardTitleText.text = cardTitleText.text = ("Slash"); card.cardIcon = card.playerIcon[0]; }
+            if (card.name == ("Player_HeavyAttack")) { cardTitleText.text = ("Bonk"); card.cardIcon = card.playerIcon[0]; }
+            if (card.name == ("Skeleton_Attack")) { cardTitleText.text = ("Thunder"); card.cardClass = ScriptableCard.CardClass.Monster; card.cardIcon = card.playerIcon[1]; }
         }
         
         
@@ -73,6 +73,7 @@ public class CardUI : MonoBehaviour
         cardImage.sprite = card.cardIcon;
         cardBorder.sprite = card.cardBorder;
     }
+
     public void HoverCard()
     {
         if (battleSceneManager.selectedCard == null)

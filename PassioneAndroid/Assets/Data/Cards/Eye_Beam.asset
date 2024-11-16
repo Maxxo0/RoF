@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Eye_Beam
   m_EditorClassIdentifier: 
   cardTitle: Eye Beam
-  cardIcon: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: 60bf1b9ecfca16e4789dc96139ad6757, type: 3}
+  playerIcon: []
   cardBorder: {fileID: 21300000, guid: f081319f84f84aa43ba25f3bf27d5c25, type: 3}
   isUpgraded: 0
   cardType: 0

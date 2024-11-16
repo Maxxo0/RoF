@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Demon_Attack
   m_EditorClassIdentifier: 
   cardTitle: Demon Attack
-  cardIcon: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: 79ce57c427c469d41837ba93f9aceeda, type: 3}
+  playerIcon: []
   cardBorder: {fileID: 21300000, guid: f081319f84f84aa43ba25f3bf27d5c25, type: 3}
   isUpgraded: 0
   cardType: 0
