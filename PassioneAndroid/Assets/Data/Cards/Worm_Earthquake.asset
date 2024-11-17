@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Worm_Earthquake
   m_EditorClassIdentifier: 
   cardTitle: Worm Earthquake
-  cardIcon: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: c9c10658018dd534ea2e29c385d52c49, type: 3}
+  playerIcon: []
   cardBorder: {fileID: 21300000, guid: 78353abcb4ad7ea40853e594ba980858, type: 3}
   isUpgraded: 0
   cardType: 0
