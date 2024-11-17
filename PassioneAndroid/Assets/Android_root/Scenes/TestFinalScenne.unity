@@ -132,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1338700}
   m_Layer: 0
-  m_Name: Spawns1
+  m_Name: Spawns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4118,8 +4118,8 @@ MonoBehaviour:
   enemy2: {fileID: 0}
   enemy3: {fileID: 0}
   enemies1:
-  - {fileID: 6113586960061738911, guid: 232365a777247a744b54eb480ac1cd2b, type: 3}
-  - {fileID: 8339912072144536423, guid: 087b151c4dfe55f4185a44e91598c9e7, type: 3}
+  - {fileID: 1088086705823741902, guid: dd076aa10a31b384d8285551b20fadc5, type: 3}
+  - {fileID: 1088086705823741902, guid: dd076aa10a31b384d8285551b20fadc5, type: 3}
   - {fileID: 8339912072144536423, guid: 087b151c4dfe55f4185a44e91598c9e7, type: 3}
   - {fileID: 8339912072144536423, guid: 087b151c4dfe55f4185a44e91598c9e7, type: 3}
   - {fileID: 8339912072144536423, guid: 087b151c4dfe55f4185a44e91598c9e7, type: 3}

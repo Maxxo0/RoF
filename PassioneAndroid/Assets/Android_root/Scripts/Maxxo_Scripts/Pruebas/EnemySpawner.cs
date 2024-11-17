@@ -33,7 +33,7 @@ public class EnemySpawner : MonoBehaviour
         if (GameManager.Instance.stateS == 4) { firstRange = 6; secondRange = 8; }
         if (GameManager.Instance.stateS == 5) { firstRange = 8; secondRange = 10; }
         if (GameManager.Instance.stateS == 6) { firstRange = 10; secondRange = 12; }
-        if (GameManager.Instance.stateS == 1) { firstRange = 12; secondRange = 14; }
+        if (GameManager.Instance.stateS == 7) { firstRange = 12; secondRange = 14; }
 
     }
 
@@ -47,7 +47,7 @@ public class EnemySpawner : MonoBehaviour
             enemy.enemyT = Enemy.EnemyType.Enemy1;
             GameManager.Instance.maxEnemies++;
             GameManager.Instance.canE1 = true;
-            Instantiate(enemy1, transform.position, Quaternion.identity); Debug.Log("1");
+            Instantiate(enemy1, transform.position, enemy1.transform.rotation); Debug.Log("1");
 
 
         }
@@ -59,7 +59,7 @@ public class EnemySpawner : MonoBehaviour
             enemy.enemyT = Enemy.EnemyType.Enemy2;
             GameManager.Instance.maxEnemies++;
             GameManager.Instance.canE2 = true;
-            Instantiate(enemy2, transform.position, Quaternion.identity); Debug.Log("2");
+            Instantiate(enemy2, transform.position, enemy2.transform.rotation); Debug.Log("2");
 
 
         }
@@ -71,7 +71,7 @@ public class EnemySpawner : MonoBehaviour
             enemy.enemyT = Enemy.EnemyType.Enemy3;
             GameManager.Instance.maxEnemies++;
             GameManager.Instance.canE3 = true;
-            Instantiate(enemy3, transform.position, Quaternion.identity); Debug.Log("3");
+            Instantiate(enemy3, transform.position, enemy2.transform.rotation); Debug.Log("3");
 
 
         }
