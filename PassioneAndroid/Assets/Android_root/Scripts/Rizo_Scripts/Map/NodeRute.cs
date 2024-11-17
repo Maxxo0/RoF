@@ -8,7 +8,6 @@ public class NodeRute : MonoBehaviour
     [SerializeField] bool isNodeTappeable=false;
     [SerializeField] GameObject[] nodos_a_desactivar;
     [SerializeField] GameObject[] nodos_a_activar;
-    [SerializeField] GameObject spawn;
     public GameObject nodeActive;
     public void NextFase()
     {
@@ -36,7 +35,6 @@ public class NodeRute : MonoBehaviour
         isNodeTappeable = false;
         gameObject.GetComponent<SphereCollider>().enabled = false;
         nodeActive.GetComponent<RotateNode>().stop = true;
-        spawn.SetActive(true);
         SceneManager.Instance.SelectLevel();
         nodeActive.SetActive(false);
     }
