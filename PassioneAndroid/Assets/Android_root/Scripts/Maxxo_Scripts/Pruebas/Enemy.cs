@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public enum EnemyClass { Spider, Skeleton, BigSpider, Mimic }
 
     public EnemyType enemyT;
+    [SerializeField] Animator animator;
     public enum EnemyType { Enemy1, Enemy2, Enemy3 }
     public int eAction;
     public bool eCanAct;
@@ -24,6 +25,7 @@ public class Enemy : MonoBehaviour
     {
         battleSceneManager = FindObjectOfType<BattleSceneManager>();
         enemyHealth = GetComponent<HealtManager>();
+        animator = GetComponent<Animator>();
 
     }
 
@@ -89,12 +91,14 @@ public class Enemy : MonoBehaviour
 
     public void Attack()
     {
+        animator.SetTrigger("Attack");
         GameManager.Instance.healthPlayer.TakeDMG(eDamage);
-        StartCoroutine(CTurn());
+        
     }
 
     public void Stun()
     {
+        animator.SetTrigger("Stun");
         GameManager.Instance.pStun = true;
     }
 
@@ -106,6 +110,11 @@ public class Enemy : MonoBehaviour
     public void Defend()
     {
         enemyHealth.ArmorUp(eArmor);
+        
+    }
+
+    public void PassTurn()
+    {
         StartCoroutine(CTurn());
     }
 }
