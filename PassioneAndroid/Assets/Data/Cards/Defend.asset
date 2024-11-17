@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Defend
   m_EditorClassIdentifier: 
   cardTitle: Defend
-  cardIcon: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: 9b069847cd6bdde4aaf6062c34241df7, type: 3}
+  playerIcon: []
   cardBorder: {fileID: 21300000, guid: 376836408d811004a8417456588b0eca, type: 3}
   isUpgraded: 0
   cardType: 1
@@ -30,4 +31,4 @@ MonoBehaviour:
   buffAmount:
     baseAmount: 0
     upgradedAmount: 0
-  rarity: 1
+  rarity: 0

@@ -208,8 +208,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459930663}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.047784176, y: 0.704222, z: -0.04760325, w: -0.70676863}
-  m_LocalPosition: {x: 7.8571167, y: 2.2844772, z: 0.37643802}
+  m_LocalRotation: {x: 0.09043274, y: 0.7129814, z: -0.09357201, w: 0.68900204}
+  m_LocalPosition: {x: -4.4650574, y: 2.4117775, z: 0.22385466}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -259,6 +259,79 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1001 &547360370
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4803355931594059844, guid: 87f6d4b2a61215946a17f161c01a2e42,
+        type: 3}
+      propertyPath: m_Name
+      value: Necromancer_Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803355931594059844, guid: 87f6d4b2a61215946a17f161c01a2e42,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324137022520929022, guid: 87f6d4b2a61215946a17f161c01a2e42,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324137022520929022, guid: 87f6d4b2a61215946a17f161c01a2e42,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324137022520929022, guid: 87f6d4b2a61215946a17f161c01a2e42,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324137022520929022, guid: 87f6d4b2a61215946a17f161c01a2e42,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324137022520929022, guid: 87f6d4b2a61215946a17f161c01a2e42,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324137022520929022, guid: 87f6d4b2a61215946a17f161c01a2e42,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324137022520929022, guid: 87f6d4b2a61215946a17f161c01a2e42,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324137022520929022, guid: 87f6d4b2a61215946a17f161c01a2e42,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324137022520929022, guid: 87f6d4b2a61215946a17f161c01a2e42,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324137022520929022, guid: 87f6d4b2a61215946a17f161c01a2e42,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 87f6d4b2a61215946a17f161c01a2e42, type: 3}
 --- !u!1 &2030506455
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,9 +450,79 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1001 &8814889871872697811
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2778822238105038468, guid: 2b4f284aaac4a9e42b4acf2012430f8e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.24382
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778822238105038468, guid: 2b4f284aaac4a9e42b4acf2012430f8e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.046
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778822238105038468, guid: 2b4f284aaac4a9e42b4acf2012430f8e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.06177
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778822238105038468, guid: 2b4f284aaac4a9e42b4acf2012430f8e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778822238105038468, guid: 2b4f284aaac4a9e42b4acf2012430f8e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778822238105038468, guid: 2b4f284aaac4a9e42b4acf2012430f8e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778822238105038468, guid: 2b4f284aaac4a9e42b4acf2012430f8e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778822238105038468, guid: 2b4f284aaac4a9e42b4acf2012430f8e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778822238105038468, guid: 2b4f284aaac4a9e42b4acf2012430f8e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778822238105038468, guid: 2b4f284aaac4a9e42b4acf2012430f8e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3304389468517348414, guid: 2b4f284aaac4a9e42b4acf2012430f8e,
+        type: 3}
+      propertyPath: m_Name
+      value: DeathKnight_Prefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2b4f284aaac4a9e42b4acf2012430f8e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 459930666}
   - {fileID: 2030506457}
+  - {fileID: 8814889871872697811}
+  - {fileID: 547360370}
