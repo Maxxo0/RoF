@@ -190,4 +190,11 @@ private void Awake()
         
         rewardPanel.SetActive(true);
     }
+
+    public void GoMap()
+    {
+        rewardPanel.SetActive(false);
+        baseCam.SetActive(false);
+        mapCam.SetActive(true);
+    }
 }

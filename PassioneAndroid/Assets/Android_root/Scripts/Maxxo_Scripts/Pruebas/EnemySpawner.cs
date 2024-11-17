@@ -38,6 +38,8 @@ public class EnemySpawner : MonoBehaviour
             GameManager.Instance.maxEnemies++;
             GameManager.Instance.canE1 = true;
             Instantiate(enemy1, transform.position, Quaternion.identity); Debug.Log("1");
+            
+            
         }
         if (spawn2 == true)
         {
@@ -48,6 +50,8 @@ public class EnemySpawner : MonoBehaviour
             GameManager.Instance.maxEnemies++;
             GameManager.Instance.canE2 = true;
             Instantiate(enemy2, transform.position, Quaternion.identity); Debug.Log("2");
+            
+
         }
         if (spawn3 == true)
         {
@@ -58,6 +62,8 @@ public class EnemySpawner : MonoBehaviour
             GameManager.Instance.maxEnemies++;
             GameManager.Instance.canE3 = true;
             Instantiate(enemy3, transform.position, Quaternion.identity); Debug.Log("3");
+            
+
         }
     }
 }
