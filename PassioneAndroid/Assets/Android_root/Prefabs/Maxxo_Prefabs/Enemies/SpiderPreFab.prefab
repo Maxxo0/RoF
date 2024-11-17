@@ -152,5 +152,6 @@ MonoBehaviour:
   enemyC: 0
   enemyT: 0
   eAction: 0
-  eCanAct: 0
+  eCanAct: 1
   eDamage: 50
+  eArmor: 0

@@ -124,6 +124,9 @@ MonoBehaviour:
   enemyC: 1
   enemyT: 0
   eAction: 0
+  eCanAct: 1
+  eDamage: 25
+  eArmor: 50
 --- !u!114 &7745284791715284721
 MonoBehaviour:
   m_ObjectHideFlags: 0
