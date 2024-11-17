@@ -17,6 +17,7 @@ public class HealtManager : MonoBehaviour
     public int healthMaxAlter;
     public int armor;
     public bool isAlive;
+    public bool isDead;
     public ScriptableCard cardDrop;
     public ScriptableCard[] cardsDrops;
     BattleSceneManager battleSceneManager;
@@ -37,6 +38,7 @@ public class HealtManager : MonoBehaviour
     private void Update()
     {
         if (isAlive == false && type == Type.enemy) { eDead(); }
+        if (isAlive == false && type == Type.player) { Dead(); }
     }
 
     public void HealthUp(int healthUp) 
@@ -83,17 +85,31 @@ public class HealtManager : MonoBehaviour
     }
     void eDead() 
     {
-        cardDrop = cardsDrops[Random.Range(0,10)];
-        battleSceneManager.DisplayCardEnemy(cardDrop);
-        battleSceneManager.drawPile.Add(cardDrop);
-        GameManager.Instance.deathEnemies++;
-        /*if (enemy.enemyT == Enemy.EnemyType.Enemy1) { GameManager.Instance.canE1 = false; }
-        if (enemy.enemyT == Enemy.EnemyType.Enemy2) { GameManager.Instance.canE2 = false; }
-        if (enemy.enemyT == Enemy.EnemyType.Enemy3) { GameManager.Instance.canE3 = false; }*/
-        if (GameManager.Instance.maxEnemies == GameManager.Instance.deathEnemies)
+        if (!isDead) 
         {
-            SceneManager.Instance.RewardPanel();
+            isDead = true;
+            cardDrop = cardsDrops[Random.Range(0, 10)];
+            battleSceneManager.DisplayCardEnemy(cardDrop);
+            battleSceneManager.drawPile.Add(cardDrop);
+            GameManager.Instance.deathEnemies++;
+            if (enemy.enemyT == Enemy.EnemyType.Enemy1) { GameManager.Instance.canE1 = false; }
+            if (enemy.enemyT == Enemy.EnemyType.Enemy2) { GameManager.Instance.canE2 = false; }
+            if (enemy.enemyT == Enemy.EnemyType.Enemy3) { GameManager.Instance.canE3 = false; }
+            if (GameManager.Instance.maxEnemies == GameManager.Instance.deathEnemies)
+            {
+                SceneManager.Instance.RewardPanel();
+            }
+            gameObject.SetActive(false);
         }
-        gameObject.SetActive(false);
+    }
+
+    void Dead()
+    {
+        if (!isDead) 
+        {
+            isDead = true;
+            Debug.Log("You die");
+            gameObject.SetActive(false);
+        }
     }
 }

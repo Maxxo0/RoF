@@ -150,9 +150,9 @@ private void Awake()
                 GameManager.Instance.actualClass = GameManager.CharacterClass.necromancer;
                 break;
         }
-        //baseCam.SetActive(false);
-        //mapCam.SetActive(true);
-        mapPanel.SetActive(true);
+        baseCam.SetActive(false);
+        mapCam.SetActive(true);
+        //mapPanel.SetActive(true);
     }
 
     public void SelectLevel()
@@ -172,13 +172,17 @@ private void Awake()
             case 4: fprefab4.SetActive(true); break;
             case 5: fprefab5.SetActive(true); break;
         }
+        baseCam.SetActive(true);
+        mapCam.SetActive(false);
+
 
         // Activar enemigos según la cantidad seleccionada
         if (enemies >= 1) eSpawn1.GetComponent<EnemySpawner>().SpawnEnemies();
         if (enemies >= 2) eSpawn2.GetComponent<EnemySpawner>().SpawnEnemies();
         if (enemies == 3) eSpawn3.GetComponent<EnemySpawner>().SpawnEnemies();
 
-        mapPanel.SetActive(false);
+        //mapPanel.SetActive(false);
+        
     }
 
     public void RewardPanel()

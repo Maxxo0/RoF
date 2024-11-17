@@ -202,7 +202,11 @@ namespace Maxxo
         }
 
         
-
+        void TurnPlayer()
+        {
+            GameManager.Instance.turn = GameManager.Turn.Player;
+            BeginBattle();
+        }
 
 
         public void ChangeTurn()
@@ -235,16 +239,16 @@ namespace Maxxo
             {
                 if (GameManager.Instance.canE2 == true) { GameManager.Instance.turn = GameManager.Turn.Enemy2; }
                 else if (GameManager.Instance.canE3 == true) { GameManager.Instance.turn = GameManager.Turn.Enemy3; }
-                else { GameManager.Instance.turn = GameManager.Turn.Player; }
+                else { TurnPlayer(); }
             }
             else if (GameManager.Instance.turn == GameManager.Turn.Enemy2)
             {
                 if (GameManager.Instance.canE3 == true) { GameManager.Instance.turn = GameManager.Turn.Enemy3; }
-                else { GameManager.Instance.turn = GameManager.Turn.Player; }
+                else { TurnPlayer(); }
             }
             else if (GameManager.Instance.turn == GameManager.Turn.Enemy3)
             {
-                GameManager.Instance.turn = GameManager.Turn.Player; energy = maxEnergy; DrawCards(drawAmount);
+                TurnPlayer();
             }
             /*else
             {
@@ -269,4 +273,6 @@ namespace Maxxo
         }
 
     }
+
+    
 } 

@@ -61,7 +61,7 @@ public class Enemy : MonoBehaviour
                 }
                 break;
             case EnemyClass.Skeleton:
-                if (eAction <= 5) 
+                if (eAction == 0 || eAction == 2 || eAction == 4) 
                 {
                     eCanAct = false;
                     eAction++;
@@ -82,7 +82,7 @@ public class Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         battleSceneManager.ChangeTurn();
-
+        eCanAct = true;
 
         yield return null;
     }
@@ -106,5 +106,6 @@ public class Enemy : MonoBehaviour
     public void Defend()
     {
         enemyHealth.ArmorUp(eArmor);
+        StartCoroutine(CTurn());
     }
 }
