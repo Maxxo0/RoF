@@ -12,6 +12,7 @@ public class NodeRute : MonoBehaviour
     public void NextFase()
     {
         if (!isNodeTappeable) return;
+        SceneManager.Instance.SelectLevel();
         Desactive();
         foreach (GameObject obj in nodos_a_desactivar)
         {
@@ -34,8 +35,7 @@ public class NodeRute : MonoBehaviour
         
         isNodeTappeable = false;      
         gameObject.GetComponent<SphereCollider>().enabled = false;
-        nodeActive.GetComponent<RotateNode>().stop = true;
-        SceneManager.Instance.SelectLevel();
+        nodeActive.GetComponent<RotateNode>().stop = true;        
         nodeActive.SetActive(false);
     }
 }
