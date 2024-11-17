@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mimic_Mat
+  m_Name: Worm_Mat
   m_Shader: {fileID: -6465566751694194690, guid: ee03949cc304288478bdd0459a3c296f,
     type: 3}
   m_Parent: {fileID: 0}
@@ -27,7 +27,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Albedo:
-        m_Texture: {fileID: 2800000, guid: aa9b2087d0c84f94e94cdc716a9d3404, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6fa5b12d03398b34da6c20ef3c5ced31, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normals:
@@ -72,7 +72,7 @@ Material:
     - _ZWriteControl: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 0}
-    - _DissolveColor: {r: 0.6594876, g: 0.9480332, b: 3.5849056, a: 0}
+    - _DissolveColor: {r: 3.7476301, g: 1.3883902, b: 0.26516247, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3938494442943950374
 MonoBehaviour:

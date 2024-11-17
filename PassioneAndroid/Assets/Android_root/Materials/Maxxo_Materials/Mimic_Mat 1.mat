@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mimic_Mat
+  m_Name: Mimic_Mat 1
   m_Shader: {fileID: -6465566751694194690, guid: ee03949cc304288478bdd0459a3c296f,
     type: 3}
   m_Parent: {fileID: 0}
@@ -27,7 +27,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Albedo:
-        m_Texture: {fileID: 2800000, guid: aa9b2087d0c84f94e94cdc716a9d3404, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0690b6137f4b39240a1a12c55e96a7c2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normals:
