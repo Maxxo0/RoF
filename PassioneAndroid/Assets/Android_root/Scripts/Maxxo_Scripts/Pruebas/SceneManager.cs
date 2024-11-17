@@ -98,7 +98,6 @@ private void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
         yield return new WaitForSeconds(1);
-
         battleSceneManager.StartHallwayFight();
 
         yield return new WaitForSeconds(1);
@@ -174,7 +173,7 @@ private void Awake()
         }
         baseCam.SetActive(true);
         mapCam.SetActive(false);
-
+        
 
         // Activar enemigos según la cantidad seleccionada
         if (enemies >= 1) eSpawn1.GetComponent<EnemySpawner>().SpawnEnemies();
@@ -189,5 +188,12 @@ private void Awake()
     {
         
         rewardPanel.SetActive(true);
+    }
+
+    public void GoMap()
+    {
+        rewardPanel.SetActive(false);
+        baseCam.SetActive(false);
+        mapCam.SetActive(true);
     }
 }

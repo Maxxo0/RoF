@@ -97,6 +97,7 @@ public class HealtManager : MonoBehaviour
             if (enemy.enemyT == Enemy.EnemyType.Enemy3) { GameManager.Instance.canE3 = false; }
             if (GameManager.Instance.maxEnemies == GameManager.Instance.deathEnemies)
             {
+                GameManager.Instance.stateS++;
                 SceneManager.Instance.RewardPanel();
             }
             gameObject.SetActive(false);

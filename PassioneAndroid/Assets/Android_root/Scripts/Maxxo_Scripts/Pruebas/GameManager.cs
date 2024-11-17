@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
     public bool canE1, canE2, canE3;
     public HealtManager healthPlayer;
     public bool pStun;
+    public int stateS;
 
 
     
