@@ -21,6 +21,7 @@ public class HealtManager : MonoBehaviour
     public ScriptableCard cardDrop;
     public ScriptableCard[] cardsDrops;
     BattleSceneManager battleSceneManager;
+    Animator animator;
     public enum Type { player, enemy }
     public Type type;
     Enemy enemy;
@@ -29,6 +30,7 @@ public class HealtManager : MonoBehaviour
     {
         battleSceneManager = FindObjectOfType<BattleSceneManager>();
         enemy = GetComponent<Enemy>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -88,19 +90,16 @@ public class HealtManager : MonoBehaviour
         if (!isDead) 
         {
             isDead = true;
+            GameManager.Instance.target = null;
             cardDrop = cardsDrops[Random.Range(0, 10)];
             battleSceneManager.DisplayCardEnemy(cardDrop);
             battleSceneManager.drawPile.Add(cardDrop);
             GameManager.Instance.deathEnemies++;
+            
             if (enemy.enemyT == Enemy.EnemyType.Enemy1) { GameManager.Instance.canE1 = false; }
             if (enemy.enemyT == Enemy.EnemyType.Enemy2) { GameManager.Instance.canE2 = false; }
             if (enemy.enemyT == Enemy.EnemyType.Enemy3) { GameManager.Instance.canE3 = false; }
-            if (GameManager.Instance.maxEnemies == GameManager.Instance.deathEnemies)
-            {
-                GameManager.Instance.stateS++;
-                SceneManager.Instance.RewardPanel();
-            }
-            gameObject.SetActive(false);
+            animator.SetTrigger("Death");
         }
     }
 
@@ -112,5 +111,15 @@ public class HealtManager : MonoBehaviour
             Debug.Log("You die");
             gameObject.SetActive(false);
         }
+    }
+
+    public void Death()
+    {
+        if (GameManager.Instance.maxEnemies == GameManager.Instance.deathEnemies)
+        {
+            GameManager.Instance.stateS++;
+            SceneManager.Instance.RewardPanel();
+        }
+        gameObject.SetActive(false);
     }
 }
