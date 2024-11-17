@@ -2113,106 +2113,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962050917e4146f4393c494630f93f77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &644797558
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 4f2b6985aa32aa54cb6ef0534862f432,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4f2b6985aa32aa54cb6ef0534862f432,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4f2b6985aa32aa54cb6ef0534862f432,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4f2b6985aa32aa54cb6ef0534862f432,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4f2b6985aa32aa54cb6ef0534862f432,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4f2b6985aa32aa54cb6ef0534862f432,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4f2b6985aa32aa54cb6ef0534862f432,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4f2b6985aa32aa54cb6ef0534862f432,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4f2b6985aa32aa54cb6ef0534862f432,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4f2b6985aa32aa54cb6ef0534862f432,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -1853094968961178454, guid: 4f2b6985aa32aa54cb6ef0534862f432,
-        type: 3}
-      propertyPath: m_BackGroundColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -1853094968961178454, guid: 4f2b6985aa32aa54cb6ef0534862f432,
-        type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -1853094968961178454, guid: 4f2b6985aa32aa54cb6ef0534862f432,
-        type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -1853094968961178454, guid: 4f2b6985aa32aa54cb6ef0534862f432,
-        type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 4f2b6985aa32aa54cb6ef0534862f432,
-        type: 3}
-      propertyPath: m_Name
-      value: Mago_Android_Final
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 4f2b6985aa32aa54cb6ef0534862f432,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 8821623529969584324, guid: 4f2b6985aa32aa54cb6ef0534862f432, type: 3}
-    - {fileID: 65702495048144492, guid: 4f2b6985aa32aa54cb6ef0534862f432, type: 3}
-    - {fileID: 2638509727690509668, guid: 4f2b6985aa32aa54cb6ef0534862f432, type: 3}
-    - {fileID: -5568371526223589888, guid: 4f2b6985aa32aa54cb6ef0534862f432, type: 3}
-    - {fileID: -4258411891960909470, guid: 4f2b6985aa32aa54cb6ef0534862f432, type: 3}
-    - {fileID: 7036213049465896255, guid: 4f2b6985aa32aa54cb6ef0534862f432, type: 3}
-    - {fileID: 5148817236446094103, guid: 4f2b6985aa32aa54cb6ef0534862f432, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4f2b6985aa32aa54cb6ef0534862f432, type: 3}
 --- !u!1 &648244311
 GameObject:
   m_ObjectHideFlags: 0
@@ -6956,10 +6856,10 @@ RectTransform:
   m_Children:
   - {fileID: 870042100}
   - {fileID: 65820452}
+  - {fileID: 868658989}
   - {fileID: 1714938128}
   - {fileID: 1420292986}
   - {fileID: 425849506}
-  - {fileID: 868658989}
   m_Father: {fileID: 1855826975}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7012,8 +6912,7 @@ MonoBehaviour:
   maxEnergy: 3
   energy: 0
   cardUIN: 0
-  possibleEnemies: []
-  possibleElites: []
+  endTurnButton: {fileID: 0}
 --- !u!1 &1524589845
 GameObject:
   m_ObjectHideFlags: 3
@@ -7260,6 +7159,13 @@ MonoBehaviour:
   floorNumber: 1
   goldAmount: 0
   actualClass: 0
+  maxEnemies: 3
+  deathEnemies: 0
+  canE1: 0
+  canE2: 0
+  canE3: 0
+  healthPlayer: {fileID: 0}
+  pStun: 0
 --- !u!4 &1552752543
 Transform:
   m_ObjectHideFlags: 0
@@ -8213,7 +8119,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1714938130}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1518861579}
+        m_TargetAssemblyTypeName: Maxxo.BattleSceneManager, Assembly-CSharp
+        m_MethodName: ChangeTurn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1714938130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9165,7 +9083,6 @@ SceneRoots:
   - {fileID: 181267002}
   - {fileID: 1515214946}
   - {fileID: 369431953}
-  - {fileID: 644797558}
   - {fileID: 1046163979}
   - {fileID: 239332365}
   - {fileID: 879202751}
