@@ -32,7 +32,7 @@ public class NodeRute : MonoBehaviour
     public void Desactive() 
     {
         
-        isNodeTappeable = false;
+        isNodeTappeable = false;      
         gameObject.GetComponent<SphereCollider>().enabled = false;
         nodeActive.GetComponent<RotateNode>().stop = true;
         SceneManager.Instance.SelectLevel();
