@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Worm_Bite
   m_EditorClassIdentifier: 
   cardTitle: Worm Bite
-  cardIcon: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: e2f6a397fe11aaf4993f5b9f4e2179bc, type: 3}
+  playerIcon: []
   cardBorder: {fileID: 21300000, guid: f081319f84f84aa43ba25f3bf27d5c25, type: 3}
   isUpgraded: 0
   cardType: 0
@@ -30,4 +31,4 @@ MonoBehaviour:
   buffAmount:
     baseAmount: 0
     upgradedAmount: 0
-  rarity: 0
+  rarity: 1
