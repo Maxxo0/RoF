@@ -1172,7 +1172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &425849506
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6743,7 +6743,7 @@ MonoBehaviour:
   canE1: 0
   canE2: 0
   canE3: 0
-  healthPlayer: {fileID: 0}
+  player: {fileID: 0}
   pStun: 0
   stateS: 1
 --- !u!4 &1552752543
