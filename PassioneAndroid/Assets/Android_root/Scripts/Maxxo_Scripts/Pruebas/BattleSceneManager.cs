@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 using TMPro;
 
@@ -24,6 +25,7 @@ namespace Maxxo
         public int maxEnergy;
         public int energy;
         public int cardUIN;
+        [SerializeField] TextMeshPro energyText;
         [SerializeField] GameObject endTurnButton;
         
 
@@ -38,7 +40,7 @@ namespace Maxxo
 
         private void Update()
         {
-         
+            energyText.text = (energy + "/" + maxEnergy);
         }
         public void StartHallwayFight()
         {
