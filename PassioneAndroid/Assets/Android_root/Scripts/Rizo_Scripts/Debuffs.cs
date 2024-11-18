@@ -60,14 +60,15 @@ public class Debuffs : MonoBehaviour
 
     #region ApplyDebuf
 
-    public void OnAttack(int dmg, bool shadowDmg) 
+    public int OnAttack(int dmg) 
     {
         if (DamageReduction) 
         {
             float a = dmg * 0.75f;
             dmg = (int)Mathf.Round(a);
         }
-        gameObject.GetComponent<Buffs>().OnAttack(dmg, shadowDmg);
+        return gameObject.GetComponent<Buffs>().OnAttack(dmg);
+
     }
 
     public void OnTakeDamage(int dmg, bool shadowDmg) 
@@ -94,7 +95,7 @@ public class Debuffs : MonoBehaviour
     #endregion
 
     #region DOT
-    void EndTurn()
+    public void EndTurn()
     {
         Poisoned();
         Bleeding();

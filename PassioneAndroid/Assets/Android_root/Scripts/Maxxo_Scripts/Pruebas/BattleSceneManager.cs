@@ -245,7 +245,7 @@ namespace Maxxo
                 else if (GameManager.Instance.canE2 == true) {  GameManager.Instance.turn = GameManager.Turn.Enemy2; }
                 else if (GameManager.Instance.canE3 == true) { GameManager.Instance.turn = GameManager.Turn.Enemy3; }
                 endTurnButton.SetActive(false);
-
+                GameManager.Instance.player.GetComponent<Debuffs>().EndTurn();
                 #region discard hand
                 foreach (ScriptableCard card in cardsInHand)
                 {
@@ -267,16 +267,20 @@ namespace Maxxo
                 if (GameManager.Instance.canE2 == true) { GameManager.Instance.turn = GameManager.Turn.Enemy2; }
                 else if (GameManager.Instance.canE3 == true) { GameManager.Instance.turn = GameManager.Turn.Enemy3; }
                 else { TurnPlayer(); }
+                SceneManager.Instance.eSpawn1.GetComponent<EnemySpawner>().enemy1.GetComponent<Debuffs>().EndTurn();
             }
             else if (GameManager.Instance.turn == GameManager.Turn.Enemy2)
             {
                 if (GameManager.Instance.canE3 == true) { GameManager.Instance.turn = GameManager.Turn.Enemy3; }
                 else { TurnPlayer(); }
+                SceneManager.Instance.eSpawn2.GetComponent<EnemySpawner>().enemy2.GetComponent<Debuffs>().EndTurn();
             }
             else if (GameManager.Instance.turn == GameManager.Turn.Enemy3)
             {
                 TurnPlayer();
+                SceneManager.Instance.eSpawn3.GetComponent<EnemySpawner>().enemy3.GetComponent<Debuffs>().EndTurn();
             }
+            GameManager.Instance.player.GetComponent<HealtManager>().noDMG = false;
             /*else
             {
                 foreach (Enemy e in enemies)
@@ -298,10 +302,15 @@ namespace Maxxo
                 //banner.Play("bannerOut");
             }*/
         }
+        public void AddStartMana()
+        {
+            maxEnergy = 4;
+        }
 
     }
 
-    
 
-    
+
+
+
 } 

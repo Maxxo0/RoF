@@ -77,7 +77,7 @@ public class CardActions : MonoBehaviour
         {
             
             int totalDamage = card.GetCardEffectAmount();
-            
+            totalDamage=GameManager.Instance.player.GetComponent<Debuffs>().OnAttack(totalDamage);
             HealtManager healtManager = GameManager.Instance.target.GetComponent<HealtManager>();
             healtManager.TakeDMG(totalDamage);
 
