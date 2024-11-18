@@ -42,7 +42,7 @@ public class SceneManager : MonoBehaviour
     // Paneles de UI
     [Header("Paneles de UI")]
     [SerializeField] private GameObject introPanel;
-    [SerializeField] private GameObject mapPanel;
+    [SerializeField] private GameObject playerUID;
     [SerializeField] private GameObject characterSelectPanel;
     [SerializeField] private GameObject rewardPanel;
     [SerializeField] private GameObject playerUI;
@@ -116,7 +116,7 @@ private void Awake()
         characterSelectPanel.SetActive(false);
         deathKnight.SetActive(true);
         GameManager.Instance.actualClass = GameManager.CharacterClass.deathknight;
-        mapPanel.SetActive(true);
+        //mapPanel.SetActive(true);
 
     }
 
@@ -125,7 +125,7 @@ private void Awake()
         characterSelectPanel.SetActive(false);
         necromancer.SetActive(true);
         GameManager.Instance.actualClass = GameManager.CharacterClass.necromancer;
-        mapPanel.SetActive(true);
+        //mapPanel.SetActive(true);
     }
 
     public void OnCharacterSelect(int classIndex)

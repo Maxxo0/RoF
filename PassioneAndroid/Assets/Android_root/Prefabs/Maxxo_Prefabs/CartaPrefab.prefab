@@ -161,14 +161,14 @@ RectTransform:
   m_GameObject: {fileID: 2995565074186091254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.6629, y: 1.6629, z: 1.6629}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3021974139772929477}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 37.1, y: -8.554778}
+  m_AnchoredPosition: {x: 47.264996, y: 48.44042}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7507998811006418540
@@ -334,6 +334,7 @@ MonoBehaviour:
   cardCostText: {fileID: 6094718833463942916}
   cardImage: {fileID: 413804601110186966}
   cardBorder: {fileID: 8666865324685231267}
+  attack: 
 --- !u!114 &3359897914104732916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -755,14 +756,14 @@ RectTransform:
   m_GameObject: {fileID: 7970075582731460802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1025716, y: 0.1025716, z: 0.1025716}
+  m_LocalScale: {x: 0.1705663, y: 0.1705663, z: 0.1705663}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3021974139772929477}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 36.7, y: -9}
+  m_AnchoredPosition: {x: 46.6, y: 47.7}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1590170931691755638
