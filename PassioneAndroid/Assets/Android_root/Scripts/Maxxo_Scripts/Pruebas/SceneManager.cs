@@ -186,7 +186,7 @@ private void Awake()
 
     public void RewardPanel()
     {
-        
+        battleSceneManager.OffCard();
         rewardPanel.SetActive(true);
     }
 
