@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class NodeSelector : MonoBehaviour
 {
-    [List][SerializeField] GameObject[] nodeList;
+    [SerializeField] GameObject[] nodeList;
     [SerializeField] bool concreteOption;
-    [Dropdown][SerializeField] GameObject selectedNode;
+    [SerializeField] GameObject selectedNode;
     public void randomNode() 
     {
         if (concreteOption)

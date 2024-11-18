@@ -17,9 +17,9 @@ public class EnemySpawner : MonoBehaviour
     
     [SerializeField] Image hpE1, hpE2, hpE3;
 
-    [List][SerializeField] GameObject[] enemies1;
-    [List][SerializeField] GameObject[] enemies2;
-    [List][SerializeField] GameObject[] enemies3;
+    [SerializeField] GameObject[] enemies1;
+    [SerializeField] GameObject[] enemies2;
+    [SerializeField] GameObject[] enemies3;
 
     // Start is called before the first frame update
     void Start()

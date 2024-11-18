@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,20 +8,35 @@ public class TapNode : MonoBehaviour
     [SerializeField] GameObject[] objectToActivate;
     void Update()
     {
-        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended) 
+        if ((Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended)) 
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
             RaycastHit hit;
-            if (Physics.Raycast(ray, out hit)) 
+            if (Physics.Raycast(ray, out hit))
             {
-                if (hit.transform.tag == "Node") 
+                if (hit.transform.tag == "Node")
                 {
                     ObjectToActivate();
                     hit.collider.GetComponent<NodeRute>().NextFase();
 
                 }
             }
-        }   
+        }
+        else if (Input.GetMouseButton(0))
+        {
+            // Crear el rayo desde la posición del mouse
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.transform.tag == "Node")
+                {
+                    ObjectToActivate();
+                    hit.collider.GetComponent<NodeRute>().NextFase();
+
+                }
+            }
+        }
     }
 
     void ObjectToActivate(bool active=true) 

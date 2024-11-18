@@ -24,7 +24,7 @@ public class CamRay : MonoBehaviour
     void Update()
     {
 
-        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Stationary )
+        if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Stationary)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
             RaycastHit hit;
@@ -47,6 +47,30 @@ public class CamRay : MonoBehaviour
                 GameManager.Instance.target = null;
             }
         }
-        
+        else if (Input.GetMouseButton(0))
+        {
+            // Crear el rayo desde la posición del mouse
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.collider.tag == "Enemy")
+                {
+                    GameManager.Instance.target = hit.collider.gameObject;
+                    Debug.Log("Enemigo");
+
+                }
+                if (hit.collider.tag == "Player")
+                {
+                    GameManager.Instance.target = hit.collider.gameObject;
+                    Debug.Log("Target Player");
+                }
+            }
+            else
+            {
+                GameManager.Instance.target = null;
+            }
+
+        }
     }
 }
