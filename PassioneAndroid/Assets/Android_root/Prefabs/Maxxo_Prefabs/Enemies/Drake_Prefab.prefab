@@ -371,7 +371,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0cbb4b602c78673438ca808385590e14,
         type: 3}
       propertyPath: m_Name
-      value: Deake_Prefab
+      value: Drake_Prefab
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0cbb4b602c78673438ca808385590e14,
         type: 3}
@@ -704,7 +704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f57eed974b3e04b82b6e3964108e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyC: 0
+  enemyC: 7
   enemyT: 0
   animator: {fileID: 0}
   eAction: 0

@@ -140,12 +140,12 @@ private void Awake()
         {
             case Classes.deathKnight:
                 deathKnight.SetActive(true);
-                GameManager.Instance.healthPlayer = deathKnight.GetComponent<HealtManager>();
+                GameManager.Instance.player = deathKnight;
                 GameManager.Instance.actualClass = GameManager.CharacterClass.deathknight;
                 break;
             case Classes.necromancer:
                 necromancer.SetActive(true);
-                GameManager.Instance.healthPlayer = necromancer.GetComponent<HealtManager>();
+                GameManager.Instance.player = necromancer;
                 GameManager.Instance.actualClass = GameManager.CharacterClass.necromancer;
                 break;
         }

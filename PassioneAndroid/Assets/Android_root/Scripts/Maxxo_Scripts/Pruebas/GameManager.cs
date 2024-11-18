@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
     public int maxEnemies = 3;
     public int deathEnemies = 0;
     public bool canE1, canE2, canE3;
-    public HealtManager healthPlayer;
+    public GameObject player;
     public bool pStun;
     public int stateS;
 

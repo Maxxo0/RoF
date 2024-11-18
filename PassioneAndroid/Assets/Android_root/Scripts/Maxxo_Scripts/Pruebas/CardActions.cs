@@ -55,6 +55,19 @@ public class CardActions : MonoBehaviour
                 case "Mimic Surprise":
                     Stun();
                     break;
+                case "Demon Attack":
+                    AttackEnemy();
+                    BurnEnemy();
+                    break;
+                case "Demon Drain":
+                    DrainLife();
+                    break;
+                case "Eye Beam":
+                    TrueDamage();
+                    break;
+                case "Eye Bite":
+                    AttackEnemy();
+                    break;
 
             }
         }
@@ -88,5 +101,22 @@ public class CardActions : MonoBehaviour
         {
 
         }
+
+        public void BurnEnemy()
+        {
+
+        }
+
+        public void DrainLife()
+        {
+
+        }
+
+        public void TrueDamage()
+        {
+
+        }
+
+        
     }
 }
