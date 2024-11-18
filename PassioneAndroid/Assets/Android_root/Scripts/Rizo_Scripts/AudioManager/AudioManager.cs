@@ -26,6 +26,11 @@ public class AudioManager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+    private void Start()
+    {
+        musicSource.clip = musicList[0];
+        musicSource.Play();
+    }
     public void PlayMusic(int musicIndex)
     {
         musicSource.clip = musicList[musicIndex];
