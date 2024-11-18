@@ -280,6 +280,7 @@ namespace Maxxo
                 TurnPlayer();
                 SceneManager.Instance.eSpawn3.GetComponent<EnemySpawner>().enemy3.GetComponent<Debuffs>().EndTurn();
             }
+            GameManager.Instance.player.GetComponent<HealtManager>().noDMG = false;
             /*else
             {
                 foreach (Enemy e in enemies)
