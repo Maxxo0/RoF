@@ -14,19 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardTitle: Mimic Bite
   cardIcon: {fileID: 0}
+  playerIcon: []
   cardBorder: {fileID: 21300000, guid: f081319f84f84aa43ba25f3bf27d5c25, type: 3}
   isUpgraded: 0
   cardType: 0
   cardClass: 1
   cardDescription:
-    baseAmount: Deal X damage
+    baseAmount: Deal 20 damage (can Stun)
     upgradedAmount: Grants that damage as Gold
   cardCost:
     baseAmount: 0
     upgradedAmount: 0
   cardEffect:
-    baseAmount: 100
-    upgradedAmount: 100
+    baseAmount: 20
+    upgradedAmount: 40
   buffAmount:
     baseAmount: 0
     upgradedAmount: 0

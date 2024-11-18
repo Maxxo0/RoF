@@ -20,13 +20,13 @@ MonoBehaviour:
   cardType: 1
   cardClass: 0
   cardDescription:
-    baseAmount: Gain 5 Block
+    baseAmount: Gain 10 Block
     upgradedAmount: Gain 8 Block
   cardCost:
     baseAmount: 1
     upgradedAmount: 1
   cardEffect:
-    baseAmount: 5
+    baseAmount: 10
     upgradedAmount: 8
   buffAmount:
     baseAmount: 0

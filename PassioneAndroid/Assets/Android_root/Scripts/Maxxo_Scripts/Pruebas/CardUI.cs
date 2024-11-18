@@ -15,6 +15,7 @@ public class CardUI : MonoBehaviour
     public TMP_Text cardCostText;
     public Image cardImage;
     public Image cardBorder;
+    public string attack;
 
     private void Awake()
     {
@@ -26,16 +27,18 @@ public class CardUI : MonoBehaviour
     {
         if (GameManager.Instance.actualClass == GameManager.CharacterClass.necromancer )
         {
-            if (card.name == ("Player_Attack")) { cardTitleText.text = ("Ligthning Bolt"); card.cardIcon = card.playerIcon[1]; }
-            if (card.name == ("Player_HeavyAttack")) { cardTitleText.text = ("Thunder"); card.cardIcon = card.playerIcon[1]; }
-            if (card.name == ("Skeleton_Attack")) { cardTitleText.text = ("Bonk"); card.cardClass = ScriptableCard.CardClass.Monster; card.cardIcon = card.playerIcon[0]; }
+            if (card.name == ("Player_Attack")) { cardTitleText.text = ("Ligthning Bolt"); card.cardIcon = card.playerIcon[1];  }
+            if (card.name == ("Player_HeavyAttack")) { cardTitleText.text = ("Thunder"); card.cardIcon = card.playerIcon[1];  }
+            if (card.name == ("Skeleton_Attack")) { cardTitleText.text = ("Bonk"); card.cardClass = ScriptableCard.CardClass.Monster; card.cardIcon = card.playerIcon[0];  }
+          
         }
 
         if (GameManager.Instance.actualClass == GameManager.CharacterClass.deathknight)
         {
-            if (card.name == ("Player_Attack")) { cardTitleText.text = cardTitleText.text = ("Slash"); card.cardIcon = card.playerIcon[0]; }
+            if (card.name == ("Player_Attack")) { cardTitleText.text = cardTitleText.text = ("Slash"); card.cardIcon = card.playerIcon[0];  }
             if (card.name == ("Player_HeavyAttack")) { cardTitleText.text = ("Bonk"); card.cardIcon = card.playerIcon[0]; }
             if (card.name == ("Skeleton_Attack")) { cardTitleText.text = ("Thunder"); card.cardClass = ScriptableCard.CardClass.Monster; card.cardIcon = card.playerIcon[1]; }
+           
         }
         
         

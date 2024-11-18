@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Player_HeavyAttack
   m_EditorClassIdentifier: 
   cardTitle: Player Heavy
-  cardIcon: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: 95bfd8f87b7d715469296b45fc60d82f, type: 3}
   playerIcon:
   - {fileID: 21300000, guid: 79ce57c427c469d41837ba93f9aceeda, type: 3}
   - {fileID: 21300000, guid: 95bfd8f87b7d715469296b45fc60d82f, type: 3}
@@ -22,13 +22,13 @@ MonoBehaviour:
   cardType: 0
   cardClass: 0
   cardDescription:
-    baseAmount: Deal X damage
+    baseAmount: Deal 50 damage
     upgradedAmount: Apply bleed
   cardCost:
     baseAmount: 2
     upgradedAmount: 1
   cardEffect:
-    baseAmount: 100
+    baseAmount: 50
     upgradedAmount: 100
   buffAmount:
     baseAmount: 0

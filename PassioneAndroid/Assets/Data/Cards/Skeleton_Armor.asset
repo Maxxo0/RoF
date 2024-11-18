@@ -20,7 +20,7 @@ MonoBehaviour:
   cardType: 1
   cardClass: 1
   cardDescription:
-    baseAmount: Gain 5 Block
+    baseAmount: Gain 20 Block
     upgradedAmount: Gain 8 Block
   cardCost:
     baseAmount: 0
