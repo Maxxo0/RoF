@@ -12,6 +12,7 @@ using UnityEngine;
 
 public class HealtManager : MonoBehaviour
 {
+    public bool noDMG;
     public int health;
     public int healthMaxBase;
     public int healthMaxAlter;
@@ -60,6 +61,7 @@ public class HealtManager : MonoBehaviour
     
     public void TakeDMG(int dmg, bool shadowDmg=false) 
     {
+        if (noDMG) return;
         if (!shadowDmg || armor > 0)
         {
             if ((armor - dmg) > 0) { armor -= dmg; }
@@ -78,12 +80,6 @@ public class HealtManager : MonoBehaviour
             if ((health - dmg) <= 0) isAlive = false;
             else health -= dmg;
         }
-    }
-
-    public void TargetAttack(int dmg, bool shadowDmg) 
-    {
-    
-    
     }
     void eDead() 
     {
