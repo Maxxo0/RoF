@@ -93,7 +93,7 @@ public class HealtManager : MonoBehaviour
             GameManager.Instance.target = null;
             cardDrop = cardsDrops[Random.Range(0, 10)];
             battleSceneManager.DisplayCardEnemy(cardDrop);
-            battleSceneManager.drawPile.Add(cardDrop);
+            GameManager.Instance.playerDeck.Add(cardDrop);
             GameManager.Instance.deathEnemies++;
             
             if (enemy.enemyT == Enemy.EnemyType.Enemy1) { GameManager.Instance.canE1 = false; }

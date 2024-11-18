@@ -779,6 +779,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   eAction: 0
   eCanAct: 1
+  isDig: 0
   eDamage: 0
   eArmor: 0
 --- !u!114 &8336995950916942884
@@ -794,10 +795,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  healthMaxBase: 0
+  healthMaxBase: 100
   healthMaxAlter: 0
   armor: 0
-  isAlive: 0
+  isAlive: 1
   isDead: 0
   cardDrop: {fileID: 0}
   cardsDrops:

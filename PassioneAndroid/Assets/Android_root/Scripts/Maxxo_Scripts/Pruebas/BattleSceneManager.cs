@@ -17,6 +17,7 @@ namespace Maxxo
         public List<CardUI> cardsInHandGameObjects = new List<CardUI>();
         CardActions cardActions;
 
+
         [Header("Stats")]
         public int drawAmount = 5;
         public int cardN = 0;
@@ -59,7 +60,6 @@ namespace Maxxo
             discardPile = new List<ScriptableCard>();
             drawPile = new List<ScriptableCard>();
             cardsInHand = new List<ScriptableCard>();
-
             discardPile.AddRange(GameManager.Instance.playerDeck);
             ShuffleCards();
             DrawCards(drawAmount);
@@ -173,6 +173,7 @@ namespace Maxxo
                     selectedCard = null;
                     cardUI.gameObject.SetActive(false);
                     cardsInHand.Remove(cardUI.card);
+                    GameManager.Instance.playerDeck.Remove(cardUI.card);
                     //DiscardCard(cardUI.card);
                 }
 
@@ -187,6 +188,7 @@ namespace Maxxo
                     selectedCard = null;
                     cardUI.gameObject.SetActive(false);
                     cardsInHand.Remove(cardUI.card);
+                    GameManager.Instance.playerDeck.Remove(cardUI.card);
                     //DiscardCard(cardUI.card);
                 }
             }
@@ -208,6 +210,21 @@ namespace Maxxo
             BeginBattle();
         }
 
+        public void OffCard()
+        {
+            foreach (ScriptableCard card in cardsInHand)
+            {
+                DiscardCard(card);
+            }
+            foreach (CardUI cardUI in cardsInHandGameObjects)
+            {
+                if (cardUI.gameObject.activeSelf)
+                    //Instantiate(cardUI.discardEffect, cardUI.transform.position, Quaternion.identity, topParent);
+
+                    cardUI.gameObject.SetActive(false);
+                cardsInHand.Remove(cardUI.card);
+            }
+        }
 
         public void ChangeTurn()
         {
@@ -273,6 +290,8 @@ namespace Maxxo
         }
 
     }
+
+    
 
     
 } 
