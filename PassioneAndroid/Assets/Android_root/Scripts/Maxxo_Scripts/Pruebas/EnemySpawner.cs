@@ -12,7 +12,7 @@ public class EnemySpawner : MonoBehaviour
     public int firstRange;
     public int secondRange;
 
-    [SerializeField] GameObject enemy1, enemy2, enemy3;
+    public GameObject enemy1, enemy2, enemy3;
 
     [List][SerializeField] GameObject[] enemies1;
     [List][SerializeField] GameObject[] enemies2;

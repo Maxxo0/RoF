@@ -79,12 +79,6 @@ public class HealtManager : MonoBehaviour
             else health -= dmg;
         }
     }
-
-    public void TargetAttack(int dmg, bool shadowDmg) 
-    {
-    
-    
-    }
     void eDead() 
     {
         if (!isDead) 

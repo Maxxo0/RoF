@@ -57,15 +57,15 @@ public class SceneManager : MonoBehaviour
 
     // Enemigos
     [Header("Enemigos")]
-    [SerializeField] private GameObject enemy1;
-    [SerializeField] private GameObject enemy2;
-    [SerializeField] private GameObject enemy3;
+    public GameObject enemy1;
+    public GameObject enemy2;
+    public GameObject enemy3;
 
     // Puntos de aparición de enemigos
     [Header("Puntos de aparición")]
-    [SerializeField] private GameObject eSpawn1;
-    [SerializeField] private GameObject eSpawn2;
-    [SerializeField] private GameObject eSpawn3;
+    public GameObject eSpawn1;
+    public GameObject eSpawn2;
+    public GameObject eSpawn3;
 
     // Estado de los enemigos
     [Header("Estado de Enemigos")]
@@ -188,6 +188,7 @@ private void Awake()
     {
         battleSceneManager.OffCard();
         rewardPanel.SetActive(true);
+        GameManager.Instance.player.GetComponent<ItemManager>().ActivarItemAleatorio();
     }
 
     public void GoMap()

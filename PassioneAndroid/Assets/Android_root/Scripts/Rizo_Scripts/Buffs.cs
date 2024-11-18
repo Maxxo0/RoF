@@ -30,14 +30,14 @@ public class Buffs : MonoBehaviour
     }
     #region ApplyBuff
 
-    public void OnAttack(int dmg, bool shadowDmg)
+    public int OnAttack(int dmg)
     {
         if (DamageStrength)
         {
             float a = dmg * 1.25f;
             dmg = (int)Mathf.Round(a);
         }
-
+        return gameObject.GetComponent<ItemManager>().PlayerCardAttack(dmg);
     }
 
     public void OnTakeDamage(int dmg, bool shadowDmg)
