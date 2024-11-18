@@ -792,7 +792,7 @@ MonoBehaviour:
   eAction: 0
   eCanAct: 1
   isDig: 0
-  eDamage: 0
+  eDamage: 2
   eArmor: 0
 --- !u!114 &8336995950916942884
 MonoBehaviour:
@@ -806,6 +806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91b8a5a25ec3fa4a8d741a4e3c6df9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  noDMG: 0
   health: 0
   healthMaxBase: 100
   healthMaxAlter: 0
@@ -824,6 +825,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7ff0f513312a16340965b47dba15cb8d, type: 2}
   - {fileID: 11400000, guid: 344194d97550eea48b129ef26f957453, type: 2}
   - {fileID: 11400000, guid: 344194d97550eea48b129ef26f957453, type: 2}
+  hpBar: {fileID: 0}
   type: 1
 --- !u!65 &5251276674019240773
 BoxCollider:

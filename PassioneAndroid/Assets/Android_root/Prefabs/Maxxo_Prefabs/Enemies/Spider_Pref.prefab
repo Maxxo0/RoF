@@ -630,6 +630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91b8a5a25ec3fa4a8d741a4e3c6df9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  noDMG: 0
   health: 0
   healthMaxBase: 100
   healthMaxAlter: 0
@@ -648,6 +649,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8338835bd8484f244a13b77577899232, type: 2}
   - {fileID: 11400000, guid: 8338835bd8484f244a13b77577899232, type: 2}
   - {fileID: 11400000, guid: 8338835bd8484f244a13b77577899232, type: 2}
+  hpBar: {fileID: 0}
   type: 1
 --- !u!114 &2117422148935019717
 MonoBehaviour:
@@ -667,7 +669,7 @@ MonoBehaviour:
   eAction: 0
   eCanAct: 1
   isDig: 0
-  eDamage: 50
+  eDamage: 2
   eArmor: 0
 --- !u!65 &4375652709545583699
 BoxCollider:

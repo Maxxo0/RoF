@@ -46,6 +46,8 @@ public class SceneManager : MonoBehaviour
     [SerializeField] private GameObject characterSelectPanel;
     [SerializeField] private GameObject rewardPanel;
     [SerializeField] private GameObject playerUI;
+    [SerializeField] GameObject lose;
+    [SerializeField] GameObject win;
 
     // Prefabs
     [Header("Prefabs")]
@@ -88,6 +90,10 @@ private void Awake()
         battleSceneManager = FindObjectOfType<BattleSceneManager>();
     }
 
+    private void Update()
+    {
+        if (GameManager.Instance.stateS > 7) { Win(); }
+    }
 
     public void SelectBattleType()
     {
@@ -173,7 +179,9 @@ private void Awake()
         }
         baseCam.SetActive(true);
         mapCam.SetActive(false);
-        
+        playerUID.SetActive(true);
+        //hpbars.SetActive(true);
+        //spawns.SetActive(true);
 
         // Activar enemigos según la cantidad seleccionada
         if (enemies >= 1) eSpawn1.GetComponent<EnemySpawner>().SpawnEnemies();
@@ -187,14 +195,32 @@ private void Awake()
     public void RewardPanel()
     {
         battleSceneManager.OffCard();
+        //hpbars.SetActive(false);
         rewardPanel.SetActive(true);
         GameManager.Instance.player.GetComponent<ItemManager>().ActivarItemAleatorio();
     }
 
     public void GoMap()
     {
+        //hpbars.SetActive(false);
         rewardPanel.SetActive(false);
         baseCam.SetActive(false);
         mapCam.SetActive(true);
     }
+
+    public void Lose()
+    {
+        lose.SetActive(true);
+    }
+
+    public void Win()
+    {
+        win.SetActive(true);
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
+    
 }

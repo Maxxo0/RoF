@@ -133,6 +133,12 @@ public class Enemy : MonoBehaviour
                     else { eCanAct = false; eAction++; animator.SetBool("Exit", true); }
                 }
                 break;
+            case EnemyClass.Drake:
+                if (eAction >= 0) 
+                {
+                    Attack();
+                }
+                break;
         }
     }
 
@@ -164,6 +170,7 @@ public class Enemy : MonoBehaviour
 
     public void TrueDamage()
     {
+        Attack();
         Debug.Log("Daño Verdadero");
         StartCoroutine(CTurn());
         //GameManager.Instance.healthPlayer.TakeDMG(eDamage);

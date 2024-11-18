@@ -40,7 +40,7 @@ namespace Maxxo
 
         private void Update()
         {
-            energyText.text = (energy + "/" + maxEnergy);
+            //energyText.text = (energy + "/" + maxEnergy);
         }
         public void StartHallwayFight()
         {

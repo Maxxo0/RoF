@@ -722,7 +722,7 @@ MonoBehaviour:
   eAction: 0
   eCanAct: 1
   isDig: 0
-  eDamage: 0
+  eDamage: 15
   eArmor: 0
 --- !u!114 &5919933625634041743
 MonoBehaviour:
@@ -736,6 +736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e91b8a5a25ec3fa4a8d741a4e3c6df9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  noDMG: 0
   health: 0
   healthMaxBase: 100
   healthMaxAlter: 0
@@ -743,7 +744,18 @@ MonoBehaviour:
   isAlive: 1
   isDead: 0
   cardDrop: {fileID: 0}
-  cardsDrops: []
+  cardsDrops:
+  - {fileID: 11400000, guid: 173def036d31478479107cadb26bf81e, type: 2}
+  - {fileID: 11400000, guid: 173def036d31478479107cadb26bf81e, type: 2}
+  - {fileID: 11400000, guid: 173def036d31478479107cadb26bf81e, type: 2}
+  - {fileID: 11400000, guid: 173def036d31478479107cadb26bf81e, type: 2}
+  - {fileID: 11400000, guid: 173def036d31478479107cadb26bf81e, type: 2}
+  - {fileID: 11400000, guid: 173def036d31478479107cadb26bf81e, type: 2}
+  - {fileID: 11400000, guid: 173def036d31478479107cadb26bf81e, type: 2}
+  - {fileID: 11400000, guid: 173def036d31478479107cadb26bf81e, type: 2}
+  - {fileID: 11400000, guid: 173def036d31478479107cadb26bf81e, type: 2}
+  - {fileID: 11400000, guid: 173def036d31478479107cadb26bf81e, type: 2}
+  hpBar: {fileID: 0}
   type: 1
 --- !u!65 &5886417653300686006
 BoxCollider:
