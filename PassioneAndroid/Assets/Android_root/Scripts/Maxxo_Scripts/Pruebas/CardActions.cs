@@ -68,7 +68,15 @@ public class CardActions : MonoBehaviour
                 case "Eye Bite":
                     AttackEnemy();
                     break;
-
+                case "Worm Bite":
+                    AttackEnemy();
+                    break;
+                case "Worm Dig":
+                    GameManager.Instance.player.GetComponent<HealtManager>().noDMG = true;
+                    break;
+                case "Worm Earthquake":
+                    AttackEnemy();
+                    break;
             }
         }
     
@@ -117,12 +125,12 @@ public class CardActions : MonoBehaviour
 
         public void DrainLife()
         {
-
+            AttackEnemy();
         }
 
         public void TrueDamage()
         {
-
+            AttackEnemy();
         }
 
         

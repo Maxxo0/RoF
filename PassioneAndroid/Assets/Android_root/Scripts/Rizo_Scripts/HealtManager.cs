@@ -9,6 +9,7 @@ using Maxxo;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealtManager : MonoBehaviour
 {
@@ -23,6 +24,10 @@ public class HealtManager : MonoBehaviour
     public ScriptableCard[] cardsDrops;
     BattleSceneManager battleSceneManager;
     Animator animator;
+
+    [SerializeField] Image hpBar;
+
+
     public enum Type { player, enemy }
     public Type type;
     Enemy enemy;
@@ -40,6 +45,9 @@ public class HealtManager : MonoBehaviour
     }
     private void Update()
     {
+        //if (type == Type.player) { hpBar.fillAmount = health / healthMaxBase; }
+        
+
         if (isAlive == false && type == Type.enemy) { eDead(); }
         if (isAlive == false && type == Type.player) { Dead(); }
     }
@@ -104,6 +112,7 @@ public class HealtManager : MonoBehaviour
         if (!isDead) 
         {
             isDead = true;
+            SceneManager.Instance.Lose();
             Debug.Log("You die");
             gameObject.SetActive(false);
         }
@@ -116,6 +125,10 @@ public class HealtManager : MonoBehaviour
             GameManager.Instance.stateS++;
             SceneManager.Instance.RewardPanel();
         }
+
+       
+
         gameObject.SetActive(false);
+
     }
 }

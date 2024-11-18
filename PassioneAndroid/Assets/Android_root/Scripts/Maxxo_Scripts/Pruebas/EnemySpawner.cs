@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class EnemySpawner : MonoBehaviour
     public int secondRange;
 
     public GameObject enemy1, enemy2, enemy3;
+    
+    [SerializeField] Image hpE1, hpE2, hpE3;
 
     [List][SerializeField] GameObject[] enemies1;
     [List][SerializeField] GameObject[] enemies2;
@@ -34,6 +37,10 @@ public class EnemySpawner : MonoBehaviour
         if (GameManager.Instance.stateS == 5) { firstRange = 8; secondRange = 10; }
         if (GameManager.Instance.stateS == 6) { firstRange = 10; secondRange = 12; }
         if (GameManager.Instance.stateS == 7) { firstRange = 12; secondRange = 14; }
+
+        /*if (GameManager.Instance.canE1 == true || spawn1 == true) { hpE1.fillAmount = enemy1.GetComponent<HealtManager>().health / enemy1.GetComponent<HealtManager>().healthMaxBase; }
+        if (GameManager.Instance.canE2 == true || spawn2 == true) { hpE2.fillAmount = enemy2.GetComponent<HealtManager>().health / enemy2.GetComponent<HealtManager>().healthMaxBase; }
+        if (GameManager.Instance.canE3 == true || spawn1 == true) { hpE3.fillAmount = enemy3.GetComponent<HealtManager>().health / enemy3.GetComponent<HealtManager>().healthMaxBase; }*/
 
     }
 
