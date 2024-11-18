@@ -167,6 +167,11 @@ private void Awake()
         int enemies = Random.Range(1, 4);
 
         Debug.Log(escenary);
+        fprefab1.SetActive(false);
+        fprefab2.SetActive(false);
+        fprefab3.SetActive(false);
+        fprefab4.SetActive(false);
+        fprefab5.SetActive(false);
 
         // Activar prefab según el escenario seleccionado
         switch (escenary)
