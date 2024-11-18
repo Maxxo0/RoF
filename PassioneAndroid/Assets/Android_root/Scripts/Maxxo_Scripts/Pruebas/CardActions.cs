@@ -104,7 +104,15 @@ public class CardActions : MonoBehaviour
 
         public void BurnEnemy()
         {
-
+            GameManager.Instance.target.GetComponent<Debuffs>().ApplyBurn();
+        }
+        public void PoisonEnemy()
+        {
+            GameManager.Instance.target.GetComponent<Debuffs>().ApplyPoison();
+        }
+        public void BleeedEnemy()
+        {
+            GameManager.Instance.target.GetComponent<Debuffs>().ApplyBleed();
         }
 
         public void DrainLife()

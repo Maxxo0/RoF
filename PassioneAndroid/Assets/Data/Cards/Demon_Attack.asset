@@ -20,13 +20,13 @@ MonoBehaviour:
   cardType: 0
   cardClass: 1
   cardDescription:
-    baseAmount: Deals X damage
+    baseAmount: Deals 30 damage
     upgradedAmount: 'Applies burn '
   cardCost:
     baseAmount: 0
     upgradedAmount: 0
   cardEffect:
-    baseAmount: 0
+    baseAmount: 30
     upgradedAmount: 0
   buffAmount:
     baseAmount: 0

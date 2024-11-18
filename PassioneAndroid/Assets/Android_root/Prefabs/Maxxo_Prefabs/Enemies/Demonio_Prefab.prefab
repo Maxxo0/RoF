@@ -733,6 +733,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8683602679989285058}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3c4a97a5a17ad954f80c83146d511aa2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9158576597879446148}
   m_SourcePrefab: {fileID: 100100000, guid: 3c4a97a5a17ad954f80c83146d511aa2, type: 3}
 --- !u!1 &9040818940231955736 stripped
 GameObject:
@@ -801,6 +805,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   eAction: 0
   eCanAct: 1
+  isDig: 0
   eDamage: 0
   eArmor: 0
 --- !u!114 &8683602679989285058
@@ -834,3 +839,30 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0f898b4a832ce9b439ba988d04e6705c, type: 2}
   - {fileID: 11400000, guid: 0f898b4a832ce9b439ba988d04e6705c, type: 2}
   type: 1
+--- !u!114 &9158576597879446148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9040818940231955736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 352825d573ea2174b93d33be097bee8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPoisoned: 0
+  isBleeding: 0
+  isBurning: 0
+  poisonedCoun: 0
+  poisonedCounMax: 100
+  bleedingCoun: 0
+  bleedingCounMax: 10
+  burningCoun: 0
+  burningCounMax: 3
+  poisondeLvL: 0
+  bleedingLvL: 0
+  burningLvL: 0
+  poisonedDMG: 5
+  bleedingDMG: 2
+  burningDMG: 10

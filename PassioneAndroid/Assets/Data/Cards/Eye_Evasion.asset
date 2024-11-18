@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardTitle: Eye Evasion
   cardIcon: {fileID: 0}
+  playerIcon: []
   cardBorder: {fileID: 21300000, guid: 376836408d811004a8417456588b0eca, type: 3}
   isUpgraded: 0
   cardType: 2
   cardClass: 1
   cardDescription:
-    baseAmount: Chance to evade the next 3 attacks
+    baseAmount: Chance to evade the next attack
     upgradedAmount: Deal X damage if you evade an attack
   cardCost:
     baseAmount: 0

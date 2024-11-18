@@ -418,6 +418,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7004877511190383179}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d98f6d3d3ca1f7349b5eeccd8b0a966e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -790547736542091396}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d98f6d3d3ca1f7349b5eeccd8b0a966e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3420852026403031634}
   m_SourcePrefab: {fileID: 100100000, guid: d98f6d3d3ca1f7349b5eeccd8b0a966e, type: 3}
 --- !u!1 &6317656074976346201 stripped
 GameObject:
@@ -520,3 +528,42 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6dfb2d62828b9a841978d6b2887aea11, type: 2}
   - {fileID: 11400000, guid: 6dfb2d62828b9a841978d6b2887aea11, type: 2}
   type: 1
+--- !u!114 &-790547736542091396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6317656074976346201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aea83b99770df764286698db2e059bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3420852026403031634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6317656074976346201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 352825d573ea2174b93d33be097bee8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPoisoned: 0
+  isBleeding: 0
+  isBurning: 0
+  poisonedCoun: 0
+  poisonedCounMax: 100
+  bleedingCoun: 0
+  bleedingCounMax: 10
+  burningCoun: 0
+  burningCounMax: 3
+  poisondeLvL: 0
+  bleedingLvL: 0
+  burningLvL: 0
+  poisonedDMG: 5
+  bleedingDMG: 2
+  burningDMG: 10

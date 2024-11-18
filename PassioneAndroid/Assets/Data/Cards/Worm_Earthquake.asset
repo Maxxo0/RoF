@@ -15,20 +15,20 @@ MonoBehaviour:
   cardTitle: Worm Earthquake
   cardIcon: {fileID: 21300000, guid: c9c10658018dd534ea2e29c385d52c49, type: 3}
   playerIcon: []
-  cardBorder: {fileID: 21300000, guid: 78353abcb4ad7ea40853e594ba980858, type: 3}
+  cardBorder: {fileID: 21300000, guid: e1dacc75c6f68b34b83ea15eab391d59, type: 3}
   isUpgraded: 0
   cardType: 0
   cardClass: 1
   cardDescription:
-    baseAmount: Deals X damage to all targets
+    baseAmount: One shot
     upgradedAmount: More damage
   cardCost:
     baseAmount: 0
     upgradedAmount: 0
   cardEffect:
-    baseAmount: 0
+    baseAmount: 9999
     upgradedAmount: 0
   buffAmount:
     baseAmount: 0
     upgradedAmount: 0
-  rarity: 3
+  rarity: 4

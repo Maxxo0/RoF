@@ -20,14 +20,13 @@ MonoBehaviour:
   cardType: 0
   cardClass: 1
   cardDescription:
-    baseAmount: Deal X damage. If you have less than 50% hit 2 times. If you have
-      less than 25% hit 3 times. If you have less than 5% hit 5 times.
+    baseAmount: 'Deal 30 damage (maybe x3). '
     upgradedAmount: More damage
   cardCost:
     baseAmount: 0
     upgradedAmount: 0
   cardEffect:
-    baseAmount: 0
+    baseAmount: 30
     upgradedAmount: 0
   buffAmount:
     baseAmount: 0

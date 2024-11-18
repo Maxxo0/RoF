@@ -20,13 +20,13 @@ MonoBehaviour:
   cardType: 0
   cardClass: 1
   cardDescription:
-    baseAmount: Drain X of life
+    baseAmount: Drain 20 of life
     upgradedAmount: At 50% health you heal twice as much
   cardCost:
     baseAmount: 0
     upgradedAmount: 0
   cardEffect:
-    baseAmount: 0
+    baseAmount: 20
     upgradedAmount: 0
   buffAmount:
     baseAmount: 0

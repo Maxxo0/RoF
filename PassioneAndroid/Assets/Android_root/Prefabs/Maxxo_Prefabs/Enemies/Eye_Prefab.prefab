@@ -243,6 +243,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 761515104500440403}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4d6f94b0afa8eb14a82d6aeb080fb187,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2178087281716842419}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4d6f94b0afa8eb14a82d6aeb080fb187,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4707382567533133695}
   m_SourcePrefab: {fileID: 100100000, guid: 4d6f94b0afa8eb14a82d6aeb080fb187, type: 3}
 --- !u!1 &6047878989201092287 stripped
 GameObject:
@@ -319,7 +327,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4494408868ad73e42bef32358e7396a7, type: 2}
   - {fileID: 11400000, guid: 4bb4a804b650b43469aef986a49c3087, type: 2}
   - {fileID: 11400000, guid: 4bb4a804b650b43469aef986a49c3087, type: 2}
-  - {fileID: 11400000, guid: 4bb4a804b650b43469aef986a49c3087, type: 2}
+  - {fileID: 11400000, guid: e7e6afa7c86165547b0e23898c55f90f, type: 2}
   - {fileID: 11400000, guid: e7e6afa7c86165547b0e23898c55f90f, type: 2}
   type: 1
 --- !u!135 &761515104500440403
@@ -343,3 +351,42 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 1.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2178087281716842419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6047878989201092287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aea83b99770df764286698db2e059bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4707382567533133695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6047878989201092287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 352825d573ea2174b93d33be097bee8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPoisoned: 0
+  isBleeding: 0
+  isBurning: 0
+  poisonedCoun: 0
+  poisonedCounMax: 100
+  bleedingCoun: 0
+  bleedingCounMax: 10
+  burningCoun: 0
+  burningCounMax: 3
+  poisondeLvL: 0
+  bleedingLvL: 0
+  burningLvL: 0
+  poisonedDMG: 5
+  bleedingDMG: 2
+  burningDMG: 10
