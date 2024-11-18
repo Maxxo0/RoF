@@ -326,6 +326,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a9232e556f31c554a8c9a8f9dbd44d4a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e90f51c63f7b9d54db3f3c6c2c181111, type: 2}
     - target: {fileID: 919132149155446097, guid: a9232e556f31c554a8c9a8f9dbd44d4a,
         type: 3}
       propertyPath: m_Name
@@ -1197,11 +1202,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6902573867230041995, guid: 18c86969168a8564c82a44dbf2e1d21b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1456713f11d0d3244851af52c619f7e3, type: 2}
     - target: {fileID: 919132149155446097, guid: 18c86969168a8564c82a44dbf2e1d21b,
         type: 3}
       propertyPath: m_Name
       value: Pocion3
       objectReference: {fileID: 0}
+    - target: {fileID: 1129496810705857465, guid: 18c86969168a8564c82a44dbf2e1d21b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1456713f11d0d3244851af52c619f7e3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1265,6 +1280,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1a564c1b279a5ab4087df659fa93199c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 93cf3062e1e515c4487f17fc7816fc6a, type: 2}
     - target: {fileID: 919132149155446097, guid: 1a564c1b279a5ab4087df659fa93199c,
         type: 3}
       propertyPath: m_Name
