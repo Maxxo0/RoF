@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardTitle: Mimic Surprise
   cardIcon: {fileID: 0}
+  playerIcon: []
   cardBorder: {fileID: 21300000, guid: 376836408d811004a8417456588b0eca, type: 3}
   isUpgraded: 0
   cardType: 0
   cardClass: 1
   cardDescription:
-    baseAmount: If it is the first card to be thrown in this round, it stuns enemies
+    baseAmount: Apply Stun an enemy.
     upgradedAmount: Deal X damage
   cardCost:
     baseAmount: 0

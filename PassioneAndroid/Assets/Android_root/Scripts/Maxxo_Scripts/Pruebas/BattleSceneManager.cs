@@ -33,8 +33,13 @@ namespace Maxxo
         private void Awake()
         {
             cardActions = GetComponent<CardActions>();
+            
         }
 
+        private void Update()
+        {
+         
+        }
         public void StartHallwayFight()
         {
             BeginBattle(/*possibleEnemies*/);
@@ -127,12 +132,13 @@ namespace Maxxo
         {
             //Debug.Log("played card");
             //GoblinNob is enraged
-
+            
             // Cartas del Player
             if (cardUI.card.cardClass == ScriptableCard.CardClass.Player && energy >= cardUI.card.cardCost.baseAmount && !GameManager.Instance.pStun )
             {
                if (cardUI.card.cardType == ScriptableCard.CardType.Attack && GameManager.Instance.target.tag == "Enemy") 
                 {
+                   
                     cardActions.PerformAction(cardUI.card, GameManager.Instance.target);
                     Debug.Log("PlayCard");
                     energy -= cardUI.card.GetCardCostAmount();
@@ -147,6 +153,7 @@ namespace Maxxo
 
                 if (cardUI.card.cardType == ScriptableCard.CardType.Shield && GameManager.Instance.target.tag == "Player")
                 {
+
                     cardActions.PerformAction(cardUI.card, GameManager.Instance.target);
                     Debug.Log("PlayCard");
                     energy -= cardUI.card.GetCardCostAmount();
@@ -164,6 +171,7 @@ namespace Maxxo
             {
                 if (cardUI.card.cardType == ScriptableCard.CardType.Attack && GameManager.Instance.target.tag == "Enemy")
                 {
+                   
                     cardActions.PerformAction(cardUI.card, GameManager.Instance.target);
                     Debug.Log("PlayCard");
                     energy -= cardUI.card.GetCardCostAmount();
@@ -179,6 +187,7 @@ namespace Maxxo
 
                 if (cardUI.card.cardType == ScriptableCard.CardType.Shield && GameManager.Instance.target.tag == "Player")
                 {
+                    
                     cardActions.PerformAction(cardUI.card, GameManager.Instance.target);
                     Debug.Log("PlayCard");
                     energy -= cardUI.card.GetCardCostAmount();
@@ -212,6 +221,7 @@ namespace Maxxo
 
         public void OffCard()
         {
+            endTurnButton.SetActive(false);
             foreach (ScriptableCard card in cardsInHand)
             {
                 DiscardCard(card);
