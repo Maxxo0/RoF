@@ -15,7 +15,7 @@ MonoBehaviour:
   cardTitle: Player Attack
   cardIcon: {fileID: 21300000, guid: 97a3463d1d7d8d7499dc9f5f87460a05, type: 3}
   playerIcon:
-  - {fileID: 21300000, guid: 161a0c94b98089a4aa04fe17c82d3d68, type: 3}
+  - {fileID: 21300000, guid: 66957dc8b564b254fafd3d9e774ce4b7, type: 3}
   - {fileID: 21300000, guid: 97a3463d1d7d8d7499dc9f5f87460a05, type: 3}
   cardBorder: {fileID: 21300000, guid: f081319f84f84aa43ba25f3bf27d5c25, type: 3}
   isUpgraded: 0

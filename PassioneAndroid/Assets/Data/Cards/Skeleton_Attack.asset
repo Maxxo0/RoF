@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Skeleton_Attack
   m_EditorClassIdentifier: 
   cardTitle: Skeleton Attack
-  cardIcon: {fileID: 0}
+  cardIcon: {fileID: 21300000, guid: 161a0c94b98089a4aa04fe17c82d3d68, type: 3}
   playerIcon:
-  - {fileID: 21300000, guid: 161a0c94b98089a4aa04fe17c82d3d68, type: 3}
+  - {fileID: 21300000, guid: 5399cb0af01c07848b08707ee65bb657, type: 3}
   - {fileID: 21300000, guid: 95bfd8f87b7d715469296b45fc60d82f, type: 3}
   cardBorder: {fileID: 21300000, guid: f081319f84f84aa43ba25f3bf27d5c25, type: 3}
   isUpgraded: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
     baseAmount: 0
     upgradedAmount: 0
   cardEffect:
-    baseAmount: 100
+    baseAmount: 50
     upgradedAmount: 100
   buffAmount:
     baseAmount: 0
