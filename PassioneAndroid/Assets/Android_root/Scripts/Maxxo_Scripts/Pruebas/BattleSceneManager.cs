@@ -25,7 +25,7 @@ namespace Maxxo
         public int maxEnergy;
         public int energy;
         public int cardUIN;
-        [SerializeField] TextMeshPro energyText;
+        
         [SerializeField] GameObject endTurnButton;
         
 
@@ -40,7 +40,7 @@ namespace Maxxo
 
         private void Update()
         {
-            //energyText.text = (energy + "/" + maxEnergy);
+            SceneManager.Instance.energyText.text = (energy + "/" + maxEnergy);
         }
         public void StartHallwayFight()
         {

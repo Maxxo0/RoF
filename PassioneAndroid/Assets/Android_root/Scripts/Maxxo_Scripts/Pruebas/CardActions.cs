@@ -34,6 +34,9 @@ public class CardActions : MonoBehaviour
                 case "Player Heavy":
                     AttackEnemy();
                     break;
+                case "Defend":
+                    Block();
+                    break;
                 case "Skeleton Attack":
                     AttackEnemy();
                     break;
@@ -109,6 +112,12 @@ public class CardActions : MonoBehaviour
         {
 
         }
+        public void TakeCard()
+        {
+            HealtManager healtManager = GameManager.Instance.target.GetComponent<HealtManager>();
+            healtManager.GetCard();
+            
+        }
 
         public void BurnEnemy()
         {
@@ -125,7 +134,13 @@ public class CardActions : MonoBehaviour
 
         public void DrainLife()
         {
-            AttackEnemy();
+            int totalDamage = card.GetCardEffectAmount();
+            totalDamage = GameManager.Instance.player.GetComponent<Debuffs>().OnAttack(totalDamage);
+            HealtManager healtManager = GameManager.Instance.target.GetComponent<HealtManager>();
+            healtManager.TakeDMG(totalDamage);
+
+            GameManager.Instance.player.GetComponent<HealtManager>().Heal(totalDamage);
+
         }
 
         public void TrueDamage()

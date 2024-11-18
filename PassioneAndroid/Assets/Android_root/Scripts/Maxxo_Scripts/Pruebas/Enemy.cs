@@ -60,8 +60,8 @@ public class Enemy : MonoBehaviour
                     eCanAct = false;
                     eAction++;
                     int randomHit = Random.Range(0, 10);
-                    if (randomHit > 8) { eCanAct = false; eAction++; animator.SetTrigger("Stun"); }
-                    else { eCanAct = false; eAction++; animator.SetTrigger("Attack"); }
+                    if (randomHit > 8) { eCanAct = false; animator.SetTrigger("Stun"); }
+                    else { eCanAct = false;  animator.SetTrigger("Attack"); }
                 }
                 break;
             case EnemyClass.Skeleton:
@@ -95,8 +95,8 @@ public class Enemy : MonoBehaviour
                     eCanAct = false;
                     eAction++;
                     int randomHit = Random.Range(0, 10);
-                    if (randomHit > 8) { eCanAct = false; eAction++; animator.SetTrigger("Attack"); Stun(); }
-                    else { eCanAct = false; eAction++; animator.SetTrigger("Attack"); }
+                    if (randomHit > 8) { eCanAct = false; ; animator.SetTrigger("Attack"); Stun(); }
+                    else { eCanAct = false; ; animator.SetTrigger("Attack"); }
 
                 }
                 break;
@@ -106,8 +106,8 @@ public class Enemy : MonoBehaviour
                     eCanAct = false;
                     eAction++;
                     int randomHit = Random.Range(0, 10);
-                    if (randomHit > 8) { eCanAct = false; eAction++; TakeEvassion(); }
-                    else { eCanAct = false; eAction++; TrueDamage(); }
+                    if (randomHit > 8) { eCanAct = false;  TakeEvassion(); }
+                    else { eCanAct = false; ; TrueDamage(); }
                 }
                 break;
             case EnemyClass.Demon:

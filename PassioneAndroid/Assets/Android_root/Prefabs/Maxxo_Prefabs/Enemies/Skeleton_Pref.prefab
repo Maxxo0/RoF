@@ -473,7 +473,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Height: 3.5
   m_Direction: 1
   m_Center: {x: 0, y: 1.7273571, z: 0}
@@ -495,7 +495,7 @@ MonoBehaviour:
   eAction: 0
   eCanAct: 1
   isDig: 0
-  eDamage: 2
+  eDamage: 3
   eArmor: 20
 --- !u!114 &7004877511190383179
 MonoBehaviour:

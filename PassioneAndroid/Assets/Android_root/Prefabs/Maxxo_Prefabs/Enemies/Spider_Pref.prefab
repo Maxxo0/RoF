@@ -669,7 +669,7 @@ MonoBehaviour:
   eAction: 0
   eCanAct: 1
   isDig: 0
-  eDamage: 2
+  eDamage: 3
   eArmor: 0
 --- !u!65 &4375652709545583699
 BoxCollider:

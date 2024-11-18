@@ -42,6 +42,22 @@ public class HealtManager : MonoBehaviour
     private void Start()
     {
         health = healthMaxBase;
+        if (type == Type.enemy)
+        {
+            if (enemy.enemyT == Enemy.EnemyType.Enemy1)
+            {
+                hpBar = SceneManager.Instance.hpE1;
+            }
+            if (enemy.enemyT == Enemy.EnemyType.Enemy2)
+            {
+                hpBar = SceneManager.Instance.hpE2;
+            }
+            if (enemy.enemyT == Enemy.EnemyType.Enemy3)
+            {
+                hpBar = SceneManager.Instance.hpE3;
+            }
+        }
+
     }
     private void Update()
     {
@@ -50,6 +66,9 @@ public class HealtManager : MonoBehaviour
 
         if (isAlive == false && type == Type.enemy) { eDead(); }
         if (isAlive == false && type == Type.player) { Dead(); }
+        hpBar.fillAmount = (float)health / (float)healthMaxBase;
+        if (health <= 0) { hpBar.fillAmount = 0;}
+
     }
 
     public void HealthUp(int healthUp) 
@@ -130,5 +149,18 @@ public class HealtManager : MonoBehaviour
 
         gameObject.SetActive(false);
 
+    }
+
+    public void GetCard()
+    {
+        cardDrop = cardsDrops[Random.Range(0, 10)];
+        battleSceneManager.DisplayCardEnemy(cardDrop);
+        GameManager.Instance.playerDeck.Add(cardDrop);
+    }
+
+    public void Heal(int heal)
+    {
+        health += heal;
+        if (health <= healthMaxBase) { health = healthMaxBase; }
     }
 }

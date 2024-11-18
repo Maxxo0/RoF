@@ -722,7 +722,7 @@ MonoBehaviour:
   eAction: 0
   eCanAct: 1
   isDig: 0
-  eDamage: 15
+  eDamage: 20
   eArmor: 0
 --- !u!114 &5919933625634041743
 MonoBehaviour:

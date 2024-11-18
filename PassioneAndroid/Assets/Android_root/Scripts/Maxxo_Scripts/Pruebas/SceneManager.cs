@@ -1,7 +1,9 @@
 using Maxxo;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SceneManager : MonoBehaviour
 {
@@ -48,6 +50,10 @@ public class SceneManager : MonoBehaviour
     [SerializeField] private GameObject playerUI;
     [SerializeField] GameObject lose;
     [SerializeField] GameObject win;
+    public Image hpE1, hpE2, hpE3;
+    public TextMeshProUGUI energyText;
+ 
+    
 
     // Prefabs
     [Header("Prefabs")]
@@ -202,11 +208,13 @@ private void Awake()
         battleSceneManager.OffCard();
         //hpbars.SetActive(false);
         rewardPanel.SetActive(true);
+        playerUID.SetActive(false);
         GameManager.Instance.player.GetComponent<ItemManager>().ActivarItemAleatorio();
     }
 
     public void GoMap()
     {
+        playerUID.SetActive(false);
         //hpbars.SetActive(false);
         rewardPanel.SetActive(false);
         baseCam.SetActive(false);
